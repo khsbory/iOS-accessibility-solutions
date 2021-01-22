@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Demo Main View Controller-->
+        <scene sceneID="qKh-Mb-ap2">
+            <objects>
+                <viewController storyboardIdentifier="webViewDemoMain" id="9jh-Wc-OeH" customClass="WebViewDemoMainViewController" customModule="IosAccessibilityDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ijd-FW-wPU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-9j-66p">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtc-Bg-MjP">
+                                        <rect key="frame" x="123" y="100" width="168" height="30"/>
+                                        <state key="normal" title="접근성이 적용되지 않은 경우"/>
+                                        <connections>
+                                            <action selector="launchWebViewDemoWithoutAccessibility:" destination="9jh-Wc-OeH" eventType="touchUpInside" id="Pqu-Zy-jWn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlH-yn-byB">
+                                        <rect key="frame" x="144.5" y="330" width="125" height="30"/>
+                                        <state key="normal" title="접근성이 적용된 경우"/>
+                                        <connections>
+                                            <action selector="launchWebViewDemoWithAccessibility:" destination="9jh-Wc-OeH" eventType="touchUpInside" id="5nm-5b-zTm"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="앱뷰 내부에 웹뷰를 만드는 경우에는 페이지 로딩 시에 스크린 리더 사용자가 페이지가 변경되었음을 알 수 있어야 합니다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gV8-3F-fRl">
+                                        <rect key="frame" x="20" y="380" width="374" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="5hu-Ai-eX6"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gV8-3F-fRl" firstAttribute="top" secondItem="TlH-yn-byB" secondAttribute="bottom" constant="20" id="0ow-vF-4AY"/>
+                                    <constraint firstItem="rtc-Bg-MjP" firstAttribute="top" secondItem="7SJ-9j-66p" secondAttribute="top" constant="100" id="Ce4-3R-s9x"/>
+                                    <constraint firstItem="TlH-yn-byB" firstAttribute="centerX" secondItem="7SJ-9j-66p" secondAttribute="centerX" id="Qir-0V-pGt"/>
+                                    <constraint firstItem="gV8-3F-fRl" firstAttribute="trailing" secondItem="7SJ-9j-66p" secondAttribute="trailing" constant="-20" id="W5y-gm-GpM"/>
+                                    <constraint firstItem="rtc-Bg-MjP" firstAttribute="centerX" secondItem="7SJ-9j-66p" secondAttribute="centerX" id="cTV-Wi-pt8"/>
+                                    <constraint firstItem="TlH-yn-byB" firstAttribute="top" secondItem="rtc-Bg-MjP" secondAttribute="bottom" constant="200" id="kkU-tr-cPD"/>
+                                    <constraint firstItem="gV8-3F-fRl" firstAttribute="leading" secondItem="7SJ-9j-66p" secondAttribute="leading" constant="20" id="zuF-oL-kWK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YPG-FV-hut"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7SJ-9j-66p" firstAttribute="leading" secondItem="YPG-FV-hut" secondAttribute="leading" id="LX8-im-E3U"/>
+                            <constraint firstItem="7SJ-9j-66p" firstAttribute="bottom" secondItem="YPG-FV-hut" secondAttribute="bottom" id="TJW-gW-Dth"/>
+                            <constraint firstItem="7SJ-9j-66p" firstAttribute="trailing" secondItem="YPG-FV-hut" secondAttribute="trailing" id="ayg-Mb-FRO"/>
+                            <constraint firstItem="7SJ-9j-66p" firstAttribute="top" secondItem="YPG-FV-hut" secondAttribute="top" id="xxX-2Q-gF6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IyT-HW-qUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

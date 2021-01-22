@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vertical Scroll Demo2 View Controller-->
+        <scene sceneID="CYt-zv-AfY">
+            <objects>
+                <viewController storyboardIdentifier="verticalScrollDemo2" id="YgS-wu-Tbx" customClass="VerticalScrollDemo2ViewController" customModule="IosAccessibilityDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iQW-9v-fXE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEV-d6-hNr" userLabel="Page Container">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTK-ne-08V" userLabel="Top Bar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
+                                <subviews>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="go_back_unpressed_small" translatesAutoresizingMaskIntoConstraints="NO" id="0Uo-dj-kdU" userLabel="Back Button">
+                                        <rect key="frame" x="20" y="-25" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="66c-RT-ksg"/>
+                                            <constraint firstAttribute="height" constant="50" id="EJN-YN-b5n"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="접근성이 적용되지 않은 경우" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avX-hY-QGa" userLabel="Screen Title">
+                                        <rect key="frame" x="112" y="-10.5" width="190" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="avX-hY-QGa" firstAttribute="centerY" secondItem="xTK-ne-08V" secondAttribute="centerY" id="74m-Gq-aIh"/>
+                                    <constraint firstAttribute="height" id="OZD-Ec-Qpm"/>
+                                    <constraint firstItem="0Uo-dj-kdU" firstAttribute="centerY" secondItem="xTK-ne-08V" secondAttribute="centerY" id="Pn7-l1-eed"/>
+                                    <constraint firstItem="avX-hY-QGa" firstAttribute="centerX" secondItem="xTK-ne-08V" secondAttribute="centerX" id="qmF-Uv-Mcu"/>
+                                    <constraint firstItem="0Uo-dj-kdU" firstAttribute="leading" secondItem="xTK-ne-08V" secondAttribute="leading" constant="20" id="za1-iA-bz3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X3v-Um-o3m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xTK-ne-08V" firstAttribute="top" secondItem="X3v-Um-o3m" secondAttribute="top" id="MkA-dd-0fF"/>
+                            <constraint firstItem="xTK-ne-08V" firstAttribute="leading" secondItem="X3v-Um-o3m" secondAttribute="leading" id="TUS-50-lLv"/>
+                            <constraint firstItem="lEV-d6-hNr" firstAttribute="leading" secondItem="X3v-Um-o3m" secondAttribute="leading" id="Vwe-pQ-Sp8"/>
+                            <constraint firstItem="lEV-d6-hNr" firstAttribute="top" secondItem="xTK-ne-08V" secondAttribute="bottom" id="dTi-Pe-u1r"/>
+                            <constraint firstItem="lEV-d6-hNr" firstAttribute="bottom" secondItem="X3v-Um-o3m" secondAttribute="bottom" id="e7H-vU-FFC"/>
+                            <constraint firstItem="xTK-ne-08V" firstAttribute="trailing" secondItem="X3v-Um-o3m" secondAttribute="trailing" id="mzj-4Z-jc7"/>
+                            <constraint firstItem="lEV-d6-hNr" firstAttribute="trailing" secondItem="X3v-Um-o3m" secondAttribute="trailing" id="tG2-Ix-fFQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="0Uo-dj-kdU" id="lPK-0O-URo"/>
+                        <outlet property="pageContainer" destination="lEV-d6-hNr" id="UkX-sH-PAq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Og-dC-xhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="-118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="go_back_unpressed_small" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vertical Scroll Demo2 Main View Controller-->
+        <scene sceneID="GhI-eZ-jrt">
+            <objects>
+                <viewController storyboardIdentifier="verticalScrollDemo2Main" id="g1g-NW-IjH" customClass="VerticalScrollDemo2MainViewController" customModule="IosAccessibilityDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="224-Pc-Iid">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duq-UL-cYd" userLabel="Top Bar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
+                                <subviews>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="go_back_unpressed_small" translatesAutoresizingMaskIntoConstraints="NO" id="9jG-Hn-G5H" userLabel="Back Button">
+                                        <rect key="frame" x="20" y="-25" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hZ1-Gh-eOo"/>
+                                            <constraint firstAttribute="width" constant="50" id="tVe-EU-8UK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가로스크롤 접근성 데모 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0p-BG-9aY" userLabel="Screen Title">
+                                        <rect key="frame" x="122" y="-10.5" width="170" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="e0p-BG-9aY" firstAttribute="centerY" secondItem="Duq-UL-cYd" secondAttribute="centerY" id="8Gw-3g-4Nf"/>
+                                    <constraint firstItem="9jG-Hn-G5H" firstAttribute="leading" secondItem="Duq-UL-cYd" secondAttribute="leading" constant="20" id="bdX-Qo-cEb"/>
+                                    <constraint firstItem="e0p-BG-9aY" firstAttribute="centerX" secondItem="Duq-UL-cYd" secondAttribute="centerX" id="x1O-fn-lLc"/>
+                                    <constraint firstAttribute="height" id="yZr-Xf-Ppl"/>
+                                    <constraint firstItem="9jG-Hn-G5H" firstAttribute="centerY" secondItem="Duq-UL-cYd" secondAttribute="centerY" id="yuc-pN-8e3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZt-DQ-80A">
+                                <rect key="frame" x="0.0" y="17" width="414" height="862"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRs-qh-t4b">
+                                        <rect key="frame" x="123" y="100" width="168" height="30"/>
+                                        <state key="normal" title="접근성이 적용되지 않은 경우"/>
+                                        <connections>
+                                            <action selector="launchVerticalScrollDemo2WithoutAccessibility:" destination="g1g-NW-IjH" eventType="touchUpInside" id="gZJ-qz-wwN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyQ-J8-w6X">
+                                        <rect key="frame" x="144.5" y="330" width="125" height="30"/>
+                                        <state key="normal" title="접근성이 적용된 경우"/>
+                                        <connections>
+                                            <action selector="launchVerticalScrollDemo2WithAccessibility:" destination="g1g-NW-IjH" eventType="touchUpInside" id="H8a-f6-eIU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="lRs-qh-t4b" firstAttribute="top" secondItem="HZt-DQ-80A" secondAttribute="top" constant="100" id="1Bs-oY-pCX"/>
+                                    <constraint firstItem="UyQ-J8-w6X" firstAttribute="top" secondItem="lRs-qh-t4b" secondAttribute="bottom" constant="200" id="1u7-BU-t03"/>
+                                    <constraint firstItem="UyQ-J8-w6X" firstAttribute="centerX" secondItem="HZt-DQ-80A" secondAttribute="centerX" id="2e8-qZ-x7e"/>
+                                    <constraint firstItem="lRs-qh-t4b" firstAttribute="centerX" secondItem="HZt-DQ-80A" secondAttribute="centerX" id="qj2-OW-c3k"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mkg-Jk-Hk1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HZt-DQ-80A" firstAttribute="bottom" secondItem="mkg-Jk-Hk1" secondAttribute="bottom" constant="17" id="A9B-Kk-w0r"/>
+                            <constraint firstItem="Duq-UL-cYd" firstAttribute="leading" secondItem="mkg-Jk-Hk1" secondAttribute="leading" id="DTe-nt-vTg"/>
+                            <constraint firstItem="HZt-DQ-80A" firstAttribute="trailing" secondItem="mkg-Jk-Hk1" secondAttribute="trailing" id="Spt-E1-CJH"/>
+                            <constraint firstItem="HZt-DQ-80A" firstAttribute="top" secondItem="Duq-UL-cYd" secondAttribute="bottom" constant="-27" id="TBV-Ah-bFC"/>
+                            <constraint firstItem="Duq-UL-cYd" firstAttribute="top" secondItem="mkg-Jk-Hk1" secondAttribute="top" id="cDp-c2-SeC"/>
+                            <constraint firstItem="Duq-UL-cYd" firstAttribute="trailing" secondItem="mkg-Jk-Hk1" secondAttribute="trailing" id="dkV-3a-Rbb"/>
+                            <constraint firstItem="HZt-DQ-80A" firstAttribute="leading" secondItem="mkg-Jk-Hk1" secondAttribute="leading" id="oNI-VI-rv8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="9jG-Hn-G5H" id="m8N-10-akd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Laj-xp-rAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-268" y="53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="go_back_unpressed_small" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
