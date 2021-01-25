@@ -168,6 +168,37 @@ class FilterDemoViewController: UIViewController {
     @IBOutlet weak var number29: UILabel!
     @IBOutlet weak var number30: UILabel!
     
+    
+    @IBOutlet weak var alphabetA: UILabel!
+    @IBOutlet weak var alphabetB: UILabel!
+    @IBOutlet weak var alphabetC: UILabel!
+    @IBOutlet weak var alphabetD: UILabel!
+    @IBOutlet weak var alphabetE: UILabel!
+    @IBOutlet weak var alphabetF: UILabel!
+    @IBOutlet weak var alphabetG: UILabel!
+    @IBOutlet weak var alphabetH: UILabel!
+    @IBOutlet weak var alphabetI: UILabel!
+    @IBOutlet weak var alphabetJ: UILabel!
+    @IBOutlet weak var alphabetK: UILabel!
+    @IBOutlet weak var alphabetL: UILabel!
+    @IBOutlet weak var alphabetM: UILabel!
+    @IBOutlet weak var alphabetN: UILabel!
+    @IBOutlet weak var alphabetO: UILabel!
+    @IBOutlet weak var alphabetP: UILabel!
+    @IBOutlet weak var alphabetQ: UILabel!
+    @IBOutlet weak var alphabetR: UILabel!
+    @IBOutlet weak var alphabetS: UILabel!
+    @IBOutlet weak var alphabetT: UILabel!
+    @IBOutlet weak var alphabetU: UILabel!
+    @IBOutlet weak var alphabetV: UILabel!
+    @IBOutlet weak var alphabetW: UILabel!
+    @IBOutlet weak var alphabetX: UILabel!
+    @IBOutlet weak var alphabetY: UILabel!
+    @IBOutlet weak var alphabetZ: UILabel!
+   
+    
+    
+    
     private func applyFilter() {
         number1.textColor = (number1Check.tag == SELECTED) ? .blue : .black
         number1.accessibilityTraits = (number1Check.tag == SELECTED) ?  .selected : .none
@@ -258,6 +289,57 @@ class FilterDemoViewController: UIViewController {
         
         number30.textColor = (number3Check.tag == SELECTED) ? .blue : .black
         number30.accessibilityTraits = (number3Check.tag == SELECTED) ?  .selected : .none
+        
+        
+        
+        alphabetA.textColor = (alphabet1Radio.tag == SELECTED) ? .blue : .black
+        alphabetA.accessibilityTraits = (alphabet1Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetB.textColor = (alphabet1Radio.tag == SELECTED) ? .blue : .black
+        alphabetB.accessibilityTraits = (alphabet1Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetC.textColor = (alphabet1Radio.tag == SELECTED) ? .blue : .black
+        alphabetC.accessibilityTraits = (alphabet1Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetD.textColor = (alphabet1Radio.tag == SELECTED) ? .blue : .black
+        alphabetD.accessibilityTraits = (alphabet1Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetE.textColor = (alphabet1Radio.tag == SELECTED) ? .blue : .black
+        alphabetE.accessibilityTraits = (alphabet1Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetF.textColor = (alphabet2Radio.tag == SELECTED) ? .blue : .black
+        alphabetF.accessibilityTraits = (alphabet2Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetG.textColor = (alphabet2Radio.tag == SELECTED) ? .blue : .black
+        alphabetG.accessibilityTraits = (alphabet2Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetH.textColor = (alphabet2Radio.tag == SELECTED) ? .blue : .black
+        alphabetH.accessibilityTraits = (alphabet2Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetI.textColor = (alphabet2Radio.tag == SELECTED) ? .blue : .black
+        alphabetI.accessibilityTraits = (alphabet2Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetJ.textColor = (alphabet2Radio.tag == SELECTED) ? .blue : .black
+        alphabetJ.accessibilityTraits = (alphabet2Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetK.textColor = (alphabet3Radio.tag == SELECTED) ? .blue : .black
+        alphabetK.accessibilityTraits = (alphabet3Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetL.textColor = (alphabet3Radio.tag == SELECTED) ? .blue : .black
+        alphabetL.accessibilityTraits = (alphabet3Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetM.textColor = (alphabet3Radio.tag == SELECTED) ? .blue : .black
+        alphabetM.accessibilityTraits = (alphabet3Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetN.textColor = (alphabet3Radio.tag == SELECTED) ? .blue : .black
+        alphabetN.accessibilityTraits = (alphabet3Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetO.textColor = (alphabet3Radio.tag == SELECTED) ? .blue : .black
+        alphabetO.accessibilityTraits = (alphabet3Radio.tag == SELECTED) ?  .selected : .none
+        
+        alphabetP.textColor = (alphabet3Radio.tag == SELECTED) ? .blue : .black
+        alphabetP.accessibilityTraits = (alphabet3Radio.tag == SELECTED) ?  .selected : .none
+        
     }
     
     
