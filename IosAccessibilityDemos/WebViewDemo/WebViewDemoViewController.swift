@@ -145,7 +145,10 @@ class WebViewDemoViewController: UIViewController, WKUIDelegate, WKNavigationDel
                                self.progressView.isHidden = isFinished
             })
             if (Constants.isAccessibilityApplied) {
-            UIAccessibility.post(notification: .screenChanged, argument: "페이지 로드됨")
+            //UIAccessibility.post(notification: .screenChanged, argument: "페이지 로드됨")
+                
+                UIAccessibility.post(notification: .screenChanged, argument: webView.title)
+           
             }
 
             

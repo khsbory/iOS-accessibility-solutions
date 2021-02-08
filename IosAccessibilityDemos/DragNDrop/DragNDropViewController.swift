@@ -91,7 +91,7 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
         
         deleteButton.isAccessibilityElement = false
         
-//        
+//
 //        if (Constants.isAccessibilityApplied) {
 //            deleteButton.isAccessibilityElement = false
 //        }
@@ -135,7 +135,6 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
                 )
             ]
         }
-      
         
     }
     
