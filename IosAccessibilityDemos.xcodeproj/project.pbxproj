@@ -35,8 +35,20 @@
 		B33219182579E76600B6B6C6 /* AccessibilityFocusDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33219172579E76600B6B6C6 /* AccessibilityFocusDemoViewController.swift */; };
 		B33255EB25B672DA00F6C8DD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33255EA25B672DA00F6C8DD /* Constants.swift */; };
 		B33C9A27257DF418009E8811 /* AccessibilityFocusDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33C9A26257DF418009E8811 /* AccessibilityFocusDemo.storyboard */; };
+		B33CBC6225CCE821000449EC /* DragNDropPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33CBC6125CCE821000449EC /* DragNDropPopup.storyboard */; };
+		B33CBC6725CCE838000449EC /* DragNDropPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33CBC6625CCE838000449EC /* DragNDropPopupController.swift */; };
+		B33CBC7225CCF017000449EC /* DragNDropPopupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33CBC7125CCF017000449EC /* DragNDropPopupDelegate.swift */; };
+		B33D357125CB915B0079A10C /* Sunset Island.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B33D357025CB915A0079A10C /* Sunset Island.mp3 */; };
+		B33D357A25CBD7210079A10C /* DragNDropMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D357925CBD7210079A10C /* DragNDropMainViewController.swift */; };
+		B33D357F25CBD72F0079A10C /* DragNDropMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33D357E25CBD72F0079A10C /* DragNDropMain.storyboard */; };
+		B33D358725CBD7EE0079A10C /* DragNDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D358625CBD7EE0079A10C /* DragNDropViewController.swift */; };
+		B33D358C25CBD7FC0079A10C /* DragNDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33D358B25CBD7FC0079A10C /* DragNDrop.storyboard */; };
 		B3403810258076570087BE07 /* FruitTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340380F258076570087BE07 /* FruitTableCell.swift */; };
 		B3403815258076A90087BE07 /* VegetableTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3403814258076A90087BE07 /* VegetableTableCell.swift */; };
+		B3440F7C25CA43190031E6E3 /* MusicPlayerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3440F7B25CA43190031E6E3 /* MusicPlayerMainViewController.swift */; };
+		B3440F8425CA432A0031E6E3 /* MusicPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3440F8325CA432A0031E6E3 /* MusicPlayerMain.storyboard */; };
+		B3440F8925CA44760031E6E3 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3440F8825CA44760031E6E3 /* MusicPlayerViewController.swift */; };
+		B3440F8E25CA44820031E6E3 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3440F8D25CA44820031E6E3 /* MusicPlayer.storyboard */; };
 		B34FF6DB256614F50026AF2E /* WebViewDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B34FF6DA256614F50026AF2E /* WebViewDemo.storyboard */; };
 		B35BF8772563B9CA006858DF /* WebViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35BF8762563B9CA006858DF /* WebViewDemoViewController.swift */; };
 		B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37E840325650D4900DCD7DF /* WebViewDemoMainViewController.swift */; };
@@ -110,8 +122,20 @@
 		B33219172579E76600B6B6C6 /* AccessibilityFocusDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityFocusDemoViewController.swift; sourceTree = "<group>"; };
 		B33255EA25B672DA00F6C8DD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B33C9A26257DF418009E8811 /* AccessibilityFocusDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccessibilityFocusDemo.storyboard; sourceTree = "<group>"; };
+		B33CBC6125CCE821000449EC /* DragNDropPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DragNDropPopup.storyboard; sourceTree = "<group>"; };
+		B33CBC6625CCE838000449EC /* DragNDropPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragNDropPopupController.swift; sourceTree = "<group>"; };
+		B33CBC7125CCF017000449EC /* DragNDropPopupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragNDropPopupDelegate.swift; sourceTree = "<group>"; };
+		B33D357025CB915A0079A10C /* Sunset Island.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sunset Island.mp3"; sourceTree = "<group>"; };
+		B33D357925CBD7210079A10C /* DragNDropMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragNDropMainViewController.swift; sourceTree = "<group>"; };
+		B33D357E25CBD72F0079A10C /* DragNDropMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DragNDropMain.storyboard; sourceTree = "<group>"; };
+		B33D358625CBD7EE0079A10C /* DragNDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragNDropViewController.swift; sourceTree = "<group>"; };
+		B33D358B25CBD7FC0079A10C /* DragNDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DragNDrop.storyboard; sourceTree = "<group>"; };
 		B340380F258076570087BE07 /* FruitTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableCell.swift; sourceTree = "<group>"; };
 		B3403814258076A90087BE07 /* VegetableTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableTableCell.swift; sourceTree = "<group>"; };
+		B3440F7B25CA43190031E6E3 /* MusicPlayerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerMainViewController.swift; sourceTree = "<group>"; };
+		B3440F8325CA432A0031E6E3 /* MusicPlayerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayerMain.storyboard; sourceTree = "<group>"; };
+		B3440F8825CA44760031E6E3 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		B3440F8D25CA44820031E6E3 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
 		B34FF6DA256614F50026AF2E /* WebViewDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewDemo.storyboard; sourceTree = "<group>"; };
 		B35BF8762563B9CA006858DF /* WebViewDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoViewController.swift; sourceTree = "<group>"; };
 		B37E840325650D4900DCD7DF /* WebViewDemoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoMainViewController.swift; sourceTree = "<group>"; };
@@ -183,12 +207,15 @@
 		1F8501E92518816700B99181 /* IosAccessibilityDemos */ = {
 			isa = PBXGroup;
 			children = (
+				B33D357825CBD7010079A10C /* DragNDrop */,
+				B3440F7A25CA42D00031E6E3 /* MusicPlayer */,
 				B32673D525B5707E0067C5CE /* FilterDemo */,
 				B326737325B5329C0067C5CE /* VerticalScrollDemo2 */,
 				B33219092579E5AE00B6B6C6 /* AccessibilityFocusDemo */,
 				B35BF8752563B993006858DF /* WebViewDemo */,
 				1F85021C25188B4C00B99181 /* VerticalScrollDemo */,
 				1F8501EA2518816700B99181 /* AppDelegate.swift */,
+				B33D357025CB915A0079A10C /* Sunset Island.mp3 */,
 				1F8501EC2518816700B99181 /* SceneDelegate.swift */,
 				B3403814258076A90087BE07 /* VegetableTableCell.swift */,
 				B340380F258076570087BE07 /* FruitTableCell.swift */,
@@ -278,6 +305,31 @@
 				B33C9A26257DF418009E8811 /* AccessibilityFocusDemo.storyboard */,
 			);
 			path = AccessibilityFocusDemo;
+			sourceTree = "<group>";
+		};
+		B33D357825CBD7010079A10C /* DragNDrop */ = {
+			isa = PBXGroup;
+			children = (
+				B33D357925CBD7210079A10C /* DragNDropMainViewController.swift */,
+				B33D357E25CBD72F0079A10C /* DragNDropMain.storyboard */,
+				B33D358625CBD7EE0079A10C /* DragNDropViewController.swift */,
+				B33D358B25CBD7FC0079A10C /* DragNDrop.storyboard */,
+				B33CBC6125CCE821000449EC /* DragNDropPopup.storyboard */,
+				B33CBC6625CCE838000449EC /* DragNDropPopupController.swift */,
+				B33CBC7125CCF017000449EC /* DragNDropPopupDelegate.swift */,
+			);
+			path = DragNDrop;
+			sourceTree = "<group>";
+		};
+		B3440F7A25CA42D00031E6E3 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B3440F7B25CA43190031E6E3 /* MusicPlayerMainViewController.swift */,
+				B3440F8325CA432A0031E6E3 /* MusicPlayerMain.storyboard */,
+				B3440F8825CA44760031E6E3 /* MusicPlayerViewController.swift */,
+				B3440F8D25CA44820031E6E3 /* MusicPlayer.storyboard */,
+			);
+			path = MusicPlayer;
 			sourceTree = "<group>";
 		};
 		B35BF8752563B993006858DF /* WebViewDemo */ = {
@@ -405,6 +457,8 @@
 				B32673C225B569D20067C5CE /* VerticalScrollDemo2Main.storyboard in Resources */,
 				1F8501F42518816800B99181 /* Assets.xcassets in Resources */,
 				1F8502212518A37B00B99181 /* VerticalScrollDemo.storyboard in Resources */,
+				B33D357125CB915B0079A10C /* Sunset Island.mp3 in Resources */,
+				B33D358C25CBD7FC0079A10C /* DragNDrop.storyboard in Resources */,
 				B34FF6DB256614F50026AF2E /* WebViewDemo.storyboard in Resources */,
 				B326738C25B534390067C5CE /* FirstPage.storyboard in Resources */,
 				B33C9A27257DF418009E8811 /* AccessibilityFocusDemo.storyboard in Resources */,
@@ -412,9 +466,13 @@
 				B326738725B5342C0067C5CE /* VerticalScrollDemo2.storyboard in Resources */,
 				B326739125B5344A0067C5CE /* SecondPage.storyboard in Resources */,
 				1F8501F22518816700B99181 /* Main.storyboard in Resources */,
+				B33D357F25CBD72F0079A10C /* DragNDropMain.storyboard in Resources */,
+				B3440F8E25CA44820031E6E3 /* MusicPlayer.storyboard in Resources */,
+				B3440F8425CA432A0031E6E3 /* MusicPlayerMain.storyboard in Resources */,
 				B37E840925650D6000DCD7DF /* WebViewDemoMain.storyboard in Resources */,
 				B32673E625B571C70067C5CE /* FilterDemo.storyboard in Resources */,
 				B33219132579E6A500B6B6C6 /* AccessibilityFocusDemoMain.storyboard in Resources */,
+				B33CBC6225CCE821000449EC /* DragNDropPopup.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,14 +603,19 @@
 				1F8501EF2518816700B99181 /* ViewController.swift in Sources */,
 				B326738225B533E80067C5CE /* SecondPageViewController.swift in Sources */,
 				B3403810258076570087BE07 /* FruitTableCell.swift in Sources */,
+				B33D357A25CBD7210079A10C /* DragNDropMainViewController.swift in Sources */,
 				1F8501EB2518816700B99181 /* AppDelegate.swift in Sources */,
+				B3440F7C25CA43190031E6E3 /* MusicPlayerMainViewController.swift in Sources */,
 				1F85021B2518852B00B99181 /* TableCell.swift in Sources */,
 				B32673D725B570CD0067C5CE /* FilterDemoMainViewController.swift in Sources */,
+				B3440F8925CA44760031E6E3 /* MusicPlayerViewController.swift in Sources */,
 				B35BF8772563B9CA006858DF /* WebViewDemoViewController.swift in Sources */,
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
 				1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */,
 				B326737525B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift in Sources */,
+				B33D358725CBD7EE0079A10C /* DragNDropViewController.swift in Sources */,
+				B33CBC6725CCE838000449EC /* DragNDropPopupController.swift in Sources */,
 				B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */,
 				B3403815258076A90087BE07 /* VegetableTableCell.swift in Sources */,
 				B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */,
@@ -560,6 +623,7 @@
 				B32673BD25B569A20067C5CE /* VerticalScrollDemo2MainViewController.swift in Sources */,
 				B332190B2579E60900B6B6C6 /* AccessibilityFocusDemoMainViewController.swift in Sources */,
 				B33255EB25B672DA00F6C8DD /* Constants.swift in Sources */,
+				B33CBC7225CCF017000449EC /* DragNDropPopupDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

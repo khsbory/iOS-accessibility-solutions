@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music Player Main View Controller-->
+        <scene sceneID="lNj-kn-DzQ">
+            <objects>
+                <viewController storyboardIdentifier="music_player_main" id="23P-Q9-2oW" customClass="MusicPlayerMainViewController" customModule="IosAccessibilityDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ua-OT-Pl9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVQ-xI-da9" userLabel="Screen">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfF-sd-JyA">
+                                        <rect key="frame" x="144.5" y="430" width="125" height="30"/>
+                                        <state key="normal" title="접근성이 적용된 경우"/>
+                                        <connections>
+                                            <action selector="launchDemoWithAccessibility:" destination="23P-Q9-2oW" eventType="touchUpInside" id="TPV-Zh-H6q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="req-69-3f3">
+                                        <rect key="frame" x="123" y="200" width="168" height="30"/>
+                                        <state key="normal" title="접근성이 적용되지 않은 경우"/>
+                                        <connections>
+                                            <action selector="launchDemoWithoutAccessibility:" destination="23P-Q9-2oW" eventType="touchUpInside" id="0PR-FU-8rk"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PQA-4p-Ifo">
+                                        <rect key="frame" x="30" y="510" width="354" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="DkE-CE-pLL"/>
+                                        </constraints>
+                                        <string key="text">UISlider 가 아닌 커스텀으로 재생시간조절을 구현하는 경우에는 반드시 보이스오버 사용자를 위한 접근성 구현이 필요합니다.
+</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pfF-sd-JyA" firstAttribute="top" secondItem="req-69-3f3" secondAttribute="bottom" constant="200" id="638-qR-1cP"/>
+                                    <constraint firstItem="req-69-3f3" firstAttribute="top" secondItem="sVQ-xI-da9" secondAttribute="top" constant="200" id="FeE-vj-SPS"/>
+                                    <constraint firstItem="PQA-4p-Ifo" firstAttribute="trailing" secondItem="sVQ-xI-da9" secondAttribute="trailing" constant="-30" id="fIN-F5-tOg"/>
+                                    <constraint firstItem="PQA-4p-Ifo" firstAttribute="top" secondItem="pfF-sd-JyA" secondAttribute="bottom" constant="50" id="hBJ-eg-bCx"/>
+                                    <constraint firstItem="req-69-3f3" firstAttribute="centerX" secondItem="sVQ-xI-da9" secondAttribute="centerX" id="rGp-Dp-dqF"/>
+                                    <constraint firstItem="pfF-sd-JyA" firstAttribute="centerX" secondItem="sVQ-xI-da9" secondAttribute="centerX" id="y2S-q8-rST"/>
+                                    <constraint firstItem="PQA-4p-Ifo" firstAttribute="leading" secondItem="sVQ-xI-da9" secondAttribute="leading" constant="30" id="zxC-6f-nBb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="otT-EY-E9b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sVQ-xI-da9" firstAttribute="top" secondItem="otT-EY-E9b" secondAttribute="top" id="9aY-Jv-kfW"/>
+                            <constraint firstItem="otT-EY-E9b" firstAttribute="trailing" secondItem="sVQ-xI-da9" secondAttribute="trailing" id="Sm1-Ad-BfL"/>
+                            <constraint firstItem="sVQ-xI-da9" firstAttribute="leading" secondItem="otT-EY-E9b" secondAttribute="leading" id="TAl-cc-PfM"/>
+                            <constraint firstItem="otT-EY-E9b" firstAttribute="bottom" secondItem="sVQ-xI-da9" secondAttribute="bottom" id="gq3-tS-pG9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXw-w8-bj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

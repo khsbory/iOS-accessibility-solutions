@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music Player View Controller-->
+        <scene sceneID="IhJ-Ue-iIE">
+            <objects>
+                <viewController storyboardIdentifier="music_player" id="sPq-3P-KLz" customClass="MusicPlayerViewController" customModule="IosAccessibilityDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6xO-qm-aiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beQ-nD-64r" userLabel="Screen">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jd1-Ov-EXh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="614"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fq1-1v-pa4">
+                                        <rect key="frame" x="0.0" y="614" width="414" height="4"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74z-Bo-DOq" userLabel="Remaining Time">
+                                        <rect key="frame" x="30" y="641" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-Ow-atS" userLabel="Elapsed Time" customClass="AccessibileUILabel" customModule="IosAccessibilityDemos" customModuleProvider="target">
+                                        <rect key="frame" x="342" y="641" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="sIh-1q-bDA" userLabel="Play Button">
+                                        <rect key="frame" x="172" y="688" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="BaC-gB-5Lj"/>
+                                            <constraint firstAttribute="height" constant="70" id="quA-rO-dzd"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="paf-Ow-atS" firstAttribute="trailing" secondItem="Jd1-Ov-EXh" secondAttribute="trailing" constant="-30" id="37Q-5g-gK5"/>
+                                    <constraint firstItem="74z-Bo-DOq" firstAttribute="leading" secondItem="beQ-nD-64r" secondAttribute="leading" constant="30" id="5WH-kb-9ks"/>
+                                    <constraint firstItem="Fq1-1v-pa4" firstAttribute="bottom" secondItem="beQ-nD-64r" secondAttribute="bottom" constant="-200" id="6pk-AT-Km2"/>
+                                    <constraint firstItem="74z-Bo-DOq" firstAttribute="top" secondItem="Fq1-1v-pa4" secondAttribute="bottom" constant="23" id="B8J-Wq-Ooj"/>
+                                    <constraint firstItem="Fq1-1v-pa4" firstAttribute="trailing" secondItem="beQ-nD-64r" secondAttribute="trailing" id="BGy-uf-rPT"/>
+                                    <constraint firstItem="Jd1-Ov-EXh" firstAttribute="top" secondItem="beQ-nD-64r" secondAttribute="top" id="Fpq-Vu-r9R"/>
+                                    <constraint firstItem="Jd1-Ov-EXh" firstAttribute="trailing" secondItem="beQ-nD-64r" secondAttribute="trailing" id="MLi-5E-lyf"/>
+                                    <constraint firstItem="Fq1-1v-pa4" firstAttribute="leading" secondItem="beQ-nD-64r" secondAttribute="leading" id="ToZ-Mo-JGB"/>
+                                    <constraint firstItem="Jd1-Ov-EXh" firstAttribute="leading" secondItem="beQ-nD-64r" secondAttribute="leading" id="VB2-cd-gwm"/>
+                                    <constraint firstItem="sIh-1q-bDA" firstAttribute="top" secondItem="Fq1-1v-pa4" secondAttribute="bottom" constant="70" id="ZKg-mg-htr"/>
+                                    <constraint firstItem="Jd1-Ov-EXh" firstAttribute="bottom" secondItem="Fq1-1v-pa4" secondAttribute="top" id="lCX-3A-NI5"/>
+                                    <constraint firstItem="sIh-1q-bDA" firstAttribute="centerX" secondItem="beQ-nD-64r" secondAttribute="centerX" id="tHB-pB-afQ"/>
+                                    <constraint firstItem="paf-Ow-atS" firstAttribute="top" secondItem="Fq1-1v-pa4" secondAttribute="bottom" constant="23" id="v8F-kx-jXB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M8Q-5J-eZb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="beQ-nD-64r" firstAttribute="top" secondItem="M8Q-5J-eZb" secondAttribute="top" id="4T8-Lz-oMM"/>
+                            <constraint firstItem="M8Q-5J-eZb" firstAttribute="trailing" secondItem="beQ-nD-64r" secondAttribute="trailing" id="7NE-Cz-cLe"/>
+                            <constraint firstItem="beQ-nD-64r" firstAttribute="leading" secondItem="M8Q-5J-eZb" secondAttribute="leading" id="Jqb-e9-1Tc"/>
+                            <constraint firstItem="M8Q-5J-eZb" firstAttribute="bottom" secondItem="beQ-nD-64r" secondAttribute="bottom" id="m67-mW-L4r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="elapsedTime" destination="paf-Ow-atS" id="53o-bL-8Ue"/>
+                        <outlet property="playButton" destination="sIh-1q-bDA" id="crc-s6-Zvg"/>
+                        <outlet property="progressView" destination="Fq1-1v-pa4" id="348-sg-FPH"/>
+                        <outlet property="remainingTime" destination="74z-Bo-DOq" id="uqy-7f-X7g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sE1-FS-oJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239" y="64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
