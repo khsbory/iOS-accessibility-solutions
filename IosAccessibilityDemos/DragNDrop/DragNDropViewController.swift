@@ -142,12 +142,27 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
     @objc func deleteItem() -> Bool {
         let view = getAccessibilityFocusedItem()
         print("plusapps deleteItem")
-   
+        let index = getIndexInStackView(subview: view!)
+        
+        var newIndex = index - 1
+        if (newIndex < 0) {
+            newIndex = 0
+        }
+       
         //stackView?.removeArrangedSubview를 사용하면 삭제가 제대로 안되는 듯
         //removeFromSuperview를 사용해야 하는 듯
         view!.removeFromSuperview()
         //stackView?.removeArrangedSubview(view!)
         annouceAccessibility(message: String(view!.tag) + "삭제됨")
+        
+        
+        
+        //이전 view에 초점을 맞춤
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            UIAccessibility.post(notification: .layoutChanged, argument: self.stackView?.arrangedSubviews[newIndex])
+         
+        })
+       
         return true
     
     }
@@ -170,7 +185,7 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
         stackView?.insertArrangedSubview(view!, at: newIndex)
         
         annouceAccessibility(message: String(stackView!.arrangedSubviews[index].tag) + "위로 이동됨")
-    
+       
         return true
      
     }
@@ -200,8 +215,7 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
 
         annouceAccessibility(message: String(stackView!.arrangedSubviews[index].tag) + "아래로 이동됨")
 
-        
-
+      
         return true
 
 
