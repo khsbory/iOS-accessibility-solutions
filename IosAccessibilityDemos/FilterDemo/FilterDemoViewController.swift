@@ -443,7 +443,7 @@ class FilterDemoViewController: UIViewController {
                 UIAccessibility.post(notification: .announcement  , argument: "알파벳 필터 접음")
             })
             
-            alphabetSection.accessibilityLabel = "알파벳 펼치기"
+            alphabetSection.accessibilityLabel = "알파벳 접기"
             
         }
         
