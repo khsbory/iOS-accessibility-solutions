@@ -82,9 +82,10 @@ class FilterDemoViewController: UIViewController {
             topBar.accessibilityElementsHidden = true
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                UIAccessibility.post(notification: .announcement , argument: "필터 열림")
+                
                 //필터를 열었을 때 숫자 섹션에 접근성 포커스를 맞춤
                 UIAccessibility.post(notification: .screenChanged, argument: self.closeSideMenuButton)
+				UIAccessibility.post(notification: .announcement , argument: "필터 열림")
             })
             
             
@@ -128,8 +129,9 @@ class FilterDemoViewController: UIViewController {
             topBar.accessibilityElementsHidden = false
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                UIAccessibility.post(notification: .announcement , argument: "필터 닫힘")
+                
                 UIAccessibility.post(notification: .screenChanged, argument: self.filterButton)
+				UIAccessibility.post(notification: .announcement , argument: "필터 닫힘")
             })
             
             
@@ -374,7 +376,7 @@ class FilterDemoViewController: UIViewController {
         numberSectionlabel.accessibilityTraits = .button
         //숫자 섹션을 펼침
         numberSection.tag = SELECTED
-        numberSectionlabel.accessibilityHint = "접기"
+        numberSectionlabel.accessibilityLabel = "숫자 접기"
     }
     
     
@@ -394,7 +396,7 @@ class FilterDemoViewController: UIViewController {
         alphabetSectionlabel.accessibilityTraits = .button
         //알파벳 섹션을 접음
         alphabetSection.tag = UNSELECTED
-        alphabetSectionlabel.accessibilityHint = "펼치기"
+        alphabetSectionlabel.accessibilityLabel = "알파벳 펼치기"
     }
     
     
@@ -415,7 +417,7 @@ class FilterDemoViewController: UIViewController {
                 UIAccessibility.post(notification: .announcement , argument: "알파벳 필터 펼침")
             })
             
-            alphabetSection.accessibilityHint = "접기"
+            alphabetSection.accessibilityLabel = "알파벳 접기"
             
         }
         
@@ -441,7 +443,7 @@ class FilterDemoViewController: UIViewController {
                 UIAccessibility.post(notification: .announcement  , argument: "알파벳 필터 접음")
             })
             
-            alphabetSection.accessibilityHint = "펼치기"
+            alphabetSection.accessibilityLabel = "알파벳 펼치기"
             
         }
         
@@ -470,7 +472,7 @@ class FilterDemoViewController: UIViewController {
                 UIAccessibility.post(notification: .announcement  , argument: "숫자 필터 접음")
             })
             
-            numberSectionlabel.accessibilityHint = "펼치기"
+            numberSectionlabel.accessibilityLabel = "숫자 펼치기"
             
         }
         
@@ -500,7 +502,7 @@ class FilterDemoViewController: UIViewController {
                 UIAccessibility.post(notification: .announcement , argument: "숫자 필터 펼침")
             })
             
-            numberSectionlabel.accessibilityHint = "접기"
+            numberSectionlabel.accessibilityLabel = "숫자 접기"
             
         }
         number1Label.isHidden = false
