@@ -668,8 +668,11 @@ class FilterDemoViewController: UIViewController {
             
             if (Constants.isAccessibilityApplied) {
                 alphabet1Label.accessibilityTraits.insert(.selected)
+                alphabet1Label.accessibilityTraits.insert(.notEnabled)
                 alphabet2Label.accessibilityTraits.remove(.selected)
-                alphabet3Label.accessibilityTraits.remove(.selected)
+                alphabet2Label.accessibilityTraits.remove(.notEnabled)
+                                alphabet3Label.accessibilityTraits.remove(.selected)
+                alphabet3Label.accessibilityTraits.remove(.notEnabled)
             }
         }
         
@@ -690,9 +693,12 @@ class FilterDemoViewController: UIViewController {
             
             if (Constants.isAccessibilityApplied) {
                 alphabet2Label.accessibilityTraits.insert(.selected)
-                
+                alphabet2Label.accessibilityTraits.insert(.notEnabled)
+            
                 alphabet1Label.accessibilityTraits.remove(.selected)
+                alphabet1Label.accessibilityTraits.remove(.notEnabled)
                 alphabet3Label.accessibilityTraits.remove(.selected)
+                alphabet3Label.accessibilityTraits.remove(.notEnabled)
             }
             
         }
@@ -716,8 +722,11 @@ class FilterDemoViewController: UIViewController {
             
             if (Constants.isAccessibilityApplied) {
                 alphabet3Label.accessibilityTraits.insert(.selected)
+                alphabet3Label.accessibilityTraits.insert(.notEnabled)
                 alphabet1Label.accessibilityTraits.remove(.selected)
+                alphabet1Label.accessibilityTraits.remove(.notEnabled)
                 alphabet2Label.accessibilityTraits.remove(.selected)
+                alphabet2Label.accessibilityTraits.remove(.notEnabled)
             }
             
         }
