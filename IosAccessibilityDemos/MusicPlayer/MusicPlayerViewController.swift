@@ -53,9 +53,9 @@ class MusicPlayerViewController: UIViewController, AVAudioPlayerDelegate {
         
         if (Constants.isAccessibilityApplied) {
             remainingTime.accessibilityLabel = "남은 시간" + String(remainingTimeConvertResult.1) + "분" + String(remainingTimeConvertResult.2) + "초"
-            elapsedTime.accessibilityLabel = "경과 시간" + String(elapsedTimeConvertResult.1) + "분" + String(elapsedTimeConvertResult.2) + "초"
+            elapsedTime.accessibilityLabel = "경과 시간"
             
-            elapsedTime.accessibilityValue = String(elapsedTimeConvertResult.1) + "분" + String(elapsedTimeConvertResult.2) + "초"
+            elapsedTime.accessibilityValue = String(elapsedTimeConvertResult.1) + "분" + String(elapsedTimeConvertResult.2) + "초" + progressView
         }
     }
     
