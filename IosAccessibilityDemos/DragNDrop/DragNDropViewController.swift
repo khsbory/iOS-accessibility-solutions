@@ -185,8 +185,10 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
         stackView?.insertArrangedSubview(view!, at: newIndex)
         
         annouceAccessibility(message: String(stackView!.arrangedSubviews[index].tag) + "위로 이동됨")
-       DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             UIAccessibility.post(notification: .layoutChanged, argument: self.stackView?.arrangedSubviews[newIndex])
+         
+        })
         return true
      
     }
@@ -215,9 +217,10 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
         stackView?.insertArrangedSubview(view!, at: newIndex)
 
         annouceAccessibility(message: String(stackView!.arrangedSubviews[index].tag) + "아래로 이동됨")
-DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             UIAccessibility.post(notification: .layoutChanged, argument: self.stackView?.arrangedSubviews[newIndex])
-      
+         
+        })
         return true
 
 
