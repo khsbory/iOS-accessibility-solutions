@@ -57,19 +57,19 @@
 		276E4B5A33DA3BC3FDC6F69258347D7B /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests-frameworks.sh"; sourceTree = "<group>"; };
 		2971E1D64C3D267B79457EB82B1D0639 /* DLRadioButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton-dummy.m"; sourceTree = "<group>"; };
 		3087B3BC72B2971C786EB33D8516B71C /* Pods-IosAccessibilityDemos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IosAccessibilityDemos-Info.plist"; sourceTree = "<group>"; };
-		3E26BA03994713FBEB9C3406695782F1 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DLRadioButton.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E26BA03994713FBEB9C3406695782F1 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40730B3C3A36645335F66B3293EFF9F7 /* Pods-IosAccessibilityDemosTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IosAccessibilityDemosTests.modulemap"; sourceTree = "<group>"; };
 		4570AC68CAD26A4B210C89FFC759705E /* DLRadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = DLRadioButton/DLRadioButton.m; sourceTree = "<group>"; };
 		5B6853AB86321F311F1B26F8420F9FBB /* Pods-IosAccessibilityDemos-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IosAccessibilityDemos-frameworks.sh"; sourceTree = "<group>"; };
 		5BC88F19383AFDACC58942FA3D484E39 /* Pods-IosAccessibilityDemos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IosAccessibilityDemos.modulemap"; sourceTree = "<group>"; };
-		5CDDDFD097A5D10A35C26D5792532EA9 /* Pods_IosAccessibilityDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IosAccessibilityDemos.framework; path = "Pods-IosAccessibilityDemos.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		616856DE1AB65EE3C09A0319A0565CB9 /* Pods_IosAccessibilityDemosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IosAccessibilityDemosTests.framework; path = "Pods-IosAccessibilityDemosTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDDDFD097A5D10A35C26D5792532EA9 /* Pods_IosAccessibilityDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		616856DE1AB65EE3C09A0319A0565CB9 /* Pods_IosAccessibilityDemosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62464512EE189C26F7C781EFD97C6065 /* Pods-IosAccessibilityDemosTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IosAccessibilityDemosTests-Info.plist"; sourceTree = "<group>"; };
 		628B13222FE228E41E7264A01ACEB76A /* DLRadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = DLRadioButton/DLRadioButton.h; sourceTree = "<group>"; };
 		63F56AB022B9C48E274A2C06C5C1D5A0 /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests-dummy.m"; sourceTree = "<group>"; };
 		6483344D9899787382178BEE4FEE64F6 /* Pods-IosAccessibilityDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IosAccessibilityDemos.release.xcconfig"; sourceTree = "<group>"; };
 		66277072A9718E117DE3351FB84BE91B /* DLRadioButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DLRadioButton.modulemap; sourceTree = "<group>"; };
-		689184D90B8CC9135B56A52F5593D525 /* Pods_IosAccessibilityDemos_IosAccessibilityDemosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IosAccessibilityDemos_IosAccessibilityDemosUITests.framework; path = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689184D90B8CC9135B56A52F5593D525 /* Pods_IosAccessibilityDemos_IosAccessibilityDemosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemos_IosAccessibilityDemosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		79B20A4E2B33B2EA74A418D1E7146F61 /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		80B55099E7394459DF14ED9402711697 /* DLRadioButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.release.xcconfig; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		8F057763A4FEFE6EE151A643FCC2A0C9 /* Pods-IosAccessibilityDemosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IosAccessibilityDemosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9562AF633F29528D7E1FB1A8CA779745 /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.modulemap"; sourceTree = "<group>"; };
 		99C3535D7D1C218532EDD3B302F196E3 /* DLRadioButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DLRadioButton-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B1DEF6B59EC990E5A97BBEA77A114CC7 /* Pods-IosAccessibilityDemosTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IosAccessibilityDemosTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B39416F13CC9D89EE5857B1C0491636B /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests-Info.plist"; sourceTree = "<group>"; };
 		B82DEE252B98D6D1FC5656BDAF11EFDF /* Pods-IosAccessibilityDemosTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IosAccessibilityDemosTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -240,7 +240,6 @@
 				4570AC68CAD26A4B210C89FFC759705E /* DLRadioButton.m */,
 				EF77EDC3C54D8075EC398E1F0326144A /* Support Files */,
 			);
-			name = DLRadioButton;
 			path = DLRadioButton;
 			sourceTree = "<group>";
 		};
@@ -702,11 +701,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GPSC4H96AT;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -737,11 +738,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D9854DF2E466452721C847D655697B3 /* DLRadioButton.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GPSC4H96AT;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -771,11 +774,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80B55099E7394459DF14ED9402711697 /* DLRadioButton.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GPSC4H96AT;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -845,11 +850,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GPSC4H96AT;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

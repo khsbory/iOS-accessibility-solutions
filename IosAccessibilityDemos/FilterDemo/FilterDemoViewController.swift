@@ -413,9 +413,6 @@ class FilterDemoViewController: UIViewController {
     private func openAlphabetSection() {
         if (Constants.isAccessibilityApplied) {
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                UIAccessibility.post(notification: .announcement , argument: "알파벳 필터 펼침")
-            })
             
             alphabetSectionlabel.accessibilityLabel = "알파벳 접기"
             
@@ -439,9 +436,6 @@ class FilterDemoViewController: UIViewController {
     private func closeAlphabetSection() {
         if (Constants.isAccessibilityApplied) {
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                UIAccessibility.post(notification: .announcement  , argument: "알파벳 필터 접음")
-            })
             
             alphabetSectionlabel.accessibilityLabel = "알파벳 펼치기"
             
@@ -468,9 +462,6 @@ class FilterDemoViewController: UIViewController {
         
         if (Constants.isAccessibilityApplied) {
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                UIAccessibility.post(notification: .announcement  , argument: "숫자 필터 접음")
-            })
             
             numberSectionlabel.accessibilityLabel = "숫자 펼치기"
             
@@ -497,10 +488,6 @@ class FilterDemoViewController: UIViewController {
     private func openNumberSection() {
         if (Constants.isAccessibilityApplied) {
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                //.layoutChanged는 음성 안내를 안함
-                UIAccessibility.post(notification: .announcement , argument: "숫자 필터 펼침")
-            })
             
             numberSectionlabel.accessibilityLabel = "숫자 접기"
             

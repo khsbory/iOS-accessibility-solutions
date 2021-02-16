@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2S-BX-G3M">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18091"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rolling Banner Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="rolling_banner_view_controller" id="BYZ-38-t0r" customClass="RollingBannerMenuViewController" customModule="IosAccessibilityDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FF2-3H-qEB">
+                                <rect key="frame" x="67.5" y="226.5" width="240" height="214"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="롤링배너를 구현하는 경우 보이스 오버 사용자를 위하여 보이스 오버가 켜져있을때는 배너가 자동 롤링 되지않도록 구현해야 하며 배너를 수동으로 넘길수 있어야 합니다." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5b-zh-jkJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccx-Lt-4gU">
+                                        <rect key="frame" x="36" y="90" width="168" height="74"/>
+                                        <state key="normal" title="접근성이 적용되지 않은 예시"/>
+                                        <connections>
+                                            <action selector="actionNormal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HYR-By-cIy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzK-xB-Iyv">
+                                        <rect key="frame" x="57.5" y="184" width="125" height="30"/>
+                                        <state key="normal" title="접근성이 적용된 예시"/>
+                                        <connections>
+                                            <action selector="actionApply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRj-9w-Lxh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="f5b-zh-jkJ" secondAttribute="trailing" id="Gzz-Di-Tzq"/>
+                                    <constraint firstItem="f5b-zh-jkJ" firstAttribute="leading" secondItem="FF2-3H-qEB" secondAttribute="leading" id="TD0-Dg-bw3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FF2-3H-qEB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67.5" id="2YS-k2-RcG"/>
+                            <constraint firstItem="FF2-3H-qEB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="D13-pm-Rib"/>
+                            <constraint firstItem="FF2-3H-qEB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b0j-Vl-HT9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FF2-3H-qEB" secondAttribute="trailing" constant="67.5" id="lG1-8t-9VZ"/>
+                            <constraint firstItem="FF2-3H-qEB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="226.5" id="taw-ff-3kF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sVL-Mn-8vQ"/>
+                    <connections>
+                        <segue destination="2Df-Jg-rfh" kind="show" identifier="VoiceOver" id="lSy-tG-Zhs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="646"/>
+        </scene>
+        <!--Banner View Controller-->
+        <scene sceneID="t04-4g-aBT">
+            <objects>
+                <viewController id="2Df-Jg-rfh" customClass="BannerViewController" customModule="IosAccessibilityDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i89-O5-TOO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eoT-V1-P4s">
+                                <rect key="frame" x="0.0" y="80" width="375" height="292"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pof-ON-ZSE" customClass="MYScrollView" customModule="IosAccessibilityDemos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="252"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="252" id="rtb-4p-aTG"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F9d-Yx-f0h">
+                                        <rect key="frame" x="0.0" y="262" width="375" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1Q-mb-r9K">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                                <state key="normal" title="이전 배너"/>
+                                                <connections>
+                                                    <action selector="prev:" destination="2Df-Jg-rfh" eventType="touchUpInside" id="SyY-cv-1VL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQk-sg-FGC">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                                <state key="normal" title="다음배너"/>
+                                                <connections>
+                                                    <action selector="next:" destination="2Df-Jg-rfh" eventType="touchUpInside" id="Fny-NH-P9F"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="An0-yD-s0q"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eoT-V1-P4s" firstAttribute="trailing" secondItem="An0-yD-s0q" secondAttribute="trailing" id="9Gc-CT-9Ys"/>
+                            <constraint firstItem="eoT-V1-P4s" firstAttribute="leading" secondItem="An0-yD-s0q" secondAttribute="leading" id="kkK-fk-Ypm"/>
+                            <constraint firstItem="eoT-V1-P4s" firstAttribute="top" secondItem="An0-yD-s0q" secondAttribute="top" constant="80" id="mTU-hy-Tyd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CUK-up-pmH"/>
+                    <connections>
+                        <outlet property="btNext" destination="AQk-sg-FGC" id="tko-ca-NfQ"/>
+                        <outlet property="btPrev" destination="y1Q-mb-r9K" id="Dgb-0p-Qju"/>
+                        <outlet property="scrollView" destination="pof-ON-ZSE" id="4zn-eD-dM0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEm-qU-fwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="636"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yxo-IQ-1Zl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2S-BX-G3M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kv1-zW-Kbo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Sq-f0-iOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-513" y="647"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -18,6 +18,9 @@
 		1F85021B2518852B00B99181 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85021A2518852B00B99181 /* TableCell.swift */; };
 		1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85021D25188B6A00B99181 /* VerticalScrollDemoViewController.swift */; };
 		1F8502212518A37B00B99181 /* VerticalScrollDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8502232518A37B00B99181 /* VerticalScrollDemo.storyboard */; };
+		3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED8579525D948B0006C86F4 /* RollingBanner.storyboard */; };
+		3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */; };
+		3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */; };
 		B326737525B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326737425B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift */; };
 		B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326737C25B533D80067C5CE /* FirstPageViewController.swift */; };
 		B326738225B533E80067C5CE /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326738125B533E80067C5CE /* SecondPageViewController.swift */; };
@@ -100,6 +103,9 @@
 		1F8502282518A3CE00B99181 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1F85022A2518A3E800B99181 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		2309218DADF49B74989DDBF6 /* Pods_IosAccessibilityDemos_IosAccessibilityDemosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemos_IosAccessibilityDemosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED8579525D948B0006C86F4 /* RollingBanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RollingBanner.storyboard; sourceTree = "<group>"; };
+		3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBannerMenuViewController.swift; sourceTree = "<group>"; };
+		3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		62E9DDEA1F9B164E40F1C63E /* Pods_IosAccessibilityDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E94E82D9BE3E91625ABA2A3 /* Pods-IosAccessibilityDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos.release.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos.release.xcconfig"; sourceTree = "<group>"; };
 		A4DE4496BBD36CC80CFA2539 /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 		1F8501E92518816700B99181 /* IosAccessibilityDemos */ = {
 			isa = PBXGroup;
 			children = (
+				3ED8579425D946EA006C86F4 /* RollingBanner */,
 				B33D357825CBD7010079A10C /* DragNDrop */,
 				B3440F7A25CA42D00031E6E3 /* MusicPlayer */,
 				B32673D525B5707E0067C5CE /* FilterDemo */,
@@ -255,6 +262,16 @@
 				1F8502232518A37B00B99181 /* VerticalScrollDemo.storyboard */,
 			);
 			path = VerticalScrollDemo;
+			sourceTree = "<group>";
+		};
+		3ED8579425D946EA006C86F4 /* RollingBanner */ = {
+			isa = PBXGroup;
+			children = (
+				3ED8579525D948B0006C86F4 /* RollingBanner.storyboard */,
+				3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */,
+				3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */,
+			);
+			path = RollingBanner;
 			sourceTree = "<group>";
 		};
 		819ADE748981C41F935C37A0 /* Pods */ = {
@@ -468,6 +485,7 @@
 				1F8501F22518816700B99181 /* Main.storyboard in Resources */,
 				B33D357F25CBD72F0079A10C /* DragNDropMain.storyboard in Resources */,
 				B3440F8E25CA44820031E6E3 /* MusicPlayer.storyboard in Resources */,
+				3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */,
 				B3440F8425CA432A0031E6E3 /* MusicPlayerMain.storyboard in Resources */,
 				B37E840925650D6000DCD7DF /* WebViewDemoMain.storyboard in Resources */,
 				B32673E625B571C70067C5CE /* FilterDemo.storyboard in Resources */,
@@ -610,6 +628,7 @@
 				B32673D725B570CD0067C5CE /* FilterDemoMainViewController.swift in Sources */,
 				B3440F8925CA44760031E6E3 /* MusicPlayerViewController.swift in Sources */,
 				B35BF8772563B9CA006858DF /* WebViewDemoViewController.swift in Sources */,
+				3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */,
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
 				1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */,
@@ -618,6 +637,7 @@
 				B33CBC6725CCE838000449EC /* DragNDropPopupController.swift in Sources */,
 				B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */,
 				B3403815258076A90087BE07 /* VegetableTableCell.swift in Sources */,
+				3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */,
 				B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */,
 				B33219182579E76600B6B6C6 /* AccessibilityFocusDemoViewController.swift in Sources */,
 				B32673BD25B569A20067C5CE /* VerticalScrollDemo2MainViewController.swift in Sources */,
@@ -819,7 +839,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.plusapps.IosAccessibilityDemos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nvisions.IosAccessibilityDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -838,7 +858,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.plusapps.IosAccessibilityDemos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nvisions.IosAccessibilityDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
