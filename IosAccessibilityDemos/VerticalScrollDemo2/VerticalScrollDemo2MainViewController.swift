@@ -20,7 +20,7 @@ class VerticalScrollDemo2MainViewController: UIViewController {
     }
     
     private func setScreenTitle() {       
-        self.title = "가로스크롤 접근성 데모 2"
+        self.title = "페이지 전환 데모"
     }
    
     @IBAction func launchVerticalScrollDemo2WithoutAccessibility(_ sender: Any) {

@@ -24,7 +24,7 @@ class SecondPageViewController:  UIViewController , UITableViewDelegate, UITable
     private func sayScreenNameForAccessibility(screenName: String?) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
                               
-                             UIAccessibility.post(notification: .pageScrolled , argument: screenName)
+                             UIAccessibility.post(notification: .announcement, argument: screenName)
                           })
     }
     
