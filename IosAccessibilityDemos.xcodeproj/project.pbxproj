@@ -18,6 +18,15 @@
 		1F85021B2518852B00B99181 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85021A2518852B00B99181 /* TableCell.swift */; };
 		1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85021D25188B6A00B99181 /* VerticalScrollDemoViewController.swift */; };
 		1F8502212518A37B00B99181 /* VerticalScrollDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8502232518A37B00B99181 /* VerticalScrollDemo.storyboard */; };
+		3E11435225DCF1D700B6560F /* CarouselAccessibility.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E11435125DCF1D700B6560F /* CarouselAccessibility.storyboard */; };
+		3E11435625DCF2B600B6560F /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11435525DCF2B600B6560F /* Dog.swift */; };
+		3E11435A25DCF32E00B6560F /* DogStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11435925DCF32E00B6560F /* DogStatsView.swift */; };
+		3E11435C25DCF37500B6560F /* DogCarouselContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11435B25DCF37500B6560F /* DogCarouselContainerView.swift */; };
+		3E11435E25DD0F9C00B6560F /* DogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11435D25DD0F9C00B6560F /* DogCollectionViewCell.swift */; };
+		3E11436025DD0FBB00B6560F /* DogModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11435F25DD0FBB00B6560F /* DogModalView.swift */; };
+		3E11436225DD1F4D00B6560F /* CarouselAccessibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11436125DD1F4D00B6560F /* CarouselAccessibilityViewController.swift */; };
+		3E95E30725DCDA25000F625B /* CarouselAccessibilityMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E95E30625DCDA25000F625B /* CarouselAccessibilityMain.storyboard */; };
+		3E95E31825DCE35D000F625B /* CarouselAccessibilityMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E95E31725DCE35D000F625B /* CarouselAccessibilityMainViewController.swift */; };
 		3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED8579525D948B0006C86F4 /* RollingBanner.storyboard */; };
 		3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */; };
 		3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */; };
@@ -103,6 +112,15 @@
 		1F8502282518A3CE00B99181 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1F85022A2518A3E800B99181 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		2309218DADF49B74989DDBF6 /* Pods_IosAccessibilityDemos_IosAccessibilityDemosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemos_IosAccessibilityDemosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E11435125DCF1D700B6560F /* CarouselAccessibility.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarouselAccessibility.storyboard; sourceTree = "<group>"; };
+		3E11435525DCF2B600B6560F /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		3E11435925DCF32E00B6560F /* DogStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogStatsView.swift; sourceTree = "<group>"; };
+		3E11435B25DCF37500B6560F /* DogCarouselContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCarouselContainerView.swift; sourceTree = "<group>"; };
+		3E11435D25DD0F9C00B6560F /* DogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E11435F25DD0FBB00B6560F /* DogModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModalView.swift; sourceTree = "<group>"; };
+		3E11436125DD1F4D00B6560F /* CarouselAccessibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselAccessibilityViewController.swift; sourceTree = "<group>"; };
+		3E95E30625DCDA25000F625B /* CarouselAccessibilityMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarouselAccessibilityMain.storyboard; sourceTree = "<group>"; };
+		3E95E31725DCE35D000F625B /* CarouselAccessibilityMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselAccessibilityMainViewController.swift; sourceTree = "<group>"; };
 		3ED8579525D948B0006C86F4 /* RollingBanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RollingBanner.storyboard; sourceTree = "<group>"; };
 		3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBannerMenuViewController.swift; sourceTree = "<group>"; };
 		3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +231,7 @@
 		1F8501E92518816700B99181 /* IosAccessibilityDemos */ = {
 			isa = PBXGroup;
 			children = (
+				3E95E30525DCD945000F625B /* CarouselAccessibility */,
 				3ED8579425D946EA006C86F4 /* RollingBanner */,
 				B33D357825CBD7010079A10C /* DragNDrop */,
 				B3440F7A25CA42D00031E6E3 /* MusicPlayer */,
@@ -262,6 +281,22 @@
 				1F8502232518A37B00B99181 /* VerticalScrollDemo.storyboard */,
 			);
 			path = VerticalScrollDemo;
+			sourceTree = "<group>";
+		};
+		3E95E30525DCD945000F625B /* CarouselAccessibility */ = {
+			isa = PBXGroup;
+			children = (
+				3E95E30625DCDA25000F625B /* CarouselAccessibilityMain.storyboard */,
+				3E11435525DCF2B600B6560F /* Dog.swift */,
+				3E11435925DCF32E00B6560F /* DogStatsView.swift */,
+				3E11436125DD1F4D00B6560F /* CarouselAccessibilityViewController.swift */,
+				3E11435B25DCF37500B6560F /* DogCarouselContainerView.swift */,
+				3E11435D25DD0F9C00B6560F /* DogCollectionViewCell.swift */,
+				3E11435F25DD0FBB00B6560F /* DogModalView.swift */,
+				3E95E31725DCE35D000F625B /* CarouselAccessibilityMainViewController.swift */,
+				3E11435125DCF1D700B6560F /* CarouselAccessibility.storyboard */,
+			);
+			path = CarouselAccessibility;
 			sourceTree = "<group>";
 		};
 		3ED8579425D946EA006C86F4 /* RollingBanner */ = {
@@ -433,6 +468,7 @@
 				TargetAttributes = {
 					1F8501E62518816700B99181 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1240;
 					};
 					1F8501FC2518816800B99181 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -484,6 +520,8 @@
 				B326739125B5344A0067C5CE /* SecondPage.storyboard in Resources */,
 				1F8501F22518816700B99181 /* Main.storyboard in Resources */,
 				B33D357F25CBD72F0079A10C /* DragNDropMain.storyboard in Resources */,
+				3E11435225DCF1D700B6560F /* CarouselAccessibility.storyboard in Resources */,
+				3E95E30725DCDA25000F625B /* CarouselAccessibilityMain.storyboard in Resources */,
 				B3440F8E25CA44820031E6E3 /* MusicPlayer.storyboard in Resources */,
 				3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */,
 				B3440F8425CA432A0031E6E3 /* MusicPlayerMain.storyboard in Resources */,
@@ -620,6 +658,7 @@
 			files = (
 				1F8501EF2518816700B99181 /* ViewController.swift in Sources */,
 				B326738225B533E80067C5CE /* SecondPageViewController.swift in Sources */,
+				3E95E31825DCE35D000F625B /* CarouselAccessibilityMainViewController.swift in Sources */,
 				B3403810258076570087BE07 /* FruitTableCell.swift in Sources */,
 				B33D357A25CBD7210079A10C /* DragNDropMainViewController.swift in Sources */,
 				1F8501EB2518816700B99181 /* AppDelegate.swift in Sources */,
@@ -627,6 +666,7 @@
 				1F85021B2518852B00B99181 /* TableCell.swift in Sources */,
 				B32673D725B570CD0067C5CE /* FilterDemoMainViewController.swift in Sources */,
 				B3440F8925CA44760031E6E3 /* MusicPlayerViewController.swift in Sources */,
+				3E11435C25DCF37500B6560F /* DogCarouselContainerView.swift in Sources */,
 				B35BF8772563B9CA006858DF /* WebViewDemoViewController.swift in Sources */,
 				3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */,
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
@@ -636,9 +676,14 @@
 				B33D358725CBD7EE0079A10C /* DragNDropViewController.swift in Sources */,
 				B33CBC6725CCE838000449EC /* DragNDropPopupController.swift in Sources */,
 				B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */,
+				3E11435A25DCF32E00B6560F /* DogStatsView.swift in Sources */,
 				B3403815258076A90087BE07 /* VegetableTableCell.swift in Sources */,
+				3E11435E25DD0F9C00B6560F /* DogCollectionViewCell.swift in Sources */,
 				3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */,
+				3E11436225DD1F4D00B6560F /* CarouselAccessibilityViewController.swift in Sources */,
 				B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */,
+				3E11435625DCF2B600B6560F /* Dog.swift in Sources */,
+				3E11436025DD0FBB00B6560F /* DogModalView.swift in Sources */,
 				B33219182579E76600B6B6C6 /* AccessibilityFocusDemoViewController.swift in Sources */,
 				B32673BD25B569A20067C5CE /* VerticalScrollDemo2MainViewController.swift in Sources */,
 				B332190B2579E60900B6B6C6 /* AccessibilityFocusDemoMainViewController.swift in Sources */,
@@ -832,6 +877,7 @@
 			baseConfigurationReference = A9AEE454D9096C6A42EB44F0 /* Pods-IosAccessibilityDemos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GPSC4H96AT;
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
@@ -841,6 +887,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nvisions.IosAccessibilityDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -851,6 +898,7 @@
 			baseConfigurationReference = 8E94E82D9BE3E91625ABA2A3 /* Pods-IosAccessibilityDemos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GPSC4H96AT;
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;

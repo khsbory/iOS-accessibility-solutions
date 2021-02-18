@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18091"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Carousel Accessibility Main View Controller-->
+        <scene sceneID="oK4-tB-rOU">
+            <objects>
+                <viewController storyboardIdentifier="CarouselAccessibilityMain" id="7FG-M7-OgN" customClass="CarouselAccessibilityMainViewController" customModule="IosAccessibilityDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gjI-8C-PtI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bv-zk-cML" userLabel="Screen">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOM-fo-cYH">
+                                        <rect key="frame" x="144.5" y="430" width="125" height="30"/>
+                                        <state key="normal" title="접근성이 적용된 경우"/>
+                                        <connections>
+                                            <action selector="launchDemoWithAccessibility:" destination="7FG-M7-OgN" eventType="touchUpInside" id="8WG-3C-CNNH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yc-ER-4IQ">
+                                        <rect key="frame" x="123" y="200" width="168" height="30"/>
+                                        <state key="normal" title="접근성이 적용되지 않은 경우"/>
+                                        <connections>
+                                            <action selector="launchDemoWithoutAccessibility:" destination="7FG-M7-OgN" eventType="touchUpInside" id="8WG-3C-CNH"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="캐러셀 구현 시 접근성 구현이 필요합니다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hac-dJ-ygl">
+                                        <rect key="frame" x="30" y="510" width="354" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3e8-34-Lyn"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="HOM-fo-cYH" firstAttribute="centerX" secondItem="9bv-zk-cML" secondAttribute="centerX" id="2dR-ta-gWb"/>
+                                    <constraint firstItem="hac-dJ-ygl" firstAttribute="leading" secondItem="9bv-zk-cML" secondAttribute="leading" constant="30" id="65z-Ps-2KC"/>
+                                    <constraint firstItem="9Yc-ER-4IQ" firstAttribute="top" secondItem="9bv-zk-cML" secondAttribute="top" constant="200" id="8lL-dq-fIT"/>
+                                    <constraint firstItem="9Yc-ER-4IQ" firstAttribute="centerX" secondItem="9bv-zk-cML" secondAttribute="centerX" id="FXS-le-Ueh"/>
+                                    <constraint firstItem="hac-dJ-ygl" firstAttribute="top" secondItem="HOM-fo-cYH" secondAttribute="bottom" constant="50" id="Q5L-gl-iMF"/>
+                                    <constraint firstItem="hac-dJ-ygl" firstAttribute="trailing" secondItem="9bv-zk-cML" secondAttribute="trailing" constant="-30" id="fxm-EK-NsH"/>
+                                    <constraint firstItem="HOM-fo-cYH" firstAttribute="top" secondItem="9Yc-ER-4IQ" secondAttribute="bottom" constant="200" id="zG0-go-Ha1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r9F-uj-Lec"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r9F-uj-Lec" firstAttribute="trailing" secondItem="9bv-zk-cML" secondAttribute="trailing" id="6AQ-7y-jwp"/>
+                            <constraint firstItem="9bv-zk-cML" firstAttribute="leading" secondItem="r9F-uj-Lec" secondAttribute="leading" id="GeE-SZ-Gub"/>
+                            <constraint firstItem="9bv-zk-cML" firstAttribute="top" secondItem="r9F-uj-Lec" secondAttribute="top" id="LHX-hW-Hgp"/>
+                            <constraint firstItem="r9F-uj-Lec" firstAttribute="bottom" secondItem="9bv-zk-cML" secondAttribute="bottom" id="Wp0-2W-c6K"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9I-8K-sUk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
