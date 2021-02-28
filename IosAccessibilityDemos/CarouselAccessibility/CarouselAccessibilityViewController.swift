@@ -32,12 +32,17 @@ class CarouselAccessibilityViewController: UIViewController, UICollectionViewDat
     var currentlyFocusedDog: Dog? = nil {
         // Every time we update our Dog object, we need to relay that change to all the views that care.
         didSet {
+            
             if dogStatsView != nil {
                 dogStatsView!.dog = currentlyFocusedDog
             }
-            carouselContainerView.currentDog = currentlyFocusedDog
+            if (Constants.isAccessibilityApplied) {
+                        carouselContainerView.currentDog = currentlyFocusedDog
+            }
             shelterNameLabel.text = currentlyFocusedDog?.shelterName
-            shelterInfoView.accessibilityLabel = currentlyFocusedDog?.shelterName
+            if (Constants.isAccessibilityApplied) {
+                        shelterInfoView.accessibilityLabel = currentlyFocusedDog?.shelterName
+            }
         }
     }
     let cellIdentifier = "dog collection view cell"
@@ -48,7 +53,9 @@ class CarouselAccessibilityViewController: UIViewController, UICollectionViewDat
 
         if !dogs.isEmpty {
             currentlyFocusedDog = dogs.first
-            carouselContainerView.dogs = dogs
+            if (Constants.isAccessibilityApplied) {
+                        carouselContainerView.dogs = dogs
+            }
         }
         
         if (Constants.isAccessibilityApplied) {

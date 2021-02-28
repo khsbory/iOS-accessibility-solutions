@@ -306,7 +306,7 @@
         <scene sceneID="Mij-kF-Ztc">
             <objects>
                 <viewController storyboardIdentifier="DogModalViewController" id="QU4-pQ-YGI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="H1T-al-kax" customClass="DogModalView" customModule="ExceptionalAccessibility" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="H1T-al-kax" customClass="DogModalView" customModule="IosAccessibilityDemos" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

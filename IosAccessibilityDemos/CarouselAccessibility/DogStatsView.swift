@@ -69,6 +69,8 @@ class DogStatsView: UIView {
                 to find the information they're looking for, and because without grouping the labels,
                 the content labels lose the context of what they represent.
             */
+            if (Constants.isAccessibilityApplied) {
+           
             var elements = [UIAccessibilityElement]()
             let nameElement = UIAccessibilityElement(accessibilityContainer: self)
             nameElement.accessibilityLabel = "\(nameTitleLabel.text!), \(nameLabel.text!)"
@@ -97,7 +99,7 @@ class DogStatsView: UIView {
             elements.append(weightElement)
             
             _accessibilityElements = elements
-
+            }
             return _accessibilityElements
         }
     }

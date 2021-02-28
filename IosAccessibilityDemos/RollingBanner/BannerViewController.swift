@@ -85,10 +85,7 @@ class BannerViewController: UIViewController {
         self.scrollView.contentOffset = CGPoint(x: x, y: 0)
         
         sleep(1)
-        //UIAccessibility.post(notification: .screenChanged, argument: scrollView)
-        //annoucement 제외 요구
         UIAccessibility.post(notification: .announcement, argument: banners[self.count])
-        //sleep(1)
     }
     
     func setup() {
