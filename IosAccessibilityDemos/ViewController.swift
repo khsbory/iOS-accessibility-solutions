@@ -17,7 +17,7 @@ enum VoiceOverMode {
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var demoTitles:[String] =
-        ["웹뷰 데모", "접근성 포커스 데모", "페이지 전환 데모", "필터 데모", "뮤직플레이어", "드래그 & 드롭", "롤링배너", "캐러셀 접근성"]
+        ["웹뷰 데모", "접근성 포커스 데모", "페이지 전환 데모", "필터 데모", "뮤직플레이어", "드래그 & 드롭", "롤링배너", "캐러셀 접근성", "설정"]
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
@@ -74,6 +74,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             showScreenOnOtherStoryboard(storyboardName: "RollingBanner", viewControllerStoryboardId: "rolling_banner_view_controller")
         } else if (indexPath.row == 7) {
             showScreenOnOtherStoryboard(storyboardName: "CarouselAccessibilityMain", viewControllerStoryboardId: "CarouselAccessibilityMain")
+        } else if (indexPath.row == 8) {
+            showScreenOnOtherStoryboard(storyboardName: "SettingMain", viewControllerStoryboardId: "setting_main")
         }
         //return nil을 명시하면 다른화면에서 돌아왔을 때 선택됨이라고 음성안내하지 않음
         return nil
