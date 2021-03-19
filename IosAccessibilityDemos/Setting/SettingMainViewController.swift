@@ -42,8 +42,9 @@ class SettingMainViewController: UIViewController {
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: viewControllerStoryboardId)
         viewController.modalPresentationStyle = .fullScreen
-        //self.present(viewController, animated: true, completion: nil)
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.present(viewController, animated: true, completion: nil)
+        //상단에 뒤로가기와 화면 타이틀이 표시되
+        //self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     

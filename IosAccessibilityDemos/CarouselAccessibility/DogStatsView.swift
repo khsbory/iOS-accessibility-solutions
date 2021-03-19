@@ -75,7 +75,10 @@ class DogStatsView: UIView {
             let nameElement = UIAccessibilityElement(accessibilityContainer: self)
             nameElement.accessibilityLabel = "\(nameTitleLabel.text!), \(nameLabel.text!)"
 
-            /*
+            
+                
+                
+                /*
                 This tells VoiceOver where the object should be onscreen. As the user
                 touches around with their finger, we can determine if an element is below
                 their finger.
