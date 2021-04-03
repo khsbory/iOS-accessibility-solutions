@@ -131,7 +131,7 @@ class MusicPlayerViewController: UIViewController, AVAudioPlayerDelegate {
         playButton.image = UIImage(named: "play")
         
         if (Constants.isAccessibilityApplied) {
-            playButton.accessibilityLabel = "재생"
+            playButton.accessibilityLabel = "재생, sunset island"
         }
     }
     
