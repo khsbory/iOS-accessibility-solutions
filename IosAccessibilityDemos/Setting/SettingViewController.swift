@@ -189,7 +189,8 @@ class SettingViewController: UIViewController {
     
    
     override func accessibilityPerformEscape() -> Bool {
-        return Constants.isAccessibilityApplied
+        self.dismiss(animated: true, completion: nil)
+        return true
     }
     
     
