@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18091"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,20 +46,32 @@
                                             <constraint firstAttribute="height" constant="70" id="quA-rO-dzd"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56l-an-jjF">
+                                        <rect key="frame" x="30" y="708" width="42" height="30"/>
+                                        <state key="normal" title="10초앞"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdN-Jw-Itc">
+                                        <rect key="frame" x="342" y="708" width="42" height="30"/>
+                                        <state key="normal" title="10초뒤"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="paf-Ow-atS" firstAttribute="trailing" secondItem="Jd1-Ov-EXh" secondAttribute="trailing" constant="-30" id="37Q-5g-gK5"/>
+                                    <constraint firstItem="56l-an-jjF" firstAttribute="centerY" secondItem="sIh-1q-bDA" secondAttribute="centerY" id="4oM-Gd-ZPV"/>
                                     <constraint firstItem="74z-Bo-DOq" firstAttribute="leading" secondItem="beQ-nD-64r" secondAttribute="leading" constant="30" id="5WH-kb-9ks"/>
                                     <constraint firstItem="Fq1-1v-pa4" firstAttribute="bottom" secondItem="beQ-nD-64r" secondAttribute="bottom" constant="-200" id="6pk-AT-Km2"/>
                                     <constraint firstItem="74z-Bo-DOq" firstAttribute="top" secondItem="Fq1-1v-pa4" secondAttribute="bottom" constant="23" id="B8J-Wq-Ooj"/>
                                     <constraint firstItem="Fq1-1v-pa4" firstAttribute="trailing" secondItem="beQ-nD-64r" secondAttribute="trailing" id="BGy-uf-rPT"/>
+                                    <constraint firstItem="56l-an-jjF" firstAttribute="leading" secondItem="beQ-nD-64r" secondAttribute="leading" constant="30" id="Cqk-5m-oyG"/>
                                     <constraint firstItem="Jd1-Ov-EXh" firstAttribute="top" secondItem="beQ-nD-64r" secondAttribute="top" id="Fpq-Vu-r9R"/>
                                     <constraint firstItem="Jd1-Ov-EXh" firstAttribute="trailing" secondItem="beQ-nD-64r" secondAttribute="trailing" id="MLi-5E-lyf"/>
                                     <constraint firstItem="Fq1-1v-pa4" firstAttribute="leading" secondItem="beQ-nD-64r" secondAttribute="leading" id="ToZ-Mo-JGB"/>
                                     <constraint firstItem="Jd1-Ov-EXh" firstAttribute="leading" secondItem="beQ-nD-64r" secondAttribute="leading" id="VB2-cd-gwm"/>
                                     <constraint firstItem="sIh-1q-bDA" firstAttribute="top" secondItem="Fq1-1v-pa4" secondAttribute="bottom" constant="70" id="ZKg-mg-htr"/>
                                     <constraint firstItem="Jd1-Ov-EXh" firstAttribute="bottom" secondItem="Fq1-1v-pa4" secondAttribute="top" id="lCX-3A-NI5"/>
+                                    <constraint firstItem="OdN-Jw-Itc" firstAttribute="trailing" secondItem="beQ-nD-64r" secondAttribute="trailing" constant="-30" id="lSG-4v-EDz"/>
+                                    <constraint firstItem="OdN-Jw-Itc" firstAttribute="centerY" secondItem="sIh-1q-bDA" secondAttribute="centerY" id="sRA-q8-khr"/>
                                     <constraint firstItem="sIh-1q-bDA" firstAttribute="centerX" secondItem="beQ-nD-64r" secondAttribute="centerX" id="tHB-pB-afQ"/>
                                     <constraint firstItem="paf-Ow-atS" firstAttribute="top" secondItem="Fq1-1v-pa4" secondAttribute="bottom" constant="23" id="v8F-kx-jXB"/>
                                 </constraints>
@@ -75,7 +87,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backwardButton" destination="OdN-Jw-Itc" id="f3q-lG-ZrV"/>
                         <outlet property="elapsedTime" destination="paf-Ow-atS" id="53o-bL-8Ue"/>
+                        <outlet property="forwardButton" destination="56l-an-jjF" id="0rf-kG-hJ8"/>
                         <outlet property="playButton" destination="sIh-1q-bDA" id="crc-s6-Zvg"/>
                         <outlet property="progressView" destination="Fq1-1v-pa4" id="348-sg-FPH"/>
                         <outlet property="remainingTime" destination="74z-Bo-DOq" id="uqy-7f-X7g"/>

@@ -14,6 +14,9 @@ class MusicPlayerViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var progressView: UIProgressView!
     
+    @IBOutlet weak var forwardButton: UIButton!
+    @IBOutlet weak var backwardButton: UIButton!
+    
     @IBOutlet weak var playButton: UIImageView!
     
     @IBOutlet weak var remainingTime: UILabel!
@@ -31,8 +34,41 @@ class MusicPlayerViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         initAudioPlayer()
         initPlayButton()
+        initForwardBackwardButton()
         initAccessibility()
         
+    }
+    
+    private func initForwardBackwardButton() {
+        let forwardButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleForwardButtonClick(_:)))
+        forwardButtonTapGesture.numberOfTapsRequired = 1
+        forwardButtonTapGesture.numberOfTouchesRequired = 1
+        forwardButton.addGestureRecognizer(forwardButtonTapGesture)
+        forwardButton.isUserInteractionEnabled = true
+        
+        forwardButton.isAccessibilityElement = true
+        forwardButton.accessibilityTraits = .startsMediaSession
+        
+        let backwardButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleBackwardButtonClick(_:)))
+        backwardButtonTapGesture.numberOfTapsRequired = 1
+        backwardButtonTapGesture.numberOfTouchesRequired = 1
+        backwardButton.addGestureRecognizer(backwardButtonTapGesture)
+        backwardButton.isUserInteractionEnabled = true
+        
+        backwardButton.isAccessibilityElement = true
+        backwardButton.accessibilityTraits = .startsMediaSession
+    }
+    
+    @objc func handleForwardButtonClick(_ sender: UITapGestureRecognizer) {
+        if ((audioPlayer?.isPlaying) != nil) {
+            audioPlayer?.currentTime = (audioPlayer?.currentTime ?? 0) + 10
+        }
+    }
+    
+    @objc func handleBackwardButtonClick(_ sender: UITapGestureRecognizer) {
+        if ((audioPlayer?.isPlaying) != nil) {
+            audioPlayer?.currentTime = (audioPlayer?.currentTime ?? 0) - 10
+        }
     }
     
     @objc func handlePlayButtonClick(_ sender: UITapGestureRecognizer) {
