@@ -10,11 +10,13 @@ import UIKit
 
 class ScreenScrollViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var topBarHeight: NSLayoutConstraint!
     var datas:Array<String> = Array()
     
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var buttonHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         createTableData()
@@ -85,7 +87,9 @@ class ScreenScrollViewController: UIViewController, UITableViewDelegate, UITable
     
     
         if firstVisibleIndexPath!.row == 0 {
-            backButton.isHidden = false
+            //backButton.isHidden = false
+            //buttonHeightConstraint.constant = 30
+            topBarHeight.constant = 70
             
             if Constants.isAccessibilityApplied {
             backButton.isAccessibilityElement = false
@@ -93,7 +97,9 @@ class ScreenScrollViewController: UIViewController, UITableViewDelegate, UITable
             
             
         } else {
-            backButton.isHidden = true
+            //backButton.isHidden = true
+            //buttonHeightConstraint.constant = 0
+            topBarHeight.constant = 0
             
             if Constants.isAccessibilityApplied {
             backButton.isAccessibilityElement = true
