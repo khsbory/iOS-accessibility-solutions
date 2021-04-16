@@ -19,7 +19,7 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
     private var itemCount: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addButton.accessibilityTraits = [.startsMediaSession,.button]
         showPopup()
         initStackView()
     }

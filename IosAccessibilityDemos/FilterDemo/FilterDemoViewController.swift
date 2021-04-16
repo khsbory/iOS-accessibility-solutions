@@ -373,7 +373,7 @@ class FilterDemoViewController: UIViewController {
        
         numberSection.isUserInteractionEnabled = true
         numberSection.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onNumberSectionClicked)))
-        numberSectionlabel.accessibilityTraits = .button
+        numberSectionlabel.accessibilityTraits = [.header,.button]
         //숫자 섹션을 펼침
         numberSection.tag = SELECTED
         numberSectionlabel.accessibilityLabel = "숫자 접기"
@@ -393,7 +393,7 @@ class FilterDemoViewController: UIViewController {
     private func initAlphabetSection() {
         alphabetSection.isUserInteractionEnabled = true
         alphabetSection.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onAlphabetSectionClicked)))
-        alphabetSectionlabel.accessibilityTraits = .button
+        alphabetSectionlabel.accessibilityTraits = [.header,.button]
         //알파벳 섹션을 접음
         alphabetSection.tag = UNSELECTED
         alphabetSectionlabel.accessibilityLabel = "알파벳 펼치기"

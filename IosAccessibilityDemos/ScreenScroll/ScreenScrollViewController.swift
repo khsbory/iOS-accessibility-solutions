@@ -88,7 +88,7 @@ class ScreenScrollViewController: UIViewController, UITableViewDelegate, UITable
             backButton.isHidden = false
             
             if Constants.isAccessibilityApplied {
-            backButton.isAccessibilityElement = false
+            backButton.isAccessibilityElement = true
             }
             
             
@@ -96,7 +96,7 @@ class ScreenScrollViewController: UIViewController, UITableViewDelegate, UITable
             backButton.isHidden = true
             
             if Constants.isAccessibilityApplied {
-            backButton.isAccessibilityElement = true
+            backButton.isAccessibilityElement = false
             }
            
             

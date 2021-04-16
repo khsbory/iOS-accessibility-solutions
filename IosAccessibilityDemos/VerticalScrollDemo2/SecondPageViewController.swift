@@ -16,9 +16,6 @@ class SecondPageViewController:  UIViewController , UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         initTables()
-        if (Constants.isAccessibilityApplied) {
-        sayScreenNameForAccessibility(screenName: "채소화면")
-        }
     }
     
     private func sayScreenNameForAccessibility(screenName: String?) {
