@@ -16,9 +16,6 @@ class FirstPageViewController: UIViewController , UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         initTables() 
-        if (Constants.isAccessibilityApplied) {
-        sayScreenNameForAccessibility(screenName: "과일화면")
-        }
     }
     
     private func sayScreenNameForAccessibility(screenName: String?) {

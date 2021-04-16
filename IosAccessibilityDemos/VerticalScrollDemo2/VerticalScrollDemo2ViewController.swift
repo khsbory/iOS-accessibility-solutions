@@ -91,6 +91,10 @@ class VerticalScrollDemo2ViewController: UIViewController, UIPageViewControllerD
            return nil
         } else if (currentIdx == 1) {
             guard let vc = UIStoryboard(name: "FirstPage", bundle: nil).instantiateViewController(withIdentifier: "firstPage") as? FirstPageViewController else { return FirstPageViewController() }
+            if (Constants.isAccessibilityApplied) {
+            sayScreenNameForAccessibility(screenName: "과일화면")
+            }
+
             return vc
         }
         return nil
@@ -101,11 +105,22 @@ class VerticalScrollDemo2ViewController: UIViewController, UIPageViewControllerD
       
         if (currentIdx == 0) {
             guard let vc = UIStoryboard(name: "SecondPage", bundle: nil).instantiateViewController(withIdentifier: "secondPage") as? SecondPageViewController else { return SecondPageViewController() }
+            if (Constants.isAccessibilityApplied) {
+            sayScreenNameForAccessibility(screenName: "채소화면")
+            }
+
             return vc
         } else if (currentIdx == 1) {
            return nil
         }
         return nil
+    }
+    
+    private func sayScreenNameForAccessibility(screenName: String?) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                              
+                             UIAccessibility.post(notification: .announcement, argument: screenName)
+                          })
     }
     
     // 인디케이터 개수

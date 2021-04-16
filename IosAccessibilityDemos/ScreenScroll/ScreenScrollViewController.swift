@@ -92,7 +92,7 @@ class ScreenScrollViewController: UIViewController, UITableViewDelegate, UITable
             topBarHeight.constant = 70
             
             if Constants.isAccessibilityApplied {
-            backButton.isAccessibilityElement = false
+            backButton.isAccessibilityElement = true
             }
             
             
@@ -102,7 +102,7 @@ class ScreenScrollViewController: UIViewController, UITableViewDelegate, UITable
             topBarHeight.constant = 0
             
             if Constants.isAccessibilityApplied {
-            backButton.isAccessibilityElement = true
+            backButton.isAccessibilityElement = false
             }
            
             
