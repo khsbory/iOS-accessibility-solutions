@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18091"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="height" constant="1" id="jqG-Uv-o6F"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-3Y-8Ke" userLabel="notice settings">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-3Y-8Ke" userLabel="notice settings" customClass="AlarmSettingContainerView" customModule="IosAccessibilityDemos" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="316" width="414" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0w-0a-zaG" userLabel="Hamburger Store Label">
@@ -70,21 +70,23 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 메뉴 출시 알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMC-em-BP6" userLabel="new menu notice">
-                                        <rect key="frame" x="20" y="63" width="146" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 메뉴 출시 알림  새로운 메뉴가 나오면 알려드립니다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMC-em-BP6" userLabel="new menu notice">
+                                        <rect key="frame" x="20" y="63" width="234" height="80"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="4BR-q2-49D"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQr-G0-4nV" userLabel="New Menu Notice Switch">
-                                        <rect key="frame" x="345" y="63" width="51" height="31"/>
-                                        <accessibility key="accessibilityConfiguration" label="새로운 메뉴 출시 알림 "/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQr-G0-4nV" userLabel="New Menu Notice Switch">
+                                        <rect key="frame" x="345" y="63" width="51" height="80"/>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 메뉴가 나오면 알려드립니다 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZ3-gG-Lob" userLabel="new menu text">
-                                        <rect key="frame" x="20" y="99" width="183" height="16"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 메뉴가 나오면 알려드립니다 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZ3-gG-Lob" userLabel="new menu text">
+                                        <rect key="frame" x="20" y="148" width="183" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -103,6 +105,11 @@
                                     <constraint firstItem="rZ3-gG-Lob" firstAttribute="leading" secondItem="LMC-em-BP6" secondAttribute="leading" id="kNo-bh-7iT"/>
                                     <constraint firstItem="rZ3-gG-Lob" firstAttribute="top" secondItem="LMC-em-BP6" secondAttribute="bottom" constant="5" id="sal-hP-sBM"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="hamburgerStoreLabel" destination="w0w-0a-zaG" id="bPO-OB-ZqL"/>
+                                    <outlet property="newMenuNoticeLabel" destination="LMC-em-BP6" id="ssI-gG-ecM"/>
+                                    <outlet property="newMenuNoticeSwitch" destination="IQr-G0-4nV" id="O1i-aC-kh8"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ra-vc-d5I" userLabel="Hamburger Store Menu">
                                 <rect key="frame" x="0.0" y="115" width="414" height="200"/>
@@ -224,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgx-yz-0ux" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="117.39130434782609" y="117.85714285714285"/>
         </scene>
     </scenes>
     <resources>

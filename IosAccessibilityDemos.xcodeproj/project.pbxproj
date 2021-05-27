@@ -65,6 +65,7 @@
 		B3440F8425CA432A0031E6E3 /* MusicPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3440F8325CA432A0031E6E3 /* MusicPlayerMain.storyboard */; };
 		B3440F8925CA44760031E6E3 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3440F8825CA44760031E6E3 /* MusicPlayerViewController.swift */; };
 		B3440F8E25CA44820031E6E3 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3440F8D25CA44820031E6E3 /* MusicPlayer.storyboard */; };
+		B34C46A9265F835B00AA3EEE /* AlarmSettingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C46A8265F835B00AA3EEE /* AlarmSettingContainerView.swift */; };
 		B34FF6DB256614F50026AF2E /* WebViewDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B34FF6DA256614F50026AF2E /* WebViewDemo.storyboard */; };
 		B35BF8772563B9CA006858DF /* WebViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35BF8762563B9CA006858DF /* WebViewDemoViewController.swift */; };
 		B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37E840325650D4900DCD7DF /* WebViewDemoMainViewController.swift */; };
@@ -172,6 +173,7 @@
 		B3440F8325CA432A0031E6E3 /* MusicPlayerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayerMain.storyboard; sourceTree = "<group>"; };
 		B3440F8825CA44760031E6E3 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		B3440F8D25CA44820031E6E3 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
+		B34C46A8265F835B00AA3EEE /* AlarmSettingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingContainerView.swift; sourceTree = "<group>"; };
 		B34FF6DA256614F50026AF2E /* WebViewDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewDemo.storyboard; sourceTree = "<group>"; };
 		B35BF8762563B9CA006858DF /* WebViewDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoViewController.swift; sourceTree = "<group>"; };
 		B37E840325650D4900DCD7DF /* WebViewDemoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoMainViewController.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				B380938225FB3BC000244627 /* SettingMainViewController.swift */,
 				B380938725FB3BD900244627 /* SettingMain.storyboard */,
 				B380938C25FB3BEB00244627 /* Setting.storyboard */,
+				B34C46A8265F835B00AA3EEE /* AlarmSettingContainerView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */,
 				3E11436225DD1F4D00B6560F /* CarouselAccessibilityViewController.swift in Sources */,
 				B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */,
+				B34C46A9265F835B00AA3EEE /* AlarmSettingContainerView.swift in Sources */,
 				3E11435625DCF2B600B6560F /* Dog.swift in Sources */,
 				3E11436025DD0FBB00B6560F /* DogModalView.swift in Sources */,
 				B33219182579E76600B6B6C6 /* AccessibilityFocusDemoViewController.swift in Sources */,

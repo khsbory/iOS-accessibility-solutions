@@ -56,12 +56,9 @@ class SettingViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        
         initBackButton()
         initHamburgerStoreRadio()
         handleAccesibility()
-     
-        
     }
     
     private func handleAccesibility() {
@@ -71,9 +68,7 @@ class SettingViewController: UIViewController {
             line2.isAccessibilityElement = true
         } else {
             screenTitle.accessibilityTraits = .header
-            
-            
-            
+             
         }
     }
     
