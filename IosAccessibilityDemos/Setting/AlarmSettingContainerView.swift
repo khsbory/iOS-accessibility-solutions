@@ -50,7 +50,6 @@ class AlarmSettingContainerView: UIView {
             let hamburgerStoreLabelElement = UIAccessibilityElement(accessibilityContainer: self)
                 hamburgerStoreLabelElement.accessibilityLabel = "\(hamburgerStoreLabel.text!)"
                 
-                
                 /*
                 This tells VoiceOver where the object should be onscreen. As the user
                 touches around with their finger, we can determine if an element is below
@@ -58,16 +57,17 @@ class AlarmSettingContainerView: UIView {
             */
                 hamburgerStoreLabelElement.accessibilityFrameInContainerSpace = hamburgerStoreLabel.frame
             elements.append(hamburgerStoreLabelElement)
-            
+                
+                let newMenuNoticeSwitchElement = UIAccessibilityElement(accessibilityContainer: self)
+                    newMenuNoticeSwitchElement.accessibilityLabel = "새로운 메뉴 출시 알림"
+                    newMenuNoticeSwitchElement.accessibilityFrameInContainerSpace = newMenuNoticeSwitch.frame
+                elements.append(newMenuNoticeSwitchElement)
+                
             let newMenuNoticeLabelElement = UIAccessibilityElement(accessibilityContainer: self)
                 newMenuNoticeLabelElement.accessibilityLabel = NSLocalizedString("새로운 메뉴가 나오면 알려드립니다.", bundle: .main, comment: "")
                 newMenuNoticeLabelElement.accessibilityFrameInContainerSpace = newMenuNoticeLabel.frame
             elements.append(newMenuNoticeLabelElement)
             
-            let newMenuNoticeSwitchElement = UIAccessibilityElement(accessibilityContainer: self)
-                newMenuNoticeSwitchElement.accessibilityLabel = (newMenuNoticeSwitch.accessibilityLabel ?? "") + (newMenuNoticeSwitch.accessibilityValue ?? "")
-                newMenuNoticeSwitchElement.accessibilityFrameInContainerSpace = newMenuNoticeSwitch.frame
-            elements.append(newMenuNoticeSwitchElement)
             
        
             
