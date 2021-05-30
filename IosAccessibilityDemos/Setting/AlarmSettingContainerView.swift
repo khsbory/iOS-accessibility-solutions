@@ -76,6 +76,12 @@ class AlarmSettingContainerView: UIView {
             return _accessibilityElements
         }
     }
+    
+    
+    override func accessibilityActivate() -> Bool {
+        newMenuNoticeSwitch.isOn.toggle()
+        return true
+    }
 }
 
 
