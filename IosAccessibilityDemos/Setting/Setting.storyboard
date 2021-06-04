@@ -93,6 +93,9 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="9Ex-z8-dNS"/>
                                     <constraint firstItem="w0w-0a-zaG" firstAttribute="leading" secondItem="xUo-3Y-8Ke" secondAttribute="leading" constant="16" id="JAQ-nX-0Jf"/>
