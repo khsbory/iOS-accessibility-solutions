@@ -30,6 +30,10 @@
 		3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED8579525D948B0006C86F4 /* RollingBanner.storyboard */; };
 		3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */; };
 		3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */; };
+		A05D005E267311320066F44E /* SeparateFocusMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */; };
+		A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05D005C267311320066F44E /* SeparateFocus.storyboard */; };
+		A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005D267311320066F44E /* SeparateFocusViewController.swift */; };
+		A05D006B2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D006A2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift */; };
 		B326737525B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326737425B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift */; };
 		B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326737C25B533D80067C5CE /* FirstPageViewController.swift */; };
 		B326738225B533E80067C5CE /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326738125B533E80067C5CE /* SecondPageViewController.swift */; };
@@ -135,6 +139,10 @@
 		3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		62E9DDEA1F9B164E40F1C63E /* Pods_IosAccessibilityDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E94E82D9BE3E91625ABA2A3 /* Pods-IosAccessibilityDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos.release.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos.release.xcconfig"; sourceTree = "<group>"; };
+		A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparateFocusMainViewController.swift; sourceTree = "<group>"; };
+		A05D005C267311320066F44E /* SeparateFocus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeparateFocus.storyboard; sourceTree = "<group>"; };
+		A05D005D267311320066F44E /* SeparateFocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparateFocusViewController.swift; sourceTree = "<group>"; };
+		A05D006A2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparateFocusAccessibilityViewController.swift; sourceTree = "<group>"; };
 		A4DE4496BBD36CC80CFA2539 /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9AEE454D9096C6A42EB44F0 /* Pods-IosAccessibilityDemos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos.debug.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE5551BEEAA82755248ED8B /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.release.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +268,7 @@
 				B33219092579E5AE00B6B6C6 /* AccessibilityFocusDemo */,
 				B35BF8752563B993006858DF /* WebViewDemo */,
 				1F85021C25188B4C00B99181 /* VerticalScrollDemo */,
+				A05D005A267311320066F44E /* SeparateFocus */,
 				1F8501EA2518816700B99181 /* AppDelegate.swift */,
 				B33D357025CB915A0079A10C /* Sunset Island.mp3 */,
 				1F8501EC2518816700B99181 /* SceneDelegate.swift */,
@@ -340,6 +349,17 @@
 				123F3037B0DD15C00ED4E23C /* Pods-IosAccessibilityDemosTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A05D005A267311320066F44E /* SeparateFocus */ = {
+			isa = PBXGroup;
+			children = (
+				A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */,
+				A05D005C267311320066F44E /* SeparateFocus.storyboard */,
+				A05D005D267311320066F44E /* SeparateFocusViewController.swift */,
+				A05D006A2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift */,
+			);
+			path = SeparateFocus;
 			sourceTree = "<group>";
 		};
 		B326737325B5329C0067C5CE /* VerticalScrollDemo2 */ = {
@@ -557,6 +577,7 @@
 				B33D357125CB915B0079A10C /* Sunset Island.mp3 in Resources */,
 				B33D358C25CBD7FC0079A10C /* DragNDrop.storyboard in Resources */,
 				B34FF6DB256614F50026AF2E /* WebViewDemo.storyboard in Resources */,
+				A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */,
 				B326738C25B534390067C5CE /* FirstPage.storyboard in Resources */,
 				B33D67982628003400116E26 /* ScreenScroll.storyboard in Resources */,
 				B33C9A27257DF418009E8811 /* AccessibilityFocusDemo.storyboard in Resources */,
@@ -704,10 +725,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F8501EF2518816700B99181 /* ViewController.swift in Sources */,
+				A05D005E267311320066F44E /* SeparateFocusMainViewController.swift in Sources */,
 				B326738225B533E80067C5CE /* SecondPageViewController.swift in Sources */,
 				3E95E31825DCE35D000F625B /* CarouselAccessibilityMainViewController.swift in Sources */,
 				B3403810258076570087BE07 /* FruitTableCell.swift in Sources */,
 				B33D357A25CBD7210079A10C /* DragNDropMainViewController.swift in Sources */,
+				A05D006B2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift in Sources */,
 				1F8501EB2518816700B99181 /* AppDelegate.swift in Sources */,
 				B3440F7C25CA43190031E6E3 /* MusicPlayerMainViewController.swift in Sources */,
 				1F85021B2518852B00B99181 /* TableCell.swift in Sources */,
@@ -718,6 +741,7 @@
 				3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */,
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
+				A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */,
 				1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */,
 				B326737525B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift in Sources */,
 				B33D358725CBD7EE0079A10C /* DragNDropViewController.swift in Sources */,
@@ -931,7 +955,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BAZME32E6Z;
+				DEVELOPMENT_TEAM = 3T5QFYSPG5;
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -952,7 +976,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BAZME32E6Z;
+				DEVELOPMENT_TEAM = 3T5QFYSPG5;
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
