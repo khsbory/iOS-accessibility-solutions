@@ -12,7 +12,8 @@ class SeparateFocusAccessibilityViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var cleanLabel: UILabel!
+    @IBOutlet weak var cleanNameLabel: UILabel!
+    @IBOutlet weak var cleanEmailLabel: UILabel!
     @IBOutlet weak var confirmLabel: UILabel!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -24,7 +25,8 @@ class SeparateFocusAccessibilityViewController: UIViewController {
     
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var emailView: UIView!
-    @IBOutlet weak var cleanView: UIView!
+    @IBOutlet weak var cleanNameView: UIView!
+    @IBOutlet weak var cleanEmailView: UIView!
     @IBOutlet weak var confirmView: UIView!
     
     @IBAction func onConfirmButtonClicked(_ sender: UIButton) {
@@ -40,11 +42,13 @@ class SeparateFocusAccessibilityViewController: UIViewController {
     }
     
     @IBAction func onCleanNameButtonClicked(_ sender: UIButton) {
+        
         self.nameTextField.text = ""
         
     }
     
     @IBAction func onCleanEmailButtonClicked(_ sender: UIButton) {
+        
         self.emailTextField.text = ""
         
     }
@@ -79,14 +83,14 @@ class SeparateFocusAccessibilityViewController: UIViewController {
         // 컨테이터 뷰구조로 접근성을 적용시키는 방식
         self.disableAccessibility(superView: self.emailView)
         self.setContainerViewAccessibility(containerView: self.emailView, traitsView: self.emailTextField, label: self.emailLabel.text ?? "이메일주소")
-        
-        
+                
         self.disableAccessibility(superView: self.confirmView)
         self.setContainerViewAccessibility(containerView: self.confirmView, traitsView: self.confirmButton, label: self.confirmLabel.text ?? "확인")
-        
-        self.cleanLabel.isAccessibilityElement = false
-        self.setContainerViewAccessibility(containerView: self.cleanView, traitsView: self.confirmButton, label: self.cleanLabel.text ?? "삭제")
-        
+            
+        self.disableAccessibility(superView: self.cleanNameView)
+        self.setContainerViewAccessibility(containerView: self.cleanNameView, traitsView: self.cleanNameButton, label: "\(self.cleanNameButton.titleLabel?.text ?? "이름"),\(self.cleanNameLabel.text ?? "삭제")")
+        self.disableAccessibility(superView: self.cleanEmailView)
+        self.setContainerViewAccessibility(containerView: self.cleanEmailView, traitsView: self.cleanEmailButton, label: "\(self.cleanEmailButton.titleLabel?.text ?? "이메일주소"),\(self.cleanEmailLabel.text ?? "삭제")")
 
     }
     
@@ -110,6 +114,7 @@ class SeparateFocusAccessibilityViewController: UIViewController {
        
         // nameView에 element 설정
         self.nameView.accessibilityElements = [nameElement]
+    
     }
     
     // UIView와 UILabel의 element를 생성해주는 함수
@@ -118,14 +123,19 @@ class SeparateFocusAccessibilityViewController: UIViewController {
         element.accessibilityFrameInContainerSpace = view.frame.union(labelView.frame)
         element.accessibilityLabel = label ?? labelView.text
         element.accessibilityTraits = view.accessibilityTraits
+        element.accessibilityValue = view.accessibilityValue
+        element.accessibilityHint = view.accessibilityHint
+        element.accessibilityLanguage = view.accessibilityLanguage
         return element
     }
     
     // MARK: 컨테이터 뷰구조로 접근성을 적용시키는 함수
     private func setContainerViewAccessibility(containerView: UIView, traitsView: UIView, label: String) {
-        
         containerView.isAccessibilityElement = true
         containerView.accessibilityLabel = label
         containerView.accessibilityTraits = traitsView.accessibilityTraits
+        containerView.accessibilityValue = traitsView.accessibilityValue
+        containerView.accessibilityHint = traitsView.accessibilityHint
+        containerView.accessibilityLanguage = traitsView.accessibilityLanguage
     }
 }
