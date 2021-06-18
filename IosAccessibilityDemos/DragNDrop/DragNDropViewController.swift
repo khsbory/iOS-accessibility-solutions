@@ -17,12 +17,41 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
     @IBOutlet weak var addButton: UIButton!
     private var stackView: UIStackView?
     private var itemCount: Int = 0
+    private var myDic = Dictionary<Int, Bool>()
+    @IBOutlet weak var deleteSelectAllButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addButton.accessibilityTraits = [.startsMediaSession,.button]
         showPopup()
         initStackView()
+        initDeleteSelectAllButton()
+        
     }
+    
+    private func initDeleteSelectAllButton() {
+        
+        deleteSelectAllButton.isHidden = true
+        deleteSelectAllButton.isUserInteractionEnabled = true
+        deleteSelectAllButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(deleteAllSelect)))
+    }
+    
+    
+    @objc func deleteAllSelect() -> Bool {
+        myDic.removeAll()
+        
+        if (Constants.isAccessibilityApplied) {
+            annouceAccessibility(message: "선택 삭제되었습니다.")
+            
+        }
+   
+        return true
+    
+    }
+    
+    
+    
     
     private func showPopup() {
             let storyboard = UIStoryboard(name: "DragNDropPopup", bundle: nil)
@@ -65,25 +94,42 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
         
         stackView?.addArrangedSubview(item)
         
+        let selectButton = UIButton()
         let deleteButton = UIButton()
         let numberText = UILabel()
         let handleButton = UIImageView()
         //addSubview를 하고 anchor를 지정하지 않으면 강종되는 듯
+        item.addSubview(selectButton)
         item.addSubview(deleteButton)
         item.addSubview(numberText)
         item.addSubview(handleButton)
         
         //translatesAutoresizingMaskIntoConstraints = false를 지정해야 view가 표시되는 듯
+        selectButton.translatesAutoresizingMaskIntoConstraints = false
         deleteButton.translatesAutoresizingMaskIntoConstraints = false
         numberText.translatesAutoresizingMaskIntoConstraints = false
         handleButton.translatesAutoresizingMaskIntoConstraints = false
 
 
+        selectButton.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
+        selectButton.widthAnchor.constraint(equalToConstant: 50.0).isActive = true
+        selectButton.translatesAutoresizingMaskIntoConstraints = false
+        selectButton.leftAnchor.constraint(equalTo: item.leftAnchor, constant: 20).isActive = true
+        selectButton.centerYAnchor.constraint(equalTo: item.centerYAnchor).isActive = true
+        selectButton.setTitle("선택해제", for: .normal)
+        selectButton.backgroundColor = .blue
+        
+        
+        selectButton.isAccessibilityElement = false
+        
+        
+        
+        
     
         deleteButton.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
         deleteButton.widthAnchor.constraint(equalToConstant: 50.0).isActive = true
         deleteButton.translatesAutoresizingMaskIntoConstraints = false
-        deleteButton.leftAnchor.constraint(equalTo: item.leftAnchor, constant: 20).isActive = true
+        deleteButton.leftAnchor.constraint(equalTo: selectButton.rightAnchor, constant: 20).isActive = true
         deleteButton.centerYAnchor.constraint(equalTo: item.centerYAnchor).isActive = true
         deleteButton.setTitle("삭제", for: .normal)
         deleteButton.backgroundColor = .blue
@@ -102,6 +148,9 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
         numberText.centerYAnchor.constraint(equalTo: item.centerYAnchor).isActive = true
 
         numberText.text = String(itemCount)
+        
+        
+        
       
         handleButton.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
         handleButton.widthAnchor.constraint(equalToConstant: 50.0).isActive = true
@@ -115,9 +164,25 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
         if (Constants.isAccessibilityApplied) {
             annouceAccessibility(message: String(self.itemCount) + "추가됨")
         
+ 
+           // numberText.accessibilityTraits = .button
+            //numberText.isAccessibilityElement = true
+            //numberText.accessibilityLabel = "뒤로가기"
+            numberText.isUserInteractionEnabled = true
+            numberText.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleItem)))
+            
+            
+            
+            
             
             
             item.accessibilityCustomActions = [
+                
+                UIAccessibilityCustomAction(
+                        name: "선택해제",
+                        target: self,
+                        selector: #selector(toggleItem)
+                    ),
                 UIAccessibilityCustomAction(
                         name: "삭제",
                         target: self,
@@ -136,6 +201,43 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
             ]
         }
         
+    }
+    
+    @objc func toggleItem() -> Bool {
+        let view = getAccessibilityFocusedItem()
+        print("plusapps toggleItem")
+        let index = getIndexInStackView(subview: view!)
+        
+        let isSelected = myDic[index]
+        
+        if (isSelected == nil || isSelected == false) {
+            myDic[index] = true
+            annouceAccessibility(message: String(index + 1) + " 항목 선택됨")
+            
+        } else {
+            myDic[index] = false
+            annouceAccessibility(message: String(index + 1) + " 항목 선택해제됨")
+            
+        }
+        
+        var hasSelectedItem = false
+        
+        for value in myDic.values {
+            
+            if (value == true) {
+                hasSelectedItem = true
+                break
+            }
+            print("\(value)")
+             
+        }
+
+        deleteSelectAllButton.isHidden = !hasSelectedItem
+        
+        
+       
+        return true
+    
     }
     
     

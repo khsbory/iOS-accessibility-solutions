@@ -20,6 +20,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDS-7c-rdR" userLabel="Screen">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xI1-fJ-4Gx" userLabel="Delete Select All Button">
+                                        <rect key="frame" x="294" y="20" width="100" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="RCQ-TN-01G"/>
+                                            <constraint firstAttribute="height" constant="30" id="gIy-Ff-mR9"/>
+                                        </constraints>
+                                        <state key="normal" title="선택 삭제">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleAddButtonClick:" destination="1qA-dX-U40" eventType="touchUpInside" id="6RV-dq-ptD"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE6-HR-FdO">
                                         <rect key="frame" x="157" y="49" width="100" height="30"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -42,10 +56,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="TE6-HR-FdO" firstAttribute="centerX" secondItem="YDS-7c-rdR" secondAttribute="centerX" id="0vQ-lK-HMX"/>
+                                    <constraint firstItem="xI1-fJ-4Gx" firstAttribute="trailing" secondItem="YDS-7c-rdR" secondAttribute="trailing" constant="-20" id="886-rC-rL0"/>
                                     <constraint firstItem="TE6-HR-FdO" firstAttribute="top" secondItem="YDS-7c-rdR" secondAttribute="top" constant="49" id="Evo-2Q-Nsd"/>
                                     <constraint firstItem="I6a-eZ-hz3" firstAttribute="top" secondItem="TE6-HR-FdO" secondAttribute="bottom" constant="50" id="Mwa-YO-T2C"/>
                                     <constraint firstItem="I6a-eZ-hz3" firstAttribute="leading" secondItem="YDS-7c-rdR" secondAttribute="leading" id="Xup-UX-YIH"/>
                                     <constraint firstAttribute="bottom" secondItem="I6a-eZ-hz3" secondAttribute="bottom" id="jFg-z0-zf0"/>
+                                    <constraint firstItem="xI1-fJ-4Gx" firstAttribute="top" secondItem="YDS-7c-rdR" secondAttribute="top" constant="20" id="xmz-w4-cqX"/>
                                     <constraint firstItem="I6a-eZ-hz3" firstAttribute="trailing" secondItem="YDS-7c-rdR" secondAttribute="trailing" id="zo0-rF-iYY"/>
                                 </constraints>
                             </view>
@@ -62,6 +78,7 @@
                     <connections>
                         <outlet property="addButton" destination="TE6-HR-FdO" id="NM6-7S-NVl"/>
                         <outlet property="container" destination="I6a-eZ-hz3" id="t7k-de-88Y"/>
+                        <outlet property="deleteSelectAllButton" destination="xI1-fJ-4Gx" id="bXI-au-wjP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Kn-M3-3Qp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -75,6 +92,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
