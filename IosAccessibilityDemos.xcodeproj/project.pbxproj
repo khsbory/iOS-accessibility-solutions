@@ -30,6 +30,10 @@
 		3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED8579525D948B0006C86F4 /* RollingBanner.storyboard */; };
 		3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */; };
 		3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */; };
+		869C7B922681B7EB00CF5B97 /* NewDragNDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B912681B7EB00CF5B97 /* NewDragNDropViewController.swift */; };
+		869C7B942681B81B00CF5B97 /* NewDragNDropMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */; };
+		869C7B962681B83C00CF5B97 /* NewDragNDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */; };
+		869C7B982681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B972681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift */; };
 		A05D005E267311320066F44E /* SeparateFocusMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */; };
 		A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05D005C267311320066F44E /* SeparateFocus.storyboard */; };
 		A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005D267311320066F44E /* SeparateFocusViewController.swift */; };
@@ -138,6 +142,10 @@
 		3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBannerMenuViewController.swift; sourceTree = "<group>"; };
 		3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		62E9DDEA1F9B164E40F1C63E /* Pods_IosAccessibilityDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		869C7B912681B7EB00CF5B97 /* NewDragNDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropViewController.swift; sourceTree = "<group>"; };
+		869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropMainViewController.swift; sourceTree = "<group>"; };
+		869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewDragNDrop.storyboard; sourceTree = "<group>"; };
+		869C7B972681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropTableViewCell.swift; sourceTree = "<group>"; };
 		8E94E82D9BE3E91625ABA2A3 /* Pods-IosAccessibilityDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos.release.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos.release.xcconfig"; sourceTree = "<group>"; };
 		A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparateFocusMainViewController.swift; sourceTree = "<group>"; };
 		A05D005C267311320066F44E /* SeparateFocus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeparateFocus.storyboard; sourceTree = "<group>"; };
@@ -269,6 +277,7 @@
 				B35BF8752563B993006858DF /* WebViewDemo */,
 				1F85021C25188B4C00B99181 /* VerticalScrollDemo */,
 				A05D005A267311320066F44E /* SeparateFocus */,
+				869C7B902681B7B200CF5B97 /* NewDragNDrop */,
 				1F8501EA2518816700B99181 /* AppDelegate.swift */,
 				B33D357025CB915A0079A10C /* Sunset Island.mp3 */,
 				1F8501EC2518816700B99181 /* SceneDelegate.swift */,
@@ -349,6 +358,17 @@
 				123F3037B0DD15C00ED4E23C /* Pods-IosAccessibilityDemosTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		869C7B902681B7B200CF5B97 /* NewDragNDrop */ = {
+			isa = PBXGroup;
+			children = (
+				869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */,
+				869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */,
+				869C7B912681B7EB00CF5B97 /* NewDragNDropViewController.swift */,
+				869C7B972681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift */,
+			);
+			path = NewDragNDrop;
 			sourceTree = "<group>";
 		};
 		A05D005A267311320066F44E /* SeparateFocus */ = {
@@ -590,6 +610,7 @@
 				B33D679D2628004400116E26 /* ScreenScrollMain.storyboard in Resources */,
 				3E11435225DCF1D700B6560F /* CarouselAccessibility.storyboard in Resources */,
 				3E95E30725DCDA25000F625B /* CarouselAccessibilityMain.storyboard in Resources */,
+				869C7B962681B83C00CF5B97 /* NewDragNDrop.storyboard in Resources */,
 				B3440F8E25CA44820031E6E3 /* MusicPlayer.storyboard in Resources */,
 				3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */,
 				B3440F8425CA432A0031E6E3 /* MusicPlayerMain.storyboard in Resources */,
@@ -736,10 +757,12 @@
 				1F85021B2518852B00B99181 /* TableCell.swift in Sources */,
 				B32673D725B570CD0067C5CE /* FilterDemoMainViewController.swift in Sources */,
 				B3440F8925CA44760031E6E3 /* MusicPlayerViewController.swift in Sources */,
+				869C7B982681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift in Sources */,
 				3E11435C25DCF37500B6560F /* DogCarouselContainerView.swift in Sources */,
 				B35BF8772563B9CA006858DF /* WebViewDemoViewController.swift in Sources */,
 				3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */,
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
+				869C7B922681B7EB00CF5B97 /* NewDragNDropViewController.swift in Sources */,
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
 				A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */,
 				1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */,
@@ -758,6 +781,7 @@
 				B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */,
 				B34C46A9265F835B00AA3EEE /* AlarmSettingContainerView.swift in Sources */,
 				3E11435625DCF2B600B6560F /* Dog.swift in Sources */,
+				869C7B942681B81B00CF5B97 /* NewDragNDropMainViewController.swift in Sources */,
 				3E11436025DD0FBB00B6560F /* DogModalView.swift in Sources */,
 				B33219182579E76600B6B6C6 /* AccessibilityFocusDemoViewController.swift in Sources */,
 				B32673BD25B569A20067C5CE /* VerticalScrollDemo2MainViewController.swift in Sources */,
@@ -955,7 +979,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3T5QFYSPG5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -976,7 +1000,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3T5QFYSPG5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
