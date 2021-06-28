@@ -120,6 +120,10 @@ extension NewDragNDropViewController: UITableViewDelegate, UITableViewDataSource
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.showAlert))
         cell.addGestureRecognizer(recognizer)
         
+        if Constants.isAccessibilityApplied {
+            cell.setAccessibility()
+        }
+        
         return cell
     }
     
