@@ -7,6 +7,10 @@
 //
 
 import UIKit
+protocol NewDragNDropDelegate {
+    func selectFavorite(number: Int)
+    func deselectFavorite(number: Int)
+}
 
 class NewDragNDropViewController: UIViewController {
 
@@ -14,11 +18,14 @@ class NewDragNDropViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     
     var numberArray: Array<Int> = []
+    var noneFavoriteArray: Array<Int> = []
     var selectNumberArray: Array<Int> = [] {
         didSet {
             self.setDeleteButton()
         }
     }
+    
+    var selectFavoriteArray: Array<Int> = []
     
     @IBAction func onDeleteButtonClicked(_ sender: Any) {
         self.deleteSelectArray()
@@ -29,10 +36,9 @@ class NewDragNDropViewController: UIViewController {
         super.viewDidLoad()
 
         self.initNumberArray()
+        self.initNoneFavoriteArray()
         self.initTableView()
         
-        if Constants.isAccessibilityApplied {
-        }
     }
     
     func setDeleteButton() {
@@ -54,6 +60,11 @@ class NewDragNDropViewController: UIViewController {
         for i in 1..<31 {
             numberArray.append(i)
         }
+    }
+    
+    func initNoneFavoriteArray() {
+        noneFavoriteArray.append(10)
+        noneFavoriteArray.append(11)
     }
     
     func initTableView() {
@@ -114,11 +125,23 @@ extension NewDragNDropViewController: UITableViewDelegate, UITableViewDataSource
         
         let number = numberArray[indexPath.row]
         
+        cell.number = number
         cell.numberLabel.text = "\(number)"
         cell.isSelected = self.selectNumberArray.exists(number)
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.showAlert))
         cell.addGestureRecognizer(recognizer)
+        
+        if noneFavoriteArray.exists(numberArray[indexPath.row]) {
+            cell.favoriteButton.isHidden = true
+            cell.favoriteButton.isEnabled = false
+        } else {
+            // 관심 버튼 세팅
+            cell.favoriteButton.isSelected = self.selectFavoriteArray.exists(number)
+            cell.delegate = self
+            cell.favoriteButton.isHidden = false
+            cell.favoriteButton.isEnabled = true
+        }
         
         if Constants.isAccessibilityApplied {
             cell.setAccessibility()
@@ -160,7 +183,19 @@ extension NewDragNDropViewController: UITableViewDelegate, UITableViewDataSource
     }
     
 }
-
+extension NewDragNDropViewController: NewDragNDropDelegate {
+    func selectFavorite(number: Int) {
+        if !self.selectFavoriteArray.exists(number) {
+            self.selectFavoriteArray.append(number)
+        }
+    }
+    
+    func deselectFavorite(number: Int) {
+        if self.selectFavoriteArray.exists(number) {
+            selectFavoriteArray = selectFavoriteArray.removed(number)
+        }
+    }
+}
 extension Array where Element: Equatable {
     
     /**

@@ -12,6 +12,7 @@ class NewDragNDropTableViewCell: UITableViewCell {
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    var number: Int = 0 
     
     override var isSelected: Bool {
         didSet {
@@ -22,6 +23,8 @@ class NewDragNDropTableViewCell: UITableViewCell {
     @IBAction func onFavoriteButtonClicked(_ sender: Any) {
         self.setFavorite()
     }
+    
+    var delegate: NewDragNDropDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,15 +37,26 @@ class NewDragNDropTableViewCell: UITableViewCell {
     
     // 접근성을 적용하는 함수
     func setAccessibility() {
-        // 관심 버튼에 접근성 버튼 해제
-        self.favoriteButton.isAccessibilityElement = false
-        self.accessibilityCustomActions = self.makeAccessibilityCustomActions()
+        
+        if self.favoriteButton.isEnabled {
+            // 관심 버튼에 접근성 버튼 해제
+            self.favoriteButton.isAccessibilityElement = false
+            self.accessibilityCustomActions = self.makeAccessibilityCustomActions()
+        } else {
+            self.accessibilityCustomActions = []
+        }
         
     }
     
     // 관심 선택/해제
     func setFavorite() {
         self.favoriteButton.isSelected = !self.favoriteButton.isSelected
+        
+        if self.favoriteButton.isSelected {
+            delegate?.selectFavorite(number: number)
+        } else {
+            delegate?.deselectFavorite(number: number)
+        }
     }
     
     // CustomAction을 생성하는 함수
