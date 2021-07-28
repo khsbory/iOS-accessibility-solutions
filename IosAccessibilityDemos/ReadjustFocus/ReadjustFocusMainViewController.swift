@@ -1,14 +1,14 @@
 //
-//  NewDragNDropMainViewController.swift
+//  ReadjustFocusMainViewController.swift
 //  IosAccessibilityDemos
 //
-//  Created by suni on 2021/06/22.
+//  Created by suni on 2021/07/27.
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 
 import UIKit
 
-class NewDragNDropMainViewController: UIViewController {
+class ReadjustFocusMainViewController: UIViewController {
     
      override func viewDidLoad() {
          super.viewDidLoad()
@@ -17,18 +17,18 @@ class NewDragNDropMainViewController: UIViewController {
      }
      
      private func setScreenTitle() {
-         self.title = "밀기 동작에 대한 접근성 데모"
+         self.title = "접근성 초점 재조정"
      }
      
      @IBAction func launchSeparateFocusWithoutAccessibility(_ sender: Any) {
          Constants.isAccessibilityApplied = false
-         showScreenOnOtherStoryboard(storyboardName: "NewDragNDrop", viewControllerStoryboardId: "NewDragNDrop")
+         showScreenOnOtherStoryboard(storyboardName: "ReadjustFocus", viewControllerStoryboardId: "ReadjustFocus")
          
      }
      
      @IBAction func launchSeparateFocusWithAccessibility(_ sender: Any) {
          Constants.isAccessibilityApplied = true
-         showScreenOnOtherStoryboard(storyboardName: "NewDragNDrop", viewControllerStoryboardId: "NewDragNDrop")
+         showScreenOnOtherStoryboard(storyboardName: "ReadjustFocus", viewControllerStoryboardId: "ReadjustFocus")
          
      }
      
@@ -39,6 +39,4 @@ class NewDragNDropMainViewController: UIViewController {
          self.navigationController?.pushViewController(viewController, animated: true)
      }
      
-    
-
 }

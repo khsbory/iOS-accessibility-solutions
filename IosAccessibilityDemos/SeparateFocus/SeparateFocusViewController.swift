@@ -2,7 +2,7 @@
 //  SeparateFocusViewController.swift
 //  IosAccessibilityDemos
 //
-//  Created by KBIZ on 2021/06/09.
+//  Created by suni on 2021/06/09.
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 

@@ -38,6 +38,10 @@
 		A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05D005C267311320066F44E /* SeparateFocus.storyboard */; };
 		A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005D267311320066F44E /* SeparateFocusViewController.swift */; };
 		A05D006B2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D006A2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift */; };
+		A09B13D226B15B7000EF499A /* ReadjustFocusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B13CE26B15B7000EF499A /* ReadjustFocusTableViewCell.swift */; };
+		A09B13D326B15B7000EF499A /* ReadjustFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B13CF26B15B7000EF499A /* ReadjustFocusViewController.swift */; };
+		A09B13D426B15B7000EF499A /* ReadjustFocusMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B13D026B15B7000EF499A /* ReadjustFocusMainViewController.swift */; };
+		A09B13D526B15B7000EF499A /* ReadjustFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09B13D126B15B7000EF499A /* ReadjustFocus.storyboard */; };
 		B326737525B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326737425B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift */; };
 		B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326737C25B533D80067C5CE /* FirstPageViewController.swift */; };
 		B326738225B533E80067C5CE /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326738125B533E80067C5CE /* SecondPageViewController.swift */; };
@@ -151,6 +155,10 @@
 		A05D005C267311320066F44E /* SeparateFocus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeparateFocus.storyboard; sourceTree = "<group>"; };
 		A05D005D267311320066F44E /* SeparateFocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparateFocusViewController.swift; sourceTree = "<group>"; };
 		A05D006A2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparateFocusAccessibilityViewController.swift; sourceTree = "<group>"; };
+		A09B13CE26B15B7000EF499A /* ReadjustFocusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadjustFocusTableViewCell.swift; sourceTree = "<group>"; };
+		A09B13CF26B15B7000EF499A /* ReadjustFocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadjustFocusViewController.swift; sourceTree = "<group>"; };
+		A09B13D026B15B7000EF499A /* ReadjustFocusMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadjustFocusMainViewController.swift; sourceTree = "<group>"; };
+		A09B13D126B15B7000EF499A /* ReadjustFocus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReadjustFocus.storyboard; sourceTree = "<group>"; };
 		A4DE4496BBD36CC80CFA2539 /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9AEE454D9096C6A42EB44F0 /* Pods-IosAccessibilityDemos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos.debug.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE5551BEEAA82755248ED8B /* Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.release.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests/Pods-IosAccessibilityDemos-IosAccessibilityDemosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +286,7 @@
 				1F85021C25188B4C00B99181 /* VerticalScrollDemo */,
 				A05D005A267311320066F44E /* SeparateFocus */,
 				869C7B902681B7B200CF5B97 /* NewDragNDrop */,
+				A09B13CD26B15B7000EF499A /* ReadjustFocus */,
 				1F8501EA2518816700B99181 /* AppDelegate.swift */,
 				B33D357025CB915A0079A10C /* Sunset Island.mp3 */,
 				1F8501EC2518816700B99181 /* SceneDelegate.swift */,
@@ -380,6 +389,17 @@
 				A05D006A2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift */,
 			);
 			path = SeparateFocus;
+			sourceTree = "<group>";
+		};
+		A09B13CD26B15B7000EF499A /* ReadjustFocus */ = {
+			isa = PBXGroup;
+			children = (
+				A09B13CE26B15B7000EF499A /* ReadjustFocusTableViewCell.swift */,
+				A09B13CF26B15B7000EF499A /* ReadjustFocusViewController.swift */,
+				A09B13D026B15B7000EF499A /* ReadjustFocusMainViewController.swift */,
+				A09B13D126B15B7000EF499A /* ReadjustFocus.storyboard */,
+			);
+			path = ReadjustFocus;
 			sourceTree = "<group>";
 		};
 		B326737325B5329C0067C5CE /* VerticalScrollDemo2 */ = {
@@ -596,6 +616,7 @@
 				1F8502212518A37B00B99181 /* VerticalScrollDemo.storyboard in Resources */,
 				B33D357125CB915B0079A10C /* Sunset Island.mp3 in Resources */,
 				B33D358C25CBD7FC0079A10C /* DragNDrop.storyboard in Resources */,
+				A09B13D526B15B7000EF499A /* ReadjustFocus.storyboard in Resources */,
 				B34FF6DB256614F50026AF2E /* WebViewDemo.storyboard in Resources */,
 				A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */,
 				B326738C25B534390067C5CE /* FirstPage.storyboard in Resources */,
@@ -752,6 +773,7 @@
 				B3403810258076570087BE07 /* FruitTableCell.swift in Sources */,
 				B33D357A25CBD7210079A10C /* DragNDropMainViewController.swift in Sources */,
 				A05D006B2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift in Sources */,
+				A09B13D426B15B7000EF499A /* ReadjustFocusMainViewController.swift in Sources */,
 				1F8501EB2518816700B99181 /* AppDelegate.swift in Sources */,
 				B3440F7C25CA43190031E6E3 /* MusicPlayerMainViewController.swift in Sources */,
 				1F85021B2518852B00B99181 /* TableCell.swift in Sources */,
@@ -764,6 +786,7 @@
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
 				869C7B922681B7EB00CF5B97 /* NewDragNDropViewController.swift in Sources */,
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
+				A09B13D326B15B7000EF499A /* ReadjustFocusViewController.swift in Sources */,
 				A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */,
 				1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */,
 				B326737525B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift in Sources */,
@@ -776,6 +799,7 @@
 				B33D678B2627FFF800116E26 /* ScreenScrollViewController.swift in Sources */,
 				B380938325FB3BC000244627 /* SettingMainViewController.swift in Sources */,
 				3E11435E25DD0F9C00B6560F /* DogCollectionViewCell.swift in Sources */,
+				A09B13D226B15B7000EF499A /* ReadjustFocusTableViewCell.swift in Sources */,
 				3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */,
 				3E11436225DD1F4D00B6560F /* CarouselAccessibilityViewController.swift in Sources */,
 				B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */,
