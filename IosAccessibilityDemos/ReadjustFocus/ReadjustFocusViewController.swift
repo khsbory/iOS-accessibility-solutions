@@ -12,6 +12,10 @@ class ReadjustFocusViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var footerView: UIView!
+    
+    
     var numberArray: Array<Int> = []
     var isPlusMode: Bool = false
 
@@ -40,6 +44,10 @@ class ReadjustFocusViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.initNumberArray()
         self.initTableView()
+        
+        if Constants.isAccessibilityApplied {
+            self.initAccessibility()
+        }
     }
     
     func initNumberArray() {
@@ -52,6 +60,14 @@ class ReadjustFocusViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+    }
+
+    func initAccessibility() {
+        
+        if let header = self.headerView, let table = self.tableView, let footer = self.footerView {
+            self.view.accessibilityElements = [header, table, footer]
+        }
+        
     }
     
     func showAlert() {
