@@ -205,6 +205,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="footerButton" destination="cMC-s8-bo5" id="19i-p9-2zo"/>
+                        <outlet property="footerPlusButton" destination="jLF-04-ziS" id="K8U-tM-HuA"/>
                         <outlet property="footerView" destination="VUl-Kv-8Nm" id="odG-xz-OTW"/>
                         <outlet property="headerView" destination="Cjz-PX-TyC" id="64l-U6-Svg"/>
                         <outlet property="tableView" destination="D2T-2P-ewA" id="UFi-aF-EFC"/>

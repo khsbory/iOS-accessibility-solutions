@@ -15,6 +15,8 @@ class ReadjustFocusViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var footerView: UIView!
     
+    @IBOutlet weak var footerButton: UIButton!
+    @IBOutlet weak var footerPlusButton: UIButton!
     
     var numberArray: Array<Int> = []
     var isPlusMode: Bool = false
@@ -29,11 +31,21 @@ class ReadjustFocusViewController: UIViewController {
     }
     
     @IBAction func onDefaultModeButtonClicked(_ sender: Any) {
+        if Constants.isAccessibilityApplied {
+            self.footerButton.accessibilityTraits.insert(.selected)
+            self.footerPlusButton.accessibilityTraits.remove(.selected)
+        }
+        
         self.isPlusMode = false
         self.tableView.reloadData()
     }
     
     @IBAction func onPlusModeButtonClicked(_ sender: Any) {
+        if Constants.isAccessibilityApplied {
+            self.footerPlusButton.accessibilityTraits.insert(.selected)
+            self.footerButton.accessibilityTraits.remove(.selected)
+        }
+        
         self.isPlusMode = true
         self.tableView.reloadData()
     }
@@ -67,6 +79,9 @@ class ReadjustFocusViewController: UIViewController {
         if let header = self.headerView, let table = self.tableView, let footer = self.footerView {
             self.view.accessibilityElements = [header, table, footer]
         }
+        
+        self.footerButton.accessibilityTraits.insert(.selected)
+        self.footerPlusButton.accessibilityTraits.remove(.selected)
         
     }
     
