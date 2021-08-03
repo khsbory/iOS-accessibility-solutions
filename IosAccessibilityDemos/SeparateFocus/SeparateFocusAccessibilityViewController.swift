@@ -53,6 +53,21 @@ class SeparateFocusAccessibilityViewController: UIViewController {
         
     }
     
+    @IBAction func editingDidBeginNameTextField(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.updateAuccessibility()
+            UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: self.nameView)
+        }
+    }
+    
+    
+    @IBAction func editingDidBeginEmailTextField(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.updateAuccessibility()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,6 +89,18 @@ class SeparateFocusAccessibilityViewController: UIViewController {
     private func cleanTextField() {
         self.nameTextField.text = ""
         self.emailTextField.text = ""
+    }
+    
+    private func updateAuccessibility() {
+        
+        // name Element 생성
+        let nameElement = self.getElement(view: self.nameTextField, labelView: self.nameLabel, label: self.nameLabel.text)
+
+        // nameView에 element 설정
+        self.nameView.accessibilityElements = [nameElement]
+                
+        self.setContainerViewAccessibility(containerView: self.emailView, traitsView: self.emailTextField, label: self.emailLabel.text ?? "이메일주소")
+        
     }
     
     private func setAccessibility() {
@@ -105,7 +132,6 @@ class SeparateFocusAccessibilityViewController: UIViewController {
     
     // MARK: Element로 접근성을 적용시키는 함수
     private func setViewElementAccessibility() {
-        
         // Element를 사용하는 UIView는 isAccessibilityElement = false
         self.disableAccessibility(superView: self.nameView)
         

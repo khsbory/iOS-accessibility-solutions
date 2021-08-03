@@ -34,11 +34,21 @@ class NewDragNDropViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.setScreenTitle()
+        
         self.initNumberArray()
         self.initNoneFavoriteArray()
         self.initTableView()
         
+    }
+    
+    private func setScreenTitle() {
+        if Constants.isAccessibilityApplied {
+            self.title = "접근성이 적용된 경우"
+        } else {
+            self.title = "접근성이 적용되지 않은 경우"
+        }
     }
     
     func setDeleteButton() {

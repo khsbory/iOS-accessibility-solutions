@@ -383,8 +383,8 @@
 		A05D005A267311320066F44E /* SeparateFocus */ = {
 			isa = PBXGroup;
 			children = (
-				A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */,
 				A05D005C267311320066F44E /* SeparateFocus.storyboard */,
+				A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */,
 				A05D005D267311320066F44E /* SeparateFocusViewController.swift */,
 				A05D006A2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift */,
 			);
