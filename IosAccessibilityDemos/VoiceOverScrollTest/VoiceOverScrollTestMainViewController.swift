@@ -1,14 +1,14 @@
 //
-//  ReadjustFocusMainViewController.swift
+//  VoiceOverScrollTestMainViewController.swift
 //  IosAccessibilityDemos
 //
-//  Created by suni on 2021/07/27.
+//  Created by KBIZ on 2021/08/04.
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 
 import UIKit
 
-class ReadjustFocusMainViewController: UIViewController {
+class VoiceOverScrollTestMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,18 +21,18 @@ class ReadjustFocusMainViewController: UIViewController {
     }
     
     private func setScreenTitle() {
-        self.title = "접근성 초점 재조정"
+        self.title = "보이스오버 스크롤 테스트"
     }
     
     @IBAction func launchSeparateFocusWithoutAccessibility(_ sender: Any) {
         Constants.isAccessibilityApplied = false
-        showScreenOnOtherStoryboard(storyboardName: "ReadjustFocus", viewControllerStoryboardId: "ReadjustFocus")
+        showScreenOnOtherStoryboard(storyboardName: "VoiceOverScrollTest", viewControllerStoryboardId: "VoiceOverScrollTest")
         
     }
     
     @IBAction func launchSeparateFocusWithAccessibility(_ sender: Any) {
         Constants.isAccessibilityApplied = true
-        showScreenOnOtherStoryboard(storyboardName: "ReadjustFocus", viewControllerStoryboardId: "ReadjustFocus")
+        showScreenOnOtherStoryboard(storyboardName: "VoiceOverScrollTest", viewControllerStoryboardId: "VoiceOverScrollTest")
         
     }
     
@@ -43,4 +43,5 @@ class ReadjustFocusMainViewController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+
 }

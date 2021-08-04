@@ -34,6 +34,11 @@
 		869C7B942681B81B00CF5B97 /* NewDragNDropMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */; };
 		869C7B962681B83C00CF5B97 /* NewDragNDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */; };
 		869C7B982681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B972681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift */; };
+		86C57FE926BA2A8900119C2C /* VoiceOverScrollTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C57FE826BA2A8900119C2C /* VoiceOverScrollTest.storyboard */; };
+		86C57FEB26BA2C0F00119C2C /* VoiceOverScrollTestMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C57FEA26BA2C0F00119C2C /* VoiceOverScrollTestMainViewController.swift */; };
+		86C57FED26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C57FEC26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift */; };
+		86C57FEF26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C57FEE26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift */; };
+		86C57FF126BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C57FF026BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift */; };
 		A05D005E267311320066F44E /* SeparateFocusMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */; };
 		A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05D005C267311320066F44E /* SeparateFocus.storyboard */; };
 		A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005D267311320066F44E /* SeparateFocusViewController.swift */; };
@@ -150,6 +155,11 @@
 		869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropMainViewController.swift; sourceTree = "<group>"; };
 		869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewDragNDrop.storyboard; sourceTree = "<group>"; };
 		869C7B972681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropTableViewCell.swift; sourceTree = "<group>"; };
+		86C57FE826BA2A8900119C2C /* VoiceOverScrollTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoiceOverScrollTest.storyboard; sourceTree = "<group>"; };
+		86C57FEA26BA2C0F00119C2C /* VoiceOverScrollTestMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverScrollTestMainViewController.swift; sourceTree = "<group>"; };
+		86C57FEC26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverScrollTestViewController.swift; sourceTree = "<group>"; };
+		86C57FEE26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverScrollTestTableViewCell.swift; sourceTree = "<group>"; };
+		86C57FF026BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverScrollTestWebViewCell.swift; sourceTree = "<group>"; };
 		8E94E82D9BE3E91625ABA2A3 /* Pods-IosAccessibilityDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos.release.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos.release.xcconfig"; sourceTree = "<group>"; };
 		A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparateFocusMainViewController.swift; sourceTree = "<group>"; };
 		A05D005C267311320066F44E /* SeparateFocus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeparateFocus.storyboard; sourceTree = "<group>"; };
@@ -287,6 +297,7 @@
 				A05D005A267311320066F44E /* SeparateFocus */,
 				869C7B902681B7B200CF5B97 /* NewDragNDrop */,
 				A09B13CD26B15B7000EF499A /* ReadjustFocus */,
+				86C57FE726BA2A7A00119C2C /* VoiceOverScrollTest */,
 				1F8501EA2518816700B99181 /* AppDelegate.swift */,
 				B33D357025CB915A0079A10C /* Sunset Island.mp3 */,
 				1F8501EC2518816700B99181 /* SceneDelegate.swift */,
@@ -378,6 +389,18 @@
 				869C7B972681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift */,
 			);
 			path = NewDragNDrop;
+			sourceTree = "<group>";
+		};
+		86C57FE726BA2A7A00119C2C /* VoiceOverScrollTest */ = {
+			isa = PBXGroup;
+			children = (
+				86C57FE826BA2A8900119C2C /* VoiceOverScrollTest.storyboard */,
+				86C57FEA26BA2C0F00119C2C /* VoiceOverScrollTestMainViewController.swift */,
+				86C57FEC26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift */,
+				86C57FEE26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift */,
+				86C57FF026BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift */,
+			);
+			path = VoiceOverScrollTest;
 			sourceTree = "<group>";
 		};
 		A05D005A267311320066F44E /* SeparateFocus */ = {
@@ -631,6 +654,7 @@
 				B33D679D2628004400116E26 /* ScreenScrollMain.storyboard in Resources */,
 				3E11435225DCF1D700B6560F /* CarouselAccessibility.storyboard in Resources */,
 				3E95E30725DCDA25000F625B /* CarouselAccessibilityMain.storyboard in Resources */,
+				86C57FE926BA2A8900119C2C /* VoiceOverScrollTest.storyboard in Resources */,
 				869C7B962681B83C00CF5B97 /* NewDragNDrop.storyboard in Resources */,
 				B3440F8E25CA44820031E6E3 /* MusicPlayer.storyboard in Resources */,
 				3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */,
@@ -767,6 +791,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F8501EF2518816700B99181 /* ViewController.swift in Sources */,
+				86C57FED26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift in Sources */,
 				A05D005E267311320066F44E /* SeparateFocusMainViewController.swift in Sources */,
 				B326738225B533E80067C5CE /* SecondPageViewController.swift in Sources */,
 				3E95E31825DCE35D000F625B /* CarouselAccessibilityMainViewController.swift in Sources */,
@@ -786,13 +811,16 @@
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
 				869C7B922681B7EB00CF5B97 /* NewDragNDropViewController.swift in Sources */,
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
+				86C57FEF26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift in Sources */,
 				A09B13D326B15B7000EF499A /* ReadjustFocusViewController.swift in Sources */,
+				86C57FF126BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift in Sources */,
 				A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */,
 				1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */,
 				B326737525B5338B0067C5CE /* VerticalScrollDemo2ViewController.swift in Sources */,
 				B33D358725CBD7EE0079A10C /* DragNDropViewController.swift in Sources */,
 				B33CBC6725CCE838000449EC /* DragNDropPopupController.swift in Sources */,
 				B33D67932628001200116E26 /* ScreenScrollMainViewController.swift in Sources */,
+				86C57FEB26BA2C0F00119C2C /* VoiceOverScrollTestMainViewController.swift in Sources */,
 				B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */,
 				3E11435A25DCF32E00B6560F /* DogStatsView.swift in Sources */,
 				B3403815258076A90087BE07 /* VegetableTableCell.swift in Sources */,

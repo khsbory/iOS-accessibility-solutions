@@ -62,6 +62,10 @@ class ReadjustFocusViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     func initNumberArray() {
         for i in 1..<31 {
             numberArray.append(i)
