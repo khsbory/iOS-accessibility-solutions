@@ -1,14 +1,14 @@
 //
-//  VoiceOverScrollTestMainViewController.swift
+//  RollingBanner2MainViewController.swift
 //  IosAccessibilityDemos
 //
-//  Created by suni on 2021/08/04.
+//  Created by suni on 2021/09/02.
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 
 import UIKit
 
-class VoiceOverScrollTestMainViewController: UIViewController {
+class RollingBanner2MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,18 +21,18 @@ class VoiceOverScrollTestMainViewController: UIViewController {
     }
     
     private func setScreenTitle() {
-        self.title = "보이스오버 스크롤 테스트"
+        self.title = "롤링배너 2탄"
     }
     
     @IBAction func launchSeparateFocusWithoutAccessibility(_ sender: Any) {
         Constants.isAccessibilityApplied = false
-        showScreenOnOtherStoryboard(storyboardName: "VoiceOverScrollTest", viewControllerStoryboardId: "VoiceOverScrollTest")
+        showScreenOnOtherStoryboard(storyboardName: "RollingBanner2", viewControllerStoryboardId: "RollingBanner2")
         
     }
     
     @IBAction func launchSeparateFocusWithAccessibility(_ sender: Any) {
         Constants.isAccessibilityApplied = true
-        showScreenOnOtherStoryboard(storyboardName: "VoiceOverScrollTest", viewControllerStoryboardId: "VoiceOverScrollTest")
+        showScreenOnOtherStoryboard(storyboardName: "RollingBanner2", viewControllerStoryboardId: "RollingBanner2")
         
     }
     

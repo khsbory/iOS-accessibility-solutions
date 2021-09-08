@@ -2,7 +2,7 @@
 //  ReadjustFocusTableViewCell.swift
 //  IosAccessibilityDemos
 //
-//  Created by KBIZ on 2021/07/27.
+//  Created by suni on 2021/07/27.
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 

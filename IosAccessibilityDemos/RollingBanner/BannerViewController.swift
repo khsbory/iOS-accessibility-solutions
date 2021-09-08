@@ -192,7 +192,6 @@ class BannerViewController: UIViewController {
     }
 
 }
-
 extension BannerViewController : MyScrollViewDelegate{
     func scrollPrev() {
         self.prev(self.btPrev)

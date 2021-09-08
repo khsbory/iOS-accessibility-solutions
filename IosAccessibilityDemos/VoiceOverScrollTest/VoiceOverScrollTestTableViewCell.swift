@@ -2,7 +2,7 @@
 //  VoiceOverScrollTestTableViewCell.swift
 //  IosAccessibilityDemos
 //
-//  Created by KBIZ on 2021/08/04.
+//  Created by suni on 2021/08/04.
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 
