@@ -113,9 +113,8 @@ class BannerView: UIScrollView {
     
     
     func initAccessibility() {
-        numberLabel.isAccessibilityElement = false
         self.isAccessibilityElement = true
-        
+        self.accessibilityTraits = .button
         self.accessibilityLabel = numberArray[0]
     }
     
