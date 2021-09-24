@@ -10,6 +10,7 @@ import UIKit
 protocol NewDragNDropDelegate {
     func selectFavorite(number: Int)
     func deselectFavorite(number: Int)
+    func deleteItem(number: Int)
 }
 
 class NewDragNDropViewController: UIViewController {
@@ -27,6 +28,8 @@ class NewDragNDropViewController: UIViewController {
     
     var selectFavoriteArray: Array<Int> = []
     
+    var popup: NewDragNDropPopup?
+    
     @IBAction func onDeleteButtonClicked(_ sender: Any) {
         self.deleteSelectArray()
     }
@@ -40,7 +43,7 @@ class NewDragNDropViewController: UIViewController {
         self.initNumberArray()
         self.initNoneFavoriteArray()
         self.initTableView()
-        
+        self.initLongPressGesture()
     }
     
     private func setScreenTitle() {
@@ -80,6 +83,25 @@ class NewDragNDropViewController: UIViewController {
     func initTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func initLongPressGesture() {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "NewDragNDrop", bundle: nil)
+        popup = storyBoard.instantiateViewController(withIdentifier: "NewDragNDropPopup") as? NewDragNDropPopup
+            
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(sender:)))
+        self.tableView.addGestureRecognizer(longPress)
+        
+    }
+    
+    @objc func handleLongPress(sender: UILongPressGestureRecognizer) {
+        
+        if let popVC = self.popup {
+            popVC.showAnim(vc: self, parentAddView: self.view) {
+                
+            }
+        }
     }
         
     @objc func showAlert() {
@@ -185,9 +207,21 @@ extension NewDragNDropViewController: UITableViewDelegate, UITableViewDataSource
             completion(true)
         }
         
+        // 210924. 데모 디벨롭 aciton title 삭제 요청
         let title = self.selectNumberArray.exists(number) ? "해제" : "선택"
-        action.title = title
-        action.backgroundColor = .blue
+//        action.title = title
+        if Constants.isAccessibilityApplied {
+            action.accessibilityLabel = title
+        }
+        
+        // title 대신 image 삽입
+        let name = self.selectNumberArray.exists(number) ? "check" : "uncheck"
+        
+        if let image = UIImage(named: name) {
+            action.image = image
+        } else {
+            action.backgroundColor = .blue
+        }
         
         return action
     }
@@ -203,6 +237,22 @@ extension NewDragNDropViewController: NewDragNDropDelegate {
     func deselectFavorite(number: Int) {
         if self.selectFavoriteArray.exists(number) {
             selectFavoriteArray = selectFavoriteArray.removed(number)
+        }
+    }
+    
+    func deleteItem(number: Int) {
+        
+        if let index = numberArray.indexOf(number) {
+            numberArray.remove(at: index)
+        }
+//        self.selectNumberArray.removeAll()
+        self.tableView.reloadData()
+        // TODO: 다음 이전 혹인 다음 숫자로 보내주기.
+        
+        if Constants.isAccessibilityApplied {
+            DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
+                UIAccessibility.post(notification: .announcement, argument: "삭제 완료")
+            }
         }
     }
 }

@@ -33,6 +33,7 @@
 		864C975F26E0996700B657C1 /* RollingBanner2MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C975E26E0996700B657C1 /* RollingBanner2MainViewController.swift */; };
 		864C976126E0997600B657C1 /* RollingBanner2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C976026E0997600B657C1 /* RollingBanner2ViewController.swift */; };
 		864C976326E0997F00B657C1 /* RollingBanner2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864C976226E0997F00B657C1 /* RollingBanner2.storyboard */; };
+		866B60E426FDAE9800D251C2 /* NewDragNDropPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866B60E326FDAE9800D251C2 /* NewDragNDropPopup.swift */; };
 		869C7B922681B7EB00CF5B97 /* NewDragNDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B912681B7EB00CF5B97 /* NewDragNDropViewController.swift */; };
 		869C7B942681B81B00CF5B97 /* NewDragNDropMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */; };
 		869C7B962681B83C00CF5B97 /* NewDragNDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */; };
@@ -157,6 +158,7 @@
 		864C975E26E0996700B657C1 /* RollingBanner2MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBanner2MainViewController.swift; sourceTree = "<group>"; };
 		864C976026E0997600B657C1 /* RollingBanner2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBanner2ViewController.swift; sourceTree = "<group>"; };
 		864C976226E0997F00B657C1 /* RollingBanner2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RollingBanner2.storyboard; sourceTree = "<group>"; };
+		866B60E326FDAE9800D251C2 /* NewDragNDropPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewDragNDropPopup.swift; path = IosAccessibilityDemos/NewDragNDrop/NewDragNDropPopup.swift; sourceTree = SOURCE_ROOT; };
 		869C7B912681B7EB00CF5B97 /* NewDragNDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropViewController.swift; sourceTree = "<group>"; };
 		869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropMainViewController.swift; sourceTree = "<group>"; };
 		869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewDragNDrop.storyboard; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */,
 				869C7B912681B7EB00CF5B97 /* NewDragNDropViewController.swift */,
 				869C7B972681CC0C00CF5B97 /* NewDragNDropTableViewCell.swift */,
+				866B60E326FDAE9800D251C2 /* NewDragNDropPopup.swift */,
 			);
 			path = NewDragNDrop;
 			sourceTree = "<group>";
@@ -841,6 +844,7 @@
 				B33D67932628001200116E26 /* ScreenScrollMainViewController.swift in Sources */,
 				86C57FEB26BA2C0F00119C2C /* VoiceOverScrollTestMainViewController.swift in Sources */,
 				B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */,
+				866B60E426FDAE9800D251C2 /* NewDragNDropPopup.swift in Sources */,
 				3E11435A25DCF32E00B6560F /* DogStatsView.swift in Sources */,
 				B3403815258076A90087BE07 /* VegetableTableCell.swift in Sources */,
 				B33D678B2627FFF800116E26 /* ScreenScrollViewController.swift in Sources */,
