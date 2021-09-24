@@ -34,6 +34,7 @@ class ReadjustFocusViewController: UIViewController {
         if Constants.isAccessibilityApplied {
             self.footerButton.accessibilityTraits.insert(.selected)
             self.footerPlusButton.accessibilityTraits.remove(.selected)
+            UIAccessibility.post(notification: .screenChanged, argument: self.footerButton)
         }
         
         self.isPlusMode = false
@@ -44,6 +45,8 @@ class ReadjustFocusViewController: UIViewController {
         if Constants.isAccessibilityApplied {
             self.footerPlusButton.accessibilityTraits.insert(.selected)
             self.footerButton.accessibilityTraits.remove(.selected)
+            UIAccessibility.post(notification: .screenChanged, argument: self.footerPlusButton)
+
         }
         
         self.isPlusMode = true
@@ -79,10 +82,8 @@ class ReadjustFocusViewController: UIViewController {
     }
 
     func initAccessibility() {
-        
-        if let header = self.headerView, let table = self.tableView, let footer = self.footerView {
-            self.view.accessibilityElements = [header, table, footer]
-        }
+        footerView.accessibilityTraits = .tabBar
+            self.view.accessibilityElements = [headerView, tableView, footerView]
         
         self.footerButton.accessibilityTraits.insert(.selected)
         self.footerPlusButton.accessibilityTraits.remove(.selected)
