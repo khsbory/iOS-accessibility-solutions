@@ -15,7 +15,8 @@ class NewDragNDropTableViewCell: UITableViewCell {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var deleteLabel: UILabel!
     
-    var number: Int = 0 
+    var number: Int = 0
+    var delegate: NewDragNDropDelegate?
     
     override var isSelected: Bool {
         didSet {
@@ -35,7 +36,6 @@ class NewDragNDropTableViewCell: UITableViewCell {
         
     }
     
-    var delegate: NewDragNDropDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -97,15 +97,20 @@ class NewDragNDropTableViewCell: UITableViewCell {
             self.accessibilityCustomActions = self.makeAccessibilityCustomActions()
             return true
         }
-          
+        
         let deleteAction = UIAccessibilityCustomAction(name: "삭제") { (action) -> Bool in
             UIAccessibility.post(notification: .announcement, argument: "삭제")
             self.setDelete()
             
             return true
         }
-    
         
-        return [favoriteAction, deleteAction]
+        let moreAction = UIAccessibilityCustomAction(name: "더보기") { (action) -> Bool in
+            
+            self.delegate?.showMorePopup(number: self.number)
+            
+            return true
+        }
+        return [favoriteAction, deleteAction, moreAction]
     }
 }

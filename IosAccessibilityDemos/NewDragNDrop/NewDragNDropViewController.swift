@@ -11,6 +11,7 @@ protocol NewDragNDropDelegate {
     func selectFavorite(number: Int)
     func deselectFavorite(number: Int)
     func deleteItem(number: Int)
+    func showMorePopup(number: Int)
 }
 
 class NewDragNDropViewController: UIViewController {
@@ -96,7 +97,17 @@ class NewDragNDropViewController: UIViewController {
     }
     
     @objc func handleLongPress(sender: UILongPressGestureRecognizer) {
-        
+        if sender.state == .began {
+                let touchPoint = sender.location(in: self.tableView)
+                if let indexPath = tableView.indexPathForRow(at: touchPoint) {
+                    let number = numberArray[indexPath.row]
+                    print("🔵 TableView LongPressGesture - number : \(number)")
+                }
+            }
+        self.showPopup()
+    }
+    
+    func showPopup() {
         if let popVC = self.popup {
             popVC.showAnim(vc: self, parentAddView: self.view) {
                 
@@ -228,6 +239,10 @@ extension NewDragNDropViewController: UITableViewDelegate, UITableViewDataSource
     
 }
 extension NewDragNDropViewController: NewDragNDropDelegate {
+    func showMorePopup(number: Int) {
+        self.showPopup()
+    }
+    
     func selectFavorite(number: Int) {
         if !self.selectFavoriteArray.exists(number) {
             self.selectFavoriteArray.append(number)
@@ -247,7 +262,6 @@ extension NewDragNDropViewController: NewDragNDropDelegate {
         }
 //        self.selectNumberArray.removeAll()
         self.tableView.reloadData()
-        // TODO: 다음 이전 혹인 다음 숫자로 보내주기.
         
         if Constants.isAccessibilityApplied {
             DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
