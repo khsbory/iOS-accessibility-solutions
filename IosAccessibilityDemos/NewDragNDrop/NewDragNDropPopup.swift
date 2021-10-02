@@ -34,7 +34,7 @@ class NewDragNDropPopup: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.accessibilityViewIsModal = true
         self.view.layoutIfNeeded()
     }
     

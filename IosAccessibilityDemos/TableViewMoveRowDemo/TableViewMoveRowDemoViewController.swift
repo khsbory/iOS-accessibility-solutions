@@ -61,8 +61,8 @@ extension TableViewMoveRowDemoViewController: UITableViewDelegate, UITableViewDa
         let number = numberArray[indexPath.row]
         
         cell.numberLabel.text = "\(number)"
-        
-        
+        cell.isAccessibilityElement = true
+        cell.accessibilityLabel = cell.numberLabel.text
         return cell
     }
     

@@ -110,7 +110,6 @@ class NewDragNDropViewController: UIViewController {
     func showPopup() {
         if let popVC = self.popup {
             popVC.showAnim(vc: self, parentAddView: self.view) {
-                
             }
         }
     }
@@ -228,11 +227,6 @@ extension NewDragNDropViewController: UITableViewDelegate, UITableViewDataSource
         // title 대신 image 삽입
         let name = self.selectNumberArray.exists(number) ? "check" : "uncheck"
         
-        if let image = UIImage(named: name) {
-            action.image = image
-        } else {
-            action.backgroundColor = .blue
-        }
         
         return action
     }
