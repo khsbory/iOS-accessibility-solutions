@@ -30,6 +30,13 @@
 		3ED8579625D948B0006C86F4 /* RollingBanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED8579525D948B0006C86F4 /* RollingBanner.storyboard */; };
 		3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */; };
 		3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */; };
+		860C9A11270EAFD800632EFE /* ReloadingTableViewDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C9A10270EAFD800632EFE /* ReloadingTableViewDemo.storyboard */; };
+		860C9A13270EB45300632EFE /* ReloadingButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C9A12270EB45300632EFE /* ReloadingButtonCell.swift */; };
+		860C9A15270EB65D00632EFE /* ReloadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C9A14270EB65D00632EFE /* ReloadingTableViewCell.swift */; };
+		860C9A17270EB68000632EFE /* ReloadingButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C9A16270EB68000632EFE /* ReloadingButtonCollectionViewCell.swift */; };
+		860C9A19270EB68F00632EFE /* ReloadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C9A18270EB68F00632EFE /* ReloadingCollectionViewCell.swift */; };
+		860C9A1B270EBA1800632EFE /* ReloadingTableViewMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C9A1A270EBA1800632EFE /* ReloadingTableViewMainViewController.swift */; };
+		860C9A1D270EBA3400632EFE /* ReloadingTableViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C9A1C270EBA3400632EFE /* ReloadingTableViewDemoViewController.swift */; };
 		864C975F26E0996700B657C1 /* RollingBanner2MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C975E26E0996700B657C1 /* RollingBanner2MainViewController.swift */; };
 		864C976126E0997600B657C1 /* RollingBanner2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C976026E0997600B657C1 /* RollingBanner2ViewController.swift */; };
 		864C976326E0997F00B657C1 /* RollingBanner2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864C976226E0997F00B657C1 /* RollingBanner2.storyboard */; };
@@ -159,6 +166,13 @@
 		3ED8579725D9C923006C86F4 /* RollingBannerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBannerMenuViewController.swift; sourceTree = "<group>"; };
 		3ED8579925D9CA8D006C86F4 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		62E9DDEA1F9B164E40F1C63E /* Pods_IosAccessibilityDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosAccessibilityDemos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		860C9A10270EAFD800632EFE /* ReloadingTableViewDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReloadingTableViewDemo.storyboard; sourceTree = "<group>"; };
+		860C9A12270EB45300632EFE /* ReloadingButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadingButtonCell.swift; sourceTree = "<group>"; };
+		860C9A14270EB65D00632EFE /* ReloadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadingTableViewCell.swift; sourceTree = "<group>"; };
+		860C9A16270EB68000632EFE /* ReloadingButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadingButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		860C9A18270EB68F00632EFE /* ReloadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadingCollectionViewCell.swift; sourceTree = "<group>"; };
+		860C9A1A270EBA1800632EFE /* ReloadingTableViewMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadingTableViewMainViewController.swift; sourceTree = "<group>"; };
+		860C9A1C270EBA3400632EFE /* ReloadingTableViewDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadingTableViewDemoViewController.swift; sourceTree = "<group>"; };
 		864C975E26E0996700B657C1 /* RollingBanner2MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBanner2MainViewController.swift; sourceTree = "<group>"; };
 		864C976026E0997600B657C1 /* RollingBanner2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBanner2ViewController.swift; sourceTree = "<group>"; };
 		864C976226E0997F00B657C1 /* RollingBanner2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RollingBanner2.storyboard; sourceTree = "<group>"; };
@@ -316,6 +330,7 @@
 				86C57FE726BA2A7A00119C2C /* VoiceOverScrollTest */,
 				864C975D26E0993F00B657C1 /* RollingBanner2 */,
 				A0D9A2912706C87000CA14F5 /* TableViewMoveRowDemo */,
+				860C9A0F270EAEC700632EFE /* ReloadingTableViewDemo */,
 				1F8501EA2518816700B99181 /* AppDelegate.swift */,
 				B33D357025CB915A0079A10C /* Sunset Island.mp3 */,
 				1F8501EC2518816700B99181 /* SceneDelegate.swift */,
@@ -396,6 +411,36 @@
 				123F3037B0DD15C00ED4E23C /* Pods-IosAccessibilityDemosTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		860C9A0F270EAEC700632EFE /* ReloadingTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				860C9A29270FC4E400632EFE /* CollectionViewCell */,
+				860C9A28270FC4D900632EFE /* TableViewCell */,
+				860C9A10270EAFD800632EFE /* ReloadingTableViewDemo.storyboard */,
+				860C9A1A270EBA1800632EFE /* ReloadingTableViewMainViewController.swift */,
+				860C9A1C270EBA3400632EFE /* ReloadingTableViewDemoViewController.swift */,
+			);
+			path = ReloadingTableViewDemo;
+			sourceTree = "<group>";
+		};
+		860C9A28270FC4D900632EFE /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				860C9A14270EB65D00632EFE /* ReloadingTableViewCell.swift */,
+				860C9A12270EB45300632EFE /* ReloadingButtonCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		860C9A29270FC4E400632EFE /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				860C9A16270EB68000632EFE /* ReloadingButtonCollectionViewCell.swift */,
+				860C9A18270EB68F00632EFE /* ReloadingCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		864C975D26E0993F00B657C1 /* RollingBanner2 */ = {
@@ -677,6 +722,7 @@
 				B32673C225B569D20067C5CE /* VerticalScrollDemo2Main.storyboard in Resources */,
 				1F8501F42518816800B99181 /* Assets.xcassets in Resources */,
 				1F8502212518A37B00B99181 /* VerticalScrollDemo.storyboard in Resources */,
+				860C9A11270EAFD800632EFE /* ReloadingTableViewDemo.storyboard in Resources */,
 				A0D9A2932706C89000CA14F5 /* TableViewMoveRowDemo.storyboard in Resources */,
 				B33D357125CB915B0079A10C /* Sunset Island.mp3 in Resources */,
 				B33D358C25CBD7FC0079A10C /* DragNDrop.storyboard in Resources */,
@@ -839,8 +885,11 @@
 				B326738225B533E80067C5CE /* SecondPageViewController.swift in Sources */,
 				3E95E31825DCE35D000F625B /* CarouselAccessibilityMainViewController.swift in Sources */,
 				B3403810258076570087BE07 /* FruitTableCell.swift in Sources */,
+				860C9A13270EB45300632EFE /* ReloadingButtonCell.swift in Sources */,
 				B33D357A25CBD7210079A10C /* DragNDropMainViewController.swift in Sources */,
 				A05D006B2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift in Sources */,
+				860C9A1D270EBA3400632EFE /* ReloadingTableViewDemoViewController.swift in Sources */,
+				860C9A19270EB68F00632EFE /* ReloadingCollectionViewCell.swift in Sources */,
 				A09B13D426B15B7000EF499A /* ReadjustFocusMainViewController.swift in Sources */,
 				1F8501EB2518816700B99181 /* AppDelegate.swift in Sources */,
 				B3440F7C25CA43190031E6E3 /* MusicPlayerMainViewController.swift in Sources */,
@@ -864,6 +913,7 @@
 				B33D358725CBD7EE0079A10C /* DragNDropViewController.swift in Sources */,
 				B33CBC6725CCE838000449EC /* DragNDropPopupController.swift in Sources */,
 				B33D67932628001200116E26 /* ScreenScrollMainViewController.swift in Sources */,
+				860C9A15270EB65D00632EFE /* ReloadingTableViewCell.swift in Sources */,
 				86C57FEB26BA2C0F00119C2C /* VoiceOverScrollTestMainViewController.swift in Sources */,
 				B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */,
 				866B60E426FDAE9800D251C2 /* NewDragNDropPopup.swift in Sources */,
@@ -876,6 +926,7 @@
 				3E11435E25DD0F9C00B6560F /* DogCollectionViewCell.swift in Sources */,
 				A09B13D226B15B7000EF499A /* ReadjustFocusTableViewCell.swift in Sources */,
 				3ED8579825D9C923006C86F4 /* RollingBannerMenuViewController.swift in Sources */,
+				860C9A17270EB68000632EFE /* ReloadingButtonCollectionViewCell.swift in Sources */,
 				3E11436225DD1F4D00B6560F /* CarouselAccessibilityViewController.swift in Sources */,
 				B326737D25B533D80067C5CE /* FirstPageViewController.swift in Sources */,
 				B34C46A9265F835B00AA3EEE /* AlarmSettingContainerView.swift in Sources */,
@@ -889,6 +940,7 @@
 				B33255EB25B672DA00F6C8DD /* Constants.swift in Sources */,
 				B380937E25FB3B9900244627 /* SettingViewController.swift in Sources */,
 				B33CBC7225CCF017000449EC /* DragNDropPopupDelegate.swift in Sources */,
+				860C9A1B270EBA1800632EFE /* ReloadingTableViewMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,7 +1131,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CT8CT953JS;
+				DEVELOPMENT_TEAM = 3T5QFYSPG5;
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1100,8 +1152,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CT8CT953JS;
+				DEVELOPMENT_TEAM = 3T5QFYSPG5;
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1110,6 +1163,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nvisions.IosAccessibility;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
