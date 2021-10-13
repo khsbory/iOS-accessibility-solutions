@@ -28,6 +28,8 @@ class BannerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.accessibilityLabel = "banner section"
+        scrollView.accessibilityContainerType = .semanticGroup
         setup()
     }
     

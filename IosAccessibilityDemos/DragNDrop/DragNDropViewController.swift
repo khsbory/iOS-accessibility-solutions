@@ -120,7 +120,7 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
         selectButton.backgroundColor = .blue
         
         
-        selectButton.isAccessibilityElement = false
+        selectButton.isHidden = true
         
         
         
@@ -178,11 +178,6 @@ class DragNDropViewController: UIViewController, DragNDropPopupDelegate {
             
             item.accessibilityCustomActions = [
                 
-                UIAccessibilityCustomAction(
-                        name: "선택해제",
-                        target: self,
-                        selector: #selector(toggleItem)
-                    ),
                 UIAccessibilityCustomAction(
                         name: "삭제",
                         target: self,

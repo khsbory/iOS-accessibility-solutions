@@ -59,10 +59,10 @@ class NewDragNDropTableViewCell: UITableViewCell {
             
             // 커스텀 액션 추가
             self.accessibilityCustomActions = self.makeAccessibilityCustomActions()
+            numberLabel.accessibilityTraits = .button
         } else {
-            self.accessibilityCustomActions = []
-        }
-        
+            self.accessibilityCustomActions =
+            self.makeAccessibilityCustomActions2()        }
     }
     
     // 관심 선택/해제
@@ -113,4 +113,22 @@ class NewDragNDropTableViewCell: UITableViewCell {
         }
         return [favoriteAction, deleteAction, moreAction]
     }
+    
+    func makeAccessibilityCustomActions2() -> [UIAccessibilityCustomAction] {
+        let deleteAction = UIAccessibilityCustomAction(name: "삭제") { (action) -> Bool in
+            UIAccessibility.post(notification: .announcement, argument: "삭제")
+            self.setDelete()
+            
+            return true
+        }
+        
+        let moreAction = UIAccessibilityCustomAction(name: "더보기") { (action) -> Bool in
+            
+            self.delegate?.showMorePopup(number: self.number)
+            
+            return true
+        }
+        return [deleteAction, moreAction]
+    }
+
 }
