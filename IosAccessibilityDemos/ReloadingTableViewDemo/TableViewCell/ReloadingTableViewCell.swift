@@ -12,8 +12,7 @@ class ReloadingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var minNumber: Int = 1
-    var maxNumber: Int = 50
+    var filter: ReloadingTableViewFilter?
     var array: [String] = []
     
     override func awakeFromNib() {
@@ -36,10 +35,19 @@ class ReloadingTableViewCell: UITableViewCell {
     
     func setNumberArray() {
         array.removeAll()
-        for number in minNumber..<maxNumber+1 {
-            print("setNumberArray \(number)")
-            array.append("\(number)")
+        
+        if filter == .book {
+            for number in 1..<51 {
+                print("setNumberArray \(number)")
+                array.append("\(number)")
+            }
+        } else {
+            for number in 51..<101 {
+                print("setNumberArray \(number)")
+                array.append("\(number)")
+            }
         }
+        
         collectionView.reloadData()
     }
 

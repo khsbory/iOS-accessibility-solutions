@@ -12,7 +12,8 @@ class ReloadingButtonCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let array = ["1~50","51~100"]
+    var filter: ReloadingTableViewFilter?
+    var delegate: ReloadingTableViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,7 +47,25 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
             fatalError("Expected a `\(ReloadingButtonCollectionViewCell.self)` but did not receive one.")
         }
         
-        cell.numberLabel.text =  array[indexPath.row]
+        
+        switch indexPath.row {
+        case 0:
+            cell.numberLabel.text = "1~50"
+            break
+        case 1:
+            cell.numberLabel.text = "51~100"
+            break
+        default:
+            cell.numberLabel.text = ""
+        }
+        
+        if indexPath.row == self.filter?.rawValue {
+            cell.isSelected = true
+            cell.backgroundColor = .gray
+        } else {
+            cell.isSelected = false
+            cell.backgroundColor = .white
+        }
         
         return cell
     }
@@ -54,5 +73,19 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.filter = .book
+        case 1:
+            self.filter = .movie
+        default:
+            self.filter = .book
+        }
+        
+        delegate?.selectReloadingFilter(filter: self.filter ?? .book)
+        self.collectionView.reloadData()
     }
 }

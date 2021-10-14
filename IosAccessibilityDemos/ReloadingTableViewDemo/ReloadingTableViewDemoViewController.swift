@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol ReloadingTableViewDelegate {
+    func selectReloadingFilter(filter: ReloadingTableViewFilter)
+}
+
+enum ReloadingTableViewFilter: Int {
+    case book = 0
+    case movie = 1
+}
 class ReloadingTableViewDemoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var minNumber: Int = 1
-    var maxNumber: Int = 50
+    var filter: ReloadingTableViewFilter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +40,7 @@ class ReloadingTableViewDemoViewController: UIViewController {
     func initTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        filter = .book
     }
 
 }
@@ -49,15 +57,17 @@ extension ReloadingTableViewDemoViewController: UITableViewDelegate, UITableView
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReloadingButtonCell", for: indexPath) as! ReloadingButtonCell
+            cell.filter = self.filter
+            cell.delegate = self
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReloadingTableViewCell", for: indexPath) as! ReloadingTableViewCell
-            cell.minNumber = self.minNumber
-            cell.maxNumber = self.maxNumber
+            cell.filter = self.filter
             cell.setNumberArray()
             return cell
         }
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
@@ -67,9 +77,19 @@ extension ReloadingTableViewDemoViewController: UITableViewDelegate, UITableView
             return height
         }
     }
+    
     var topbarHeight: CGFloat {
         return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
             (self.navigationController?.navigationBar.frame.height ?? 0.0)
     }
     
+}
+extension ReloadingTableViewDemoViewController: ReloadingTableViewDelegate {
+    func selectReloadingFilter(filter: ReloadingTableViewFilter) {
+       
+        self.filter = filter
+        self.tableView.reloadData()
+        
+    }
+        
 }

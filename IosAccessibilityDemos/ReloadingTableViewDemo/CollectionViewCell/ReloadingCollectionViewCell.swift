@@ -11,5 +11,4 @@ import UIKit
 class ReloadingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numberLabel: UILabel!
     
-    
 }
