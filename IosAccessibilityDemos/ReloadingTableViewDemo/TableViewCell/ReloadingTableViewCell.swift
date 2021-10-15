@@ -19,6 +19,10 @@ class ReloadingTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.initCollectionView()
+        
+        if Constants.isAccessibilityApplied {
+            self.initAccessibility()
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,18 +36,21 @@ class ReloadingTableViewCell: UITableViewCell {
         collectionView.dataSource = self
     }
     
+    func initAccessibility() {
+        // TableViewCell 안에 CollectionView가 있을 경우, 초점을 하나로 잡는 이슈
+        self.accessibilityElements = [self.collectionView]
+    }
+       
     
     func setNumberArray() {
         array.removeAll()
         
         if filter == .book {
             for number in 1..<51 {
-                print("setNumberArray \(number)")
                 array.append("\(number)")
             }
         } else {
             for number in 51..<101 {
-                print("setNumberArray \(number)")
                 array.append("\(number)")
             }
         }
@@ -54,7 +61,6 @@ class ReloadingTableViewCell: UITableViewCell {
 }
 extension ReloadingTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("numberOfItemsInSection \(array.count)")
         return array.count
     }
     

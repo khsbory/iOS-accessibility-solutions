@@ -133,6 +133,9 @@
                                                 <constraint firstItem="DCU-Pd-FW2" firstAttribute="top" secondItem="HOe-3Y-ZYN" secondAttribute="top" id="q8i-uo-ekY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="collectionView" destination="DCU-Pd-FW2" id="fjk-zI-TXB"/>
                                         </connections>
@@ -155,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="78.348214285714278"/>
+            <point key="canvasLocation" x="-407" y="127"/>
         </scene>
         <!--Reloading Table View Main View Controller-->
         <scene sceneID="ZaD-zQ-Dmc">

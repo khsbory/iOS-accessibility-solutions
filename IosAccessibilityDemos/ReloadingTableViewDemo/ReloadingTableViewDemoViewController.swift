@@ -86,7 +86,7 @@ extension ReloadingTableViewDemoViewController: UITableViewDelegate, UITableView
 }
 extension ReloadingTableViewDemoViewController: ReloadingTableViewDelegate {
     func selectReloadingFilter(filter: ReloadingTableViewFilter) {
-       
+       print("selectReloadingFilter tableViewReload")
         self.filter = filter
         self.tableView.reloadData()
         

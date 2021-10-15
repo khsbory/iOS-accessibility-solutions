@@ -21,6 +21,9 @@ class ReloadingButtonCell: UITableViewCell {
         
         self.initCollectionView()
         
+        if Constants.isAccessibilityApplied {
+            self.initAccessibility()
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,7 +35,14 @@ class ReloadingButtonCell: UITableViewCell {
     func initCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+    }    
+    
+    func initAccessibility() {
+        // TableViewCell 안에 CollectionView가 있을 경우, 초점을 하나로 잡는 이슈
+        self.accessibilityElements = [self.collectionView]
     }
+    
 }
 extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -66,6 +76,7 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
             cell.isSelected = false
             cell.backgroundColor = .white
         }
+        
         
         return cell
     }
