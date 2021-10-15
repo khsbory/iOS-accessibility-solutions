@@ -6,6 +6,7 @@ target 'IosAccessibilityDemos' do
   use_frameworks!
 
   pod 'DLRadioButton', '~> 1.4'
+  pod 'SkeletonView'
 
   # Pods for IosAccessibilityDemos
 

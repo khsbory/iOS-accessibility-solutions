@@ -53,6 +53,12 @@ class ScreenScrollViewController: UIViewController, UITableViewDelegate, UITable
         self.table.delegate = self
         self.table.dataSource = self
         self.table.rowHeight = 60
+        
+        print("TEST \(table.subviews.last)")
+       
+        table.subviews.last?.accessibilityLabel = "테스트 중입니다."
+        table.subviews.last?.isAccessibilityElement = false
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

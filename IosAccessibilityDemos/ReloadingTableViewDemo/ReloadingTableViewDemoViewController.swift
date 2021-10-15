@@ -2,19 +2,24 @@
 //  ReloadingTableViewDemoViewController.swift
 //  IosAccessibilityDemos
 //
-//  Created by KBIZ on 2021/10/07.
+//  Created by suni on 2021/10/07.
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 
 import UIKit
+import SkeletonView
 
 protocol ReloadingTableViewDelegate {
     func selectReloadingFilter(filter: ReloadingTableViewFilter)
 }
 
 enum ReloadingTableViewFilter: Int {
-    case book = 0
-    case movie = 1
+    case oneToFifty = 0
+    case fifOneToOneHundred = 1
+    case oHOneToOHFifty = 2
+    case oHFifOneToTwoHundred = 3
+    case tHOneToTHFifty  =  4
+    case tHFifOneToThreeHundred =  5
 }
 class ReloadingTableViewDemoViewController: UIViewController {
 
@@ -40,7 +45,7 @@ class ReloadingTableViewDemoViewController: UIViewController {
     func initTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        filter = .book
+        filter = .oneToFifty
     }
 
 }
@@ -49,7 +54,11 @@ class ReloadingTableViewDemoViewController: UIViewController {
 extension ReloadingTableViewDemoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+//        if filter == .oneToFifty {
+//            return 3
+//        } else {
+            return 2
+//        }
     }
     
     
@@ -86,8 +95,9 @@ extension ReloadingTableViewDemoViewController: UITableViewDelegate, UITableView
 }
 extension ReloadingTableViewDemoViewController: ReloadingTableViewDelegate {
     func selectReloadingFilter(filter: ReloadingTableViewFilter) {
-       print("selectReloadingFilter tableViewReload")
+        
         self.filter = filter
+        
         self.tableView.reloadData()
         
     }

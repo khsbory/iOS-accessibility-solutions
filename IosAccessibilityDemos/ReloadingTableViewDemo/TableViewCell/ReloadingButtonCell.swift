@@ -2,11 +2,12 @@
 //  ReloadingButtonCell.swift
 //  IosAccessibilityDemos
 //
-//  Created by KBIZ on 2021/10/07.
+//  Created by suni on 2021/10/07.
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 
 import UIKit
+import SkeletonView
 
 class ReloadingButtonCell: UITableViewCell {
 
@@ -47,7 +48,7 @@ class ReloadingButtonCell: UITableViewCell {
 extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 5
     }
     
     
@@ -65,13 +66,22 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
         case 1:
             cell.numberLabel.text = "51~100"
             break
+        case 2:
+            cell.numberLabel.text = "101~150"
+            break
+        case 3:
+            cell.numberLabel.text = "151~200"
+            break
+        case 4:
+            cell.numberLabel.text = "201~250"
+            break
         default:
             cell.numberLabel.text = ""
         }
         
         if indexPath.row == self.filter?.rawValue {
             cell.isSelected = true
-            cell.backgroundColor = .gray
+            cell.backgroundColor = .lightGray
         } else {
             cell.isSelected = false
             cell.backgroundColor = .white
@@ -87,16 +97,54 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let beforeFilter = self.filter
+        
         switch indexPath.row {
         case 0:
-            self.filter = .book
+            self.filter = .oneToFifty
         case 1:
-            self.filter = .movie
+            self.filter = .fifOneToOneHundred
+        case 2:
+            self.filter = .oHOneToOHFifty
+        case 3:
+            self.filter = .oHFifOneToTwoHundred
+        case 4:
+            self.filter = .tHOneToTHFifty
         default:
-            self.filter = .book
+            self.filter = .oneToFifty
         }
         
-        delegate?.selectReloadingFilter(filter: self.filter ?? .book)
-        self.collectionView.reloadData()
+        delegate?.selectReloadingFilter(filter: self.filter ?? .oneToFifty)
+        
+        
+        // 보이스오버가 켜져있을 경우, 주요 CollectionView Cell만 리로드
+        if Constants.isAccessibilityApplied && UIAccessibility.isVoiceOverRunning {
+            let beforeIndexPath = IndexPath(row: beforeFilter?.rawValue ?? 0, section: 0)
+            self.collectionView.reloadItems(at: [beforeIndexPath,indexPath])
+            
+            
+            self.collectionView.isUserInteractionEnabled = false
+
+            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.setEnabledCollectionView), userInfo: nil, repeats: false)
+
+        } else {
+            
+            self.collectionView.reloadData()
+            self.collectionView.layoutIfNeeded()
+            
+            // 리로드 할 경우, Skeleton UI를 사용
+            self.collectionView.showAnimatedSkeleton()
+            
+            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.hideSkeleton), userInfo: nil, repeats: false)
+        }
+    }
+    
+    @objc func hideSkeleton() {
+        self.collectionView.hideSkeleton()
+    }
+    
+    @objc func setEnabledCollectionView(){
+        self.collectionView.isUserInteractionEnabled  = true
     }
 }

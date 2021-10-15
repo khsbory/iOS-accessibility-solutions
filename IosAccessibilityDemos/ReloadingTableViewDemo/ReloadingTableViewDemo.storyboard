@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="QBx-JD-WXb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -52,6 +52,9 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
@@ -60,13 +63,22 @@
                                                                     <constraint firstAttribute="trailing" secondItem="0MF-bV-BzD" secondAttribute="trailing" id="pxg-6A-7rE"/>
                                                                     <constraint firstAttribute="bottom" secondItem="0MF-bV-BzD" secondAttribute="bottom" id="yl3-NM-UEP"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="100" height="50"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <outlet property="numberLabel" destination="0MF-bV-BzD" id="A7S-Jz-418"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
@@ -109,6 +121,9 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
@@ -117,12 +132,21 @@
                                                                     <constraint firstAttribute="bottom" secondItem="zRy-WW-PUI" secondAttribute="bottom" id="ibA-Hn-ywH"/>
                                                                     <constraint firstAttribute="trailing" secondItem="zRy-WW-PUI" secondAttribute="trailing" id="myT-QY-vhf"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </collectionViewCellContentView>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <outlet property="numberLabel" destination="zRy-WW-PUI" id="QeW-km-Auy"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </collectionView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -132,6 +156,9 @@
                                                 <constraint firstItem="DCU-Pd-FW2" firstAttribute="leading" secondItem="HOe-3Y-ZYN" secondAttribute="leading" id="b5Y-nU-hDq"/>
                                                 <constraint firstItem="DCU-Pd-FW2" firstAttribute="top" secondItem="HOe-3Y-ZYN" secondAttribute="top" id="q8i-uo-ekY"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES"/>
@@ -147,9 +174,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="QBx-JD-WXb" secondAttribute="bottom" id="Ad0-up-c47"/>
+                            <constraint firstItem="QBx-JD-WXb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="LlX-fp-caI"/>
                             <constraint firstItem="QBx-JD-WXb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="MgE-FQ-6zi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QBx-JD-WXb" secondAttribute="trailing" id="gHH-hx-A47"/>
-                            <constraint firstItem="QBx-JD-WXb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ybi-6M-Eeb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -158,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-407" y="127"/>
+            <point key="canvasLocation" x="-407.24637681159425" y="126.5625"/>
         </scene>
         <!--Reloading Table View Main View Controller-->
         <scene sceneID="ZaD-zQ-Dmc">
