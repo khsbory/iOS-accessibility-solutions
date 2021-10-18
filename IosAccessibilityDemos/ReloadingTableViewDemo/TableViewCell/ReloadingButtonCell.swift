@@ -9,12 +9,15 @@
 import UIKit
 import SkeletonView
 
+public let RELOADING_TIME: TimeInterval = 2.0
+
 class ReloadingButtonCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     var filter: ReloadingTableViewFilter?
     var delegate: ReloadingTableViewDelegate?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,14 +39,12 @@ class ReloadingButtonCell: UITableViewCell {
     func initCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
     }    
     
     func initAccessibility() {
         // TableViewCell 안에 CollectionView가 있을 경우, 초점을 하나로 잡는 이슈
         self.accessibilityElements = [self.collectionView]
     }
-    
 }
 extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -81,12 +82,13 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
         
         if indexPath.row == self.filter?.rawValue {
             cell.isSelected = true
-            cell.backgroundColor = .lightGray
+//            cell.backgroundColor = .lightGray
         } else {
             cell.isSelected = false
-            cell.backgroundColor = .white
+//            cell.backgroundColor = .white
         }
         
+        cell.initCell()
         
         return cell
     }
@@ -117,16 +119,14 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
         
         delegate?.selectReloadingFilter(filter: self.filter ?? .oneToFifty)
         
-        
         // 보이스오버가 켜져있을 경우, 주요 CollectionView Cell만 리로드
-        if Constants.isAccessibilityApplied && UIAccessibility.isVoiceOverRunning {
+        let cell = self.collectionView.cellForItem(at: indexPath) as! ReloadingButtonCollectionViewCell
+        
+        if Constants.isAccessibilityApplied && cell.isVoiceOverRunning {
             let beforeIndexPath = IndexPath(row: beforeFilter?.rawValue ?? 0, section: 0)
             self.collectionView.reloadItems(at: [beforeIndexPath,indexPath])
-            
-            
-            self.collectionView.isUserInteractionEnabled = false
-
-            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.setEnabledCollectionView), userInfo: nil, repeats: false)
+            // 로드 중일 때는, collectionView notEnabled
+            self.setNotEnabledCollectionView()
 
         } else {
             
@@ -136,8 +136,22 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
             // 리로드 할 경우, Skeleton UI를 사용
             self.collectionView.showAnimatedSkeleton()
             
-            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.hideSkeleton), userInfo: nil, repeats: false)
+            Timer.scheduledTimer(timeInterval: RELOADING_TIME, target: self, selector: #selector(self.hideSkeleton), userInfo: nil, repeats: false)
         }
+    }
+    
+    
+    func setNotEnabledCollectionView() {
+//        self.collectionView.visibleCells.forEach { cell in
+//            if let cell = cell as? ReloadingButtonCollectionViewCell {
+//                cell.isUserInteractionEnabled = false
+//                cell.accessibilityTraits = [.button, .notEnabled]
+//            }
+//        }
+        
+        self.collectionView.isUserInteractionEnabled = false
+        
+        Timer.scheduledTimer(timeInterval: RELOADING_TIME, target: self, selector: #selector(self.setEnabledCollectionView), userInfo: nil, repeats: false)
     }
     
     @objc func hideSkeleton() {
@@ -145,6 +159,12 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     @objc func setEnabledCollectionView(){
-        self.collectionView.isUserInteractionEnabled  = true
+//        self.collectionView.visibleCells.forEach { cell in
+//            if let cell = cell as? ReloadingButtonCollectionViewCell {
+//                cell.accessibilityTraits = .button
+//                cell.isUserInteractionEnabled = true
+//            }
+//        }
+        self.collectionView.isUserInteractionEnabled = true
     }
 }

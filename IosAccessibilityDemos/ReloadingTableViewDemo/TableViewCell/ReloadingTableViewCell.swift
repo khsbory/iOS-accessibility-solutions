@@ -59,7 +59,7 @@ class ReloadingTableViewCell: UITableViewCell {
         // 리로드 할 경우, Skeleton UI를 사용
         self.collectionView.showAnimatedSkeleton()
         
-        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.hideSkeleton), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: RELOADING_TIME, target: self, selector: #selector(self.hideSkeleton), userInfo: nil, repeats: false)
     }
     
     @objc func hideSkeleton() {
