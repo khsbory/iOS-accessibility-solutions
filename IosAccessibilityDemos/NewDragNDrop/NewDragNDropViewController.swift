@@ -101,7 +101,6 @@ class NewDragNDropViewController: UIViewController {
                 let touchPoint = sender.location(in: self.tableView)
                 if let indexPath = tableView.indexPathForRow(at: touchPoint) {
                     let number = numberArray[indexPath.row]
-                    print("🔵 TableView LongPressGesture - number : \(number)")
                 }
             }
         self.showPopup()

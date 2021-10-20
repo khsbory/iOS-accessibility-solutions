@@ -81,11 +81,9 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
         }
         
         if indexPath.row == self.filter?.rawValue {
-            cell.isSelected = true
-//            cell.backgroundColor = .lightGray
+            cell.isSelect = true
         } else {
-            cell.isSelected = false
-//            cell.backgroundColor = .white
+            cell.isSelect = false
         }
         
         cell.initCell()
@@ -121,10 +119,11 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
         
         // 보이스오버가 켜져있을 경우, 주요 CollectionView Cell만 리로드
         let cell = self.collectionView.cellForItem(at: indexPath) as! ReloadingButtonCollectionViewCell
-        
+                
         if Constants.isAccessibilityApplied && cell.isVoiceOverRunning {
             let beforeIndexPath = IndexPath(row: beforeFilter?.rawValue ?? 0, section: 0)
             self.collectionView.reloadItems(at: [beforeIndexPath,indexPath])
+            
             // 로드 중일 때는, collectionView notEnabled
             self.setNotEnabledCollectionView()
 
@@ -142,13 +141,6 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     
     func setNotEnabledCollectionView() {
-//        self.collectionView.visibleCells.forEach { cell in
-//            if let cell = cell as? ReloadingButtonCollectionViewCell {
-//                cell.isUserInteractionEnabled = false
-//                cell.accessibilityTraits = [.button, .notEnabled]
-//            }
-//        }
-        
         self.collectionView.isUserInteractionEnabled = false
         
         Timer.scheduledTimer(timeInterval: RELOADING_TIME, target: self, selector: #selector(self.setEnabledCollectionView), userInfo: nil, repeats: false)
@@ -159,12 +151,6 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     @objc func setEnabledCollectionView(){
-//        self.collectionView.visibleCells.forEach { cell in
-//            if let cell = cell as? ReloadingButtonCollectionViewCell {
-//                cell.accessibilityTraits = .button
-//                cell.isUserInteractionEnabled = true
-//            }
-//        }
         self.collectionView.isUserInteractionEnabled = true
     }
 }

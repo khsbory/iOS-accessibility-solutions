@@ -14,24 +14,18 @@ class ReloadingButtonCollectionViewCell: UICollectionViewCell {
     var isVoiceOverRunning: Bool = false
     
     override func accessibilityElementDidBecomeFocused() {
-        print("FocusFocusFocus \(UIAccessibility.isVoiceOverRunning)")
         self.isVoiceOverRunning = true
     }
     
     override func accessibilityElementDidLoseFocus() {
-        print("LoseLoseLose \(UIAccessibility.isVoiceOverRunning)")
         self.isVoiceOverRunning = false
     }
     
-    override var isSelected: Bool {
+    var isSelect: Bool = false {
         didSet{
-            if isSelected {
-                self.accessibilityTraits = [.notEnabled,.button]
-                self.backgroundColor = .lightGray
-            }
-            else {
-                self.accessibilityTraits = .button
-                self.backgroundColor = .white
+            self.backgroundColor = isSelect ? .lightGray : .white
+            if Constants.isAccessibilityApplied {
+                self.accessibilityTraits = isSelect ? [.notEnabled, .button, .selected] : [.button]
             }
         }
     }
@@ -44,8 +38,10 @@ class ReloadingButtonCollectionViewCell: UICollectionViewCell {
     
     func initAccessibility() {
         self.isAccessibilityElement = true
-        self.accessibilityTraits = .button
         
+        self.backgroundColor = isSelect ? .lightGray : .white
+        self.accessibilityTraits = isSelect ? [.notEnabled, .button, .selected] : [.button]
+               
         if let text = numberLabel.text {
              self.accessibilityLabel = "\(text)"
         }
