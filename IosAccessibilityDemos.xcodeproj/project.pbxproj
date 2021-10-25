@@ -41,6 +41,10 @@
 		864C976126E0997600B657C1 /* RollingBanner2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C976026E0997600B657C1 /* RollingBanner2ViewController.swift */; };
 		864C976326E0997F00B657C1 /* RollingBanner2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864C976226E0997F00B657C1 /* RollingBanner2.storyboard */; };
 		866B60E426FDAE9800D251C2 /* NewDragNDropPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866B60E326FDAE9800D251C2 /* NewDragNDropPopup.swift */; };
+		86985494272681480065AC8D /* UISliderMusicPlayerDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86985493272681480065AC8D /* UISliderMusicPlayerDemo.storyboard */; };
+		8698549A272681E20065AC8D /* UISliderMusicPlayerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86985499272681E20065AC8D /* UISliderMusicPlayerMainViewController.swift */; };
+		8698549C272681EF0065AC8D /* UISliderMusicPlayerDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8698549B272681EF0065AC8D /* UISliderMusicPlayerDemoViewController.swift */; };
+		8698549E2726888D0065AC8D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8698549D2726888D0065AC8D /* Track.swift */; };
 		869C7B922681B7EB00CF5B97 /* NewDragNDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B912681B7EB00CF5B97 /* NewDragNDropViewController.swift */; };
 		869C7B942681B81B00CF5B97 /* NewDragNDropMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */; };
 		869C7B962681B83C00CF5B97 /* NewDragNDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */; };
@@ -50,6 +54,7 @@
 		86C57FED26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C57FEC26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift */; };
 		86C57FEF26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C57FEE26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift */; };
 		86C57FF126BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C57FF026BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift */; };
+		86CF20822726912400DD2A1C /* Swish.mov in Resources */ = {isa = PBXBuildFile; fileRef = 86CF207A2726912400DD2A1C /* Swish.mov */; };
 		A05D005E267311320066F44E /* SeparateFocusMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */; };
 		A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05D005C267311320066F44E /* SeparateFocus.storyboard */; };
 		A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005D267311320066F44E /* SeparateFocusViewController.swift */; };
@@ -177,6 +182,10 @@
 		864C976026E0997600B657C1 /* RollingBanner2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingBanner2ViewController.swift; sourceTree = "<group>"; };
 		864C976226E0997F00B657C1 /* RollingBanner2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RollingBanner2.storyboard; sourceTree = "<group>"; };
 		866B60E326FDAE9800D251C2 /* NewDragNDropPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewDragNDropPopup.swift; path = IosAccessibilityDemos/NewDragNDrop/NewDragNDropPopup.swift; sourceTree = SOURCE_ROOT; };
+		86985493272681480065AC8D /* UISliderMusicPlayerDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UISliderMusicPlayerDemo.storyboard; sourceTree = "<group>"; };
+		86985499272681E20065AC8D /* UISliderMusicPlayerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderMusicPlayerMainViewController.swift; sourceTree = "<group>"; };
+		8698549B272681EF0065AC8D /* UISliderMusicPlayerDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderMusicPlayerDemoViewController.swift; sourceTree = "<group>"; };
+		8698549D2726888D0065AC8D /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		869C7B912681B7EB00CF5B97 /* NewDragNDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropViewController.swift; sourceTree = "<group>"; };
 		869C7B932681B81B00CF5B97 /* NewDragNDropMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDragNDropMainViewController.swift; sourceTree = "<group>"; };
 		869C7B952681B83C00CF5B97 /* NewDragNDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewDragNDrop.storyboard; sourceTree = "<group>"; };
@@ -186,6 +195,7 @@
 		86C57FEC26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverScrollTestViewController.swift; sourceTree = "<group>"; };
 		86C57FEE26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverScrollTestTableViewCell.swift; sourceTree = "<group>"; };
 		86C57FF026BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverScrollTestWebViewCell.swift; sourceTree = "<group>"; };
+		86CF207A2726912400DD2A1C /* Swish.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Swish.mov; sourceTree = "<group>"; };
 		8E94E82D9BE3E91625ABA2A3 /* Pods-IosAccessibilityDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos.release.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos.release.xcconfig"; sourceTree = "<group>"; };
 		A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparateFocusMainViewController.swift; sourceTree = "<group>"; };
 		A05D005C267311320066F44E /* SeparateFocus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeparateFocus.storyboard; sourceTree = "<group>"; };
@@ -331,6 +341,7 @@
 				864C975D26E0993F00B657C1 /* RollingBanner2 */,
 				A0D9A2912706C87000CA14F5 /* TableViewMoveRowDemo */,
 				860C9A0F270EAEC700632EFE /* ReloadingTableViewDemo */,
+				86985492272680FD0065AC8D /* UISliderMusicPlayerDemo */,
 				1F8501EA2518816700B99181 /* AppDelegate.swift */,
 				B33D357025CB915A0079A10C /* Sunset Island.mp3 */,
 				1F8501EC2518816700B99181 /* SceneDelegate.swift */,
@@ -453,6 +464,18 @@
 			path = RollingBanner2;
 			sourceTree = "<group>";
 		};
+		86985492272680FD0065AC8D /* UISliderMusicPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				86CF20732726912400DD2A1C /* musics */,
+				8698549D2726888D0065AC8D /* Track.swift */,
+				86985493272681480065AC8D /* UISliderMusicPlayerDemo.storyboard */,
+				86985499272681E20065AC8D /* UISliderMusicPlayerMainViewController.swift */,
+				8698549B272681EF0065AC8D /* UISliderMusicPlayerDemoViewController.swift */,
+			);
+			path = UISliderMusicPlayerDemo;
+			sourceTree = "<group>";
+		};
 		869C7B902681B7B200CF5B97 /* NewDragNDrop */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +498,14 @@
 				86C57FF026BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift */,
 			);
 			path = VoiceOverScrollTest;
+			sourceTree = "<group>";
+		};
+		86CF20732726912400DD2A1C /* musics */ = {
+			isa = PBXGroup;
+			children = (
+				86CF207A2726912400DD2A1C /* Swish.mov */,
+			);
+			path = musics;
 			sourceTree = "<group>";
 		};
 		A05D005A267311320066F44E /* SeparateFocus */ = {
@@ -721,6 +752,7 @@
 				1F8501F72518816800B99181 /* LaunchScreen.storyboard in Resources */,
 				B32673C225B569D20067C5CE /* VerticalScrollDemo2Main.storyboard in Resources */,
 				1F8501F42518816800B99181 /* Assets.xcassets in Resources */,
+				86985494272681480065AC8D /* UISliderMusicPlayerDemo.storyboard in Resources */,
 				1F8502212518A37B00B99181 /* VerticalScrollDemo.storyboard in Resources */,
 				860C9A11270EAFD800632EFE /* ReloadingTableViewDemo.storyboard in Resources */,
 				A0D9A2932706C89000CA14F5 /* TableViewMoveRowDemo.storyboard in Resources */,
@@ -738,6 +770,7 @@
 				B380938D25FB3BEB00244627 /* Setting.storyboard in Resources */,
 				B326739125B5344A0067C5CE /* SecondPage.storyboard in Resources */,
 				1F8501F22518816700B99181 /* Main.storyboard in Resources */,
+				86CF20822726912400DD2A1C /* Swish.mov in Resources */,
 				B33D357F25CBD72F0079A10C /* DragNDropMain.storyboard in Resources */,
 				B33D679D2628004400116E26 /* ScreenScrollMain.storyboard in Resources */,
 				3E11435225DCF1D700B6560F /* CarouselAccessibility.storyboard in Resources */,
@@ -901,11 +934,13 @@
 				3E11435C25DCF37500B6560F /* DogCarouselContainerView.swift in Sources */,
 				B35BF8772563B9CA006858DF /* WebViewDemoViewController.swift in Sources */,
 				3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */,
+				8698549E2726888D0065AC8D /* Track.swift in Sources */,
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
 				869C7B922681B7EB00CF5B97 /* NewDragNDropViewController.swift in Sources */,
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
 				86C57FEF26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift in Sources */,
 				A09B13D326B15B7000EF499A /* ReadjustFocusViewController.swift in Sources */,
+				8698549C272681EF0065AC8D /* UISliderMusicPlayerDemoViewController.swift in Sources */,
 				86C57FF126BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift in Sources */,
 				A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */,
 				1F85021E25188B6A00B99181 /* VerticalScrollDemoViewController.swift in Sources */,
@@ -935,6 +970,7 @@
 				3E11436025DD0FBB00B6560F /* DogModalView.swift in Sources */,
 				B33219182579E76600B6B6C6 /* AccessibilityFocusDemoViewController.swift in Sources */,
 				B32673BD25B569A20067C5CE /* VerticalScrollDemo2MainViewController.swift in Sources */,
+				8698549A272681E20065AC8D /* UISliderMusicPlayerMainViewController.swift in Sources */,
 				B332190B2579E60900B6B6C6 /* AccessibilityFocusDemoMainViewController.swift in Sources */,
 				864C975F26E0996700B657C1 /* RollingBanner2MainViewController.swift in Sources */,
 				B33255EB25B672DA00F6C8DD /* Constants.swift in Sources */,
@@ -1131,7 +1167,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CT8CT953JS;
+				DEVELOPMENT_TEAM = 3T5QFYSPG5;
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1154,7 +1190,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CT8CT953JS;
+				DEVELOPMENT_TEAM = 3T5QFYSPG5;
 				INFOPLIST_FILE = IosAccessibilityDemos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
