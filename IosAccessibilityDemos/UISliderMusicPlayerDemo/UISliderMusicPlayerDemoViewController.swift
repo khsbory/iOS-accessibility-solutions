@@ -18,13 +18,12 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
     @IBOutlet weak var totalDurationTimeLabel: UILabel!
     
     @IBOutlet weak var playPauseButton: UIButton!
-    @IBOutlet weak var timeSlider: UISlider!
-    
+    @IBOutlet weak var timeSlider: AccessibileUISlider!
     
     var track: Track?
     var avplayer: AVPlayer?
     var timeObserver: Any?
-
+    
     // 현재시간
     var currentTime: Double {
         return avplayer?.currentItem?.currentTime().seconds ?? 0
@@ -35,6 +34,25 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
         return avplayer?.currentItem?.duration.seconds ?? 0
     }
     
+    // 드래그 기능
+    var isSeeking = false
+    @IBAction func dragging(_ sender: UISlider) {
+        isSeeking = true
+        
+        
+        if timeSlider.isVoiceOverRunning {
+            seek(to: Double(sender.value))
+        }
+    }
+    
+    @IBAction func endDragging(_ sender: UISlider) {
+        isSeeking = false
+        
+        if !timeSlider.isVoiceOverRunning {
+            seek(to: Double(sender.value))
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setScreenTitle()
@@ -66,6 +84,16 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
         }
     }
     
+    
+    func seek(to: Double) {
+        // to: 0 ~ 1
+        // 0.5 * 60 = 30
+        let timeScale: CMTimeScale = 10
+        let targetTime: CMTimeValue = CMTimeValue(to * totalDurationTime) * CMTimeValue(timeScale)
+        let time = CMTime(value: targetTime, timescale: 10)
+        avplayer?.seek(to: time)
+    }
+    
     func updateUI() {
         guard let currentTrack = track else { return }
         thumbnail.image = currentTrack.thumb
@@ -86,9 +114,14 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
         currentTimeLabel.text = secondsToString(sec: currentTime)
         totalDurationTimeLabel.text = secondsToString(sec: totalDurationTime)
 
-        // 사용자가 드래깅하고있지 않을 때만 시간 업데이트를 하겠다
-        if isSeeking == false {
+        if timeSlider.isVoiceOverRunning {
+            // Voice Over Running 시에는 무조건 시간 업데이트
             timeSlider.value = Float(currentTime/totalDurationTime)
+        } else {
+            // 사용자가 드래깅하고있지 않을 때만 시간 업데이트
+            if isSeeking == false {
+                timeSlider.value = Float(currentTime/totalDurationTime)
+            }
         }
     }
     
@@ -110,15 +143,6 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
         avplayer?.pause()
     }
     
-    func seek(to: Double) {
-        // to: 0 ~ 1
-        // 0.5 * 60 = 30
-        let timeScale: CMTimeScale = 10
-        let targetTime: CMTimeValue = CMTimeValue(to * totalDurationTime) * CMTimeValue(timeScale)
-        let time = CMTime(value: targetTime, timescale: 10)
-        avplayer?.seek(to: time)
-    }
-
     @IBAction func playButtonTapped(_ sender: UIButton) {
         // 재생중인지 아닌지 확인: rate가 1이면 플레이 상태, 0이면 퍼즈 상태
         let isPlaying = avplayer?.rate == 1
@@ -132,17 +156,6 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
         }
     }
     
-    // 드래그 기능
-    var isSeeking = false
-    @IBAction func dragging(_ sender: UISlider) {
-        isSeeking = true
-    }
-    
-    @IBAction func endDragging(_ sender: UISlider) {
-        isSeeking = false
-        seek(to: Double(sender.value))
-    }
-    
     // 작동 중이던 기능들을 정지시키고 닫는다
     func close () {
         pause()
@@ -152,4 +165,19 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
     }
 
 
+}
+
+class AccessibileUISlider: UISlider {
+    
+    var isVoiceOverRunning: Bool = false
+    
+    override func accessibilityElementDidBecomeFocused() {
+        if Constants.isAccessibilityApplied {
+            isVoiceOverRunning = true
+        }
+    }
+    
+    override func accessibilityElementDidLoseFocus() {
+        isVoiceOverRunning = false
+    }
 }

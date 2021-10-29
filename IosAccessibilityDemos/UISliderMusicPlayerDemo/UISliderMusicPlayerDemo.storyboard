@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -94,7 +94,7 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-hC-4rw">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-hC-4rw" customClass="AccessibileUISlider" customModule="IosAccessibilityDemos" customModuleProvider="target">
                                 <rect key="frame" x="36" y="499" width="342" height="31"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -152,7 +152,7 @@
                         <outlet property="currentTimeLabel" destination="WMS-ht-2hj" id="FIk-ta-83q"/>
                         <outlet property="playPauseButton" destination="gvE-wh-UcN" id="VER-n2-nQ1"/>
                         <outlet property="thumbnail" destination="I3k-37-p7U" id="MeW-Rx-rDL"/>
-                        <outlet property="timeSlider" destination="1RP-hC-4rw" id="YIu-9o-IIn"/>
+                        <outlet property="timeSlider" destination="1RP-hC-4rw" id="2qi-DB-eYm"/>
                         <outlet property="totalDurationTimeLabel" destination="Zzr-d7-hna" id="FHQ-7n-U5U"/>
                         <outlet property="trackTitle" destination="4d1-qq-tsn" id="Z3i-bG-Rbe"/>
                     </connections>
