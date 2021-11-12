@@ -1,5 +1,5 @@
 //
-//  DataTableMainViewController.swift
+//  CalendarMainViewController.swift
 //  IosAccessibilityDemos
 //
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DataTableMainViewController: UIViewController {
+class CalendarMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +20,18 @@ class DataTableMainViewController: UIViewController {
     }
     
     private func setScreenTitle() {
-        self.title = "데이터 테이블 데모"
+        self.title = "캘린더 데모"
     }
     
     @IBAction func launchSeparateFocusWithoutAccessibility(_ sender: Any) {
         Constants.isAccessibilityApplied = false
-        showScreenOnOtherStoryboard(storyboardName: "DataTableDemo", viewControllerStoryboardId: "DataTable")
+        showScreenOnOtherStoryboard(storyboardName: "CalendarDemo", viewControllerStoryboardId: "CalendarDemo")
         
     }
     
     @IBAction func launchSeparateFocusWithAccessibility(_ sender: Any) {
         Constants.isAccessibilityApplied = true
-        showScreenOnOtherStoryboard(storyboardName: "DataTableDemo", viewControllerStoryboardId: "DataTable")
+        showScreenOnOtherStoryboard(storyboardName: "CalendarDemo", viewControllerStoryboardId: "AccesibilityCalendarDemo")
         
     }
     
