@@ -56,17 +56,21 @@ class AccessibilityCalendarDemoViewController: UIViewController {
     }
     
     func initAccessibility() {
+        // 1. Accessibility CollecttionView 행, 열 갯수 지정
         self.collectionView.columnCount = weeks.count
         self.collectionView.rowCount = ( days.count / 7 ) + 2
         
+        // 2. Accessibility CollecttionView 행, 열 읽기 설정
 //        self.collectionView.isRowReaderOn = true
 //        self.collectionView.isColumnReaderOn = true
         
+        // 3. Accessibility CollecttionView 헤더 설정
         self.collectionView.headerCellCount = weeks.count
         for _ in 0..<weeks.count {
             self.collectionView.headerCells.append(DataTableCalendarCell())
         }
         
+        // 4. Accessibility CollecttionView DataTable 초기 설정
         self.collectionView.initDataTable()
     }
 }
@@ -106,16 +110,18 @@ extension AccessibilityCalendarDemoViewController: UICollectionViewDelegate, UIC
         
         if Constants.isAccessibilityApplied {
             let row = indexPath.section == 0 ? indexPath.row : indexPath.row + 7
+            // 1. 현재 Accessibility Cell의 행, 열 위치 설정
             cell.row = ( row / 7 )
             cell.column = row % 7
+            
+            // 2. 현재 Accessibility Cell이 포함된 행, 열 총 길이
             cell.rowLength = ( days.count / 7 ) + 2
             cell.columnLength = weeks.count
             
+            // 3. Accessibility CollectionView의 header Cell 설정
             if indexPath.section == 0 {
-                print("\(self.collectionView.headerCells)")
                 self.collectionView.headerCells[indexPath.row] = cell
             }
-            
         }
         return cell
     }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+/**
+ # (C) DataTableCollectionView
+ - Note:접근성이 적용된 DataTable Type CollectionView
+*/
 class DataTableCollectionView: UICollectionView {
     
     var headerCells: [UIAccessibilityContainerDataTableCell] = []
@@ -24,21 +28,21 @@ class DataTableCollectionView: UICollectionView {
 }
 extension DataTableCollectionView: UIAccessibilityContainerDataTable {
     
+    // column의 header 지정
     func accessibilityHeaderElements(forColumn column: Int) -> [UIAccessibilityContainerDataTableCell]? {
 
         if column >= 0 && column < columnCount {
-            print("accessibilityHeaderElements  column \(column)")
-            print("\(headerCells[column])")
             return [headerCells[column]]
-            
         } else {
             return nil
-        }
+        }
+        
     }
     
+    // row의 header 지정
 //    func accessibilityHeaderElements(forRow row: Int) -> [UIAccessibilityContainerDataTableCell]? {
+//
 //        if row >= 0 && row < columnCount {
-//            print("accessibilityHeaderElements  row \(row)")
 //            return [headerCells[row]]
 //        } else {
 //            return nil
