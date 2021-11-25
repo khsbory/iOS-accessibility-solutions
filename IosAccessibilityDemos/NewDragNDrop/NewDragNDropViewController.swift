@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import NVAccessibilitySolution
+
 protocol NewDragNDropDelegate {
     func selectFavorite(number: Int)
     func deselectFavorite(number: Int)
@@ -60,9 +62,11 @@ class NewDragNDropViewController: UIViewController {
         if self.deleteButton.isHidden && selectNumberArray.count > 0 {
             self.deleteButton.isHidden = false
             if Constants.isAccessibilityApplied {
-                DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
-                    UIAccessibility.post(notification: .announcement, argument: "\(self.deleteButton.titleLabel?.text ?? "삭제") 버튼 표시됨")
-                }
+                // 211125. 라이브러리 사용
+                NVAccessibility.announceForAccessiblity("\(self.deleteButton.titleLabel?.text ?? "삭제") 버튼 표시됨", .now() + 1.5)
+//                DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
+//                    UIAccessibility.post(notification: .announcement, argument: "\(self.deleteButton.titleLabel?.text ?? "삭제") 버튼 표시됨")
+//                }
             }
         } else if !self.deleteButton.isHidden && selectNumberArray.count == 0 {
             self.deleteButton.isHidden = true
@@ -144,9 +148,11 @@ class NewDragNDropViewController: UIViewController {
         self.tableView.reloadData()
         
         if Constants.isAccessibilityApplied {
-            DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
-                UIAccessibility.post(notification: .announcement, argument: "삭제 완료")
-            }
+            // 211125. 라이브러리 사용
+            NVAccessibility.announceForAccessiblity("삭제 완료", .now() + 1.0)
+//            DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
+//                UIAccessibility.post(notification: .announcement, argument: "삭제 완료")
+//            }
         }
     }
     
@@ -204,12 +210,16 @@ extension NewDragNDropViewController: UITableViewDelegate, UITableViewDataSource
             if self.selectNumberArray.exists(number) {
                 self.deselectNumber(number: number)
                 if Constants.isAccessibilityApplied {
-                    UIAccessibility.post(notification: .announcement, argument: "해제됨")
+                    // 211125. 라이브러리 사용
+                    NVAccessibility.announceForAccessiblity("해제됨")
+//                    UIAccessibility.post(notification: .announcement, argument: "해제됨")
                 }
             } else {
                 self.selectNumber(number: number)
                 if Constants.isAccessibilityApplied {
-                    UIAccessibility.post(notification: .announcement, argument: "선택됨")
+                    // 211125. 라이브러리 사용
+                    NVAccessibility.announceForAccessiblity("선택됨")
+//                    UIAccessibility.post(notification: .announcement, argument: "선택됨")
                 }
             }
             self.tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -257,9 +267,11 @@ extension NewDragNDropViewController: NewDragNDropDelegate {
         self.tableView.reloadData()
         
         if Constants.isAccessibilityApplied {
-            DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
-                UIAccessibility.post(notification: .announcement, argument: "삭제 완료")
-            }
+            // 211125. 라이브러리 사용
+            NVAccessibility.announceForAccessiblity("삭제 완료", .now()+1.0)
+//            DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
+//                UIAccessibility.post(notification: .announcement, argument: "삭제 완료")
+//            }
         }
     }
 }

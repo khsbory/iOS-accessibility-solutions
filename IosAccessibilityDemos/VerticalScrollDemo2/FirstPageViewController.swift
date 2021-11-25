@@ -6,6 +6,7 @@
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 import UIKit
+import NVAccessibilitySolution
 
 class FirstPageViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     var fruits:[String] =
@@ -19,10 +20,12 @@ class FirstPageViewController: UIViewController , UITableViewDelegate, UITableVi
     }
     
     private func sayScreenNameForAccessibility(screenName: String?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                              
-                             UIAccessibility.post(notification: .announcement , argument: screenName)
-                          })
+        // 211125. 라이브러리 사용
+        NVAccessibility.announceForAccessiblity(screenName,.now() + 1.0)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+//
+//                             UIAccessibility.post(notification: .announcement , argument: screenName)
+//                          })
     }
     
     private func initTables() {

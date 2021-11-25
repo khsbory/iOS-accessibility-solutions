@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import NVAccessibilitySolution
 
 class UISliderMusicPlayerDemoViewController: UIViewController {
     
@@ -18,7 +19,7 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
     @IBOutlet weak var totalDurationTimeLabel: UILabel!
     
     @IBOutlet weak var playPauseButton: UIButton!
-    @IBOutlet weak var timeSlider: AccessibileUISlider!
+    @IBOutlet weak var timeSlider: NVAccessibilitySlider!
     
     var track: Track?
     var avplayer: AVPlayer?
@@ -40,7 +41,8 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
         isSeeking = true
         
         
-        if timeSlider.isVoiceOverRunning {
+        // 211125. 라이브러리사용
+        if timeSlider.isAccessibilityFocusStarted && Constants.isAccessibilityApplied {
             seek(to: Double(sender.value))
         }
     }
@@ -48,7 +50,8 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
     @IBAction func endDragging(_ sender: UISlider) {
         isSeeking = false
         
-        if !timeSlider.isVoiceOverRunning {
+        // 211125. 라이브러리사용
+        if !timeSlider.isAccessibilityFocusStarted && Constants.isAccessibilityApplied {
             seek(to: Double(sender.value))
         }
     }
@@ -113,8 +116,9 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
         // currentTime label, total duration label, slider
         currentTimeLabel.text = secondsToString(sec: currentTime)
         totalDurationTimeLabel.text = secondsToString(sec: totalDurationTime)
-
-        if timeSlider.isVoiceOverRunning {
+        
+        // 211125. 라이브러리사용
+        if timeSlider.isAccessibilityFocusStarted && Constants.isAccessibilityApplied  {
             // Voice Over Running 시에는 무조건 시간 업데이트
             timeSlider.value = Float(currentTime/totalDurationTime)
         } else {
@@ -165,19 +169,4 @@ class UISliderMusicPlayerDemoViewController: UIViewController {
     }
 
 
-}
-
-class AccessibileUISlider: UISlider {
-    
-    var isVoiceOverRunning: Bool = false
-    
-    override func accessibilityElementDidBecomeFocused() {
-        if Constants.isAccessibilityApplied {
-            isVoiceOverRunning = true
-        }
-    }
-    
-    override func accessibilityElementDidLoseFocus() {
-        isVoiceOverRunning = false
-    }
 }

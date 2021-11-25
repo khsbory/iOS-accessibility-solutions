@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework
+${BUILT_PRODUCTS_DIR}/NVAccessibilitySolution/NVAccessibilitySolution.framework
 ${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework

@@ -1,0 +1,6 @@
+framework module NVAccessibilitySolution {
+  umbrella header "NVAccessibilitySolution-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,19 +7,20 @@
 //
 
 import UIKit
+import NVAccessibilitySolution
 
-class ReloadingButtonCollectionViewCell: UICollectionViewCell {
+class ReloadingButtonCollectionViewCell: NVAccessibilityCollectionViewCell {
     
     @IBOutlet weak var numberLabel: UILabel!
-    var isVoiceOverRunning: Bool = false
-    
-    override func accessibilityElementDidBecomeFocused() {
-        self.isVoiceOverRunning = true
-    }
-    
-    override func accessibilityElementDidLoseFocus() {
-        self.isVoiceOverRunning = false
-    }
+//    var isVoiceOverRunning: Bool = false
+//
+//    override func accessibilityElementDidBecomeFocused() {
+//        self.isVoiceOverRunning = true
+//    }
+//
+//    override func accessibilityElementDidLoseFocus() {
+//        self.isVoiceOverRunning = false
+//    }
     
     var isSelect: Bool = false {
         didSet{

@@ -7,6 +7,7 @@ target 'IosAccessibilityDemos' do
 
   pod 'DLRadioButton', '~> 1.4'
   pod 'SkeletonView'
+  pod 'NVAccessibilitySolution', :git => 'https://github.com/khsbory/iOS-accessibility-library.git', :tag => '0.1.4'
 
   # Pods for IosAccessibilityDemos
 

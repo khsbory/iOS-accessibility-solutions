@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVAccessibilitySolution
 
 class VerticalScrollDemo2ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
@@ -117,10 +118,12 @@ class VerticalScrollDemo2ViewController: UIViewController, UIPageViewControllerD
     }
     
     private func sayScreenNameForAccessibility(screenName: String?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-                              
-                             UIAccessibility.post(notification: .announcement, argument: screenName)
-                          })
+        // 211125. 라이브러리 사용
+        NVAccessibility.announceForAccessiblity(screenName,.now() + 0.1)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+//
+//                             UIAccessibility.post(notification: .announcement, argument: screenName)
+//                          })
     }
     
     // 인디케이터 개수

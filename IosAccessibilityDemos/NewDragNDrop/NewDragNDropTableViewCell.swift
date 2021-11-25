@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVAccessibilitySolution
 
 class NewDragNDropTableViewCell: UITableViewCell {
     
@@ -92,14 +93,19 @@ class NewDragNDropTableViewCell: UITableViewCell {
         }
         
         let favoriteAction = UIAccessibilityCustomAction(name: favoriteActionName) { (action) -> Bool in
-            UIAccessibility.post(notification: .announcement, argument: "\(favoriteActionName)됨")
+//            UIAccessibility.post(notification: .announcement, argument: "\(favoriteActionName)됨")
+            
+            // 211125. 라이브러리 사용
+            NVAccessibility.announceForAccessiblity("\(favoriteActionName)됨")
             self.setFavorite()
             self.accessibilityCustomActions = self.makeAccessibilityCustomActions()
             return true
         }
         
         let deleteAction = UIAccessibilityCustomAction(name: "삭제") { (action) -> Bool in
-            UIAccessibility.post(notification: .announcement, argument: "삭제")
+            // 211125. 라이브러리 사용
+            NVAccessibility.announceForAccessiblity("삭제")
+//            UIAccessibility.post(notification: .announcement, argument: "삭제")
             self.setDelete()
             
             return true
@@ -116,7 +122,9 @@ class NewDragNDropTableViewCell: UITableViewCell {
     
     func makeAccessibilityCustomActions2() -> [UIAccessibilityCustomAction] {
         let deleteAction = UIAccessibilityCustomAction(name: "삭제") { (action) -> Bool in
-            UIAccessibility.post(notification: .announcement, argument: "삭제")
+            // 211125. 라이브러리 사용
+            NVAccessibility.announceForAccessiblity("삭제")
+//            UIAccessibility.post(notification: .announcement, argument: "삭제")
             self.setDelete()
             
             return true

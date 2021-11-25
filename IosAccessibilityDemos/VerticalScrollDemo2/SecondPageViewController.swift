@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import NVAccessibilitySolution
+
 class SecondPageViewController:  UIViewController , UITableViewDelegate, UITableViewDataSource{
     var vegetables:[String] =
         ["시금치", "콩나물", "토마토", "콩", "치나물", "오이", "배추", "고구마", "감자", "부추"]
@@ -19,10 +21,12 @@ class SecondPageViewController:  UIViewController , UITableViewDelegate, UITable
     }
     
     private func sayScreenNameForAccessibility(screenName: String?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-                              
-                             UIAccessibility.post(notification: .announcement, argument: screenName)
-                          })
+        // 211125. 라이브러리 사용
+        NVAccessibility.announceForAccessiblity(screenName,.now() + 0.1)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+//
+//                             UIAccessibility.post(notification: .announcement, argument: screenName)
+//                          })
     }
     
     private func initTables() {

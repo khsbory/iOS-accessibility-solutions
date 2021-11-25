@@ -8,6 +8,7 @@
 
 import UIKit
 import SkeletonView
+import NVAccessibilitySolution
 
 public let RELOADING_TIME: TimeInterval = 2.0
 
@@ -113,7 +114,8 @@ extension ReloadingButtonCell: UICollectionViewDelegate, UICollectionViewDataSou
         // 보이스오버가 켜져있을 경우, 주요 CollectionView Cell만 리로드
         let cell = self.collectionView.cellForItem(at: indexPath) as! ReloadingButtonCollectionViewCell
                 
-        if Constants.isAccessibilityApplied && cell.isVoiceOverRunning {
+        // 211125. 라이브러리사용
+        if Constants.isAccessibilityApplied && cell.isAccessibilityFocusStarted {
             let beforeIndexPath = IndexPath(row: beforeFilter?.rawValue ?? 0, section: 0)
             self.collectionView.reloadItems(at: [beforeIndexPath,indexPath])
             

@@ -6,7 +6,7 @@
 //  Copyright © 2021 Jeonggyu Park. All rights reserved.
 //
 import UIKit
-
+import NVAccessibilitySolution
 
 class FilterDemoViewController: UIViewController {
     
@@ -85,8 +85,10 @@ class FilterDemoViewController: UIViewController {
                 
                 //필터를 열었을 때 숫자 섹션에 접근성 포커스를 맞춤
                 UIAccessibility.post(notification: .screenChanged, argument: self.closeSideMenuButton)
-				UIAccessibility.post(notification: .announcement , argument: "필터 열림")
+//				UIAccessibility.post(notification: .announcement , argument: "필터 열림")
             })
+            // 211125. 라이브러리 사용
+            NVAccessibility.announceForAccessiblity("필터 열림",.now() + 1)
             
             
             
@@ -131,9 +133,11 @@ class FilterDemoViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                 
                 UIAccessibility.post(notification: .screenChanged, argument: self.filterButton)
-				UIAccessibility.post(notification: .announcement , argument: "필터 닫힘")
+//				UIAccessibility.post(notification: .announcement , argument: "필터 닫힘")
             })
             
+            // 211125. 라이브러리 사용
+            NVAccessibility.announceForAccessiblity("필터 닫힘",.now() + 1)
             
             
         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVAccessibilitySolution
 class BannerViewController: UIViewController {
     var mode  :VoiceOverMode = .none
     @IBOutlet weak var scrollView: MYScrollView!
@@ -70,7 +71,9 @@ class BannerViewController: UIViewController {
         sleep(1)
         //UIAccessibility.post(notification: .screenChanged, argument: scrollView)
         //annoucement 제외 요구
-        UIAccessibility.post(notification: .announcement, argument: self.banners[self.count])
+//        UIAccessibility.post(notification: .announcement, argument: self.banners[self.count])
+        // 211125. 라이브러리 사용
+        NVAccessibility.announceForAccessiblity(self.banners[self.count])
         
         //sleep(1)
 
@@ -87,7 +90,9 @@ class BannerViewController: UIViewController {
         self.scrollView.contentOffset = CGPoint(x: x, y: 0)
         
         sleep(1)
-        UIAccessibility.post(notification: .announcement, argument: banners[self.count])
+//        UIAccessibility.post(notification: .announcement, argument: banners[self.count])
+        // 211125. 라이브러리 사용
+        NVAccessibility.announceForAccessiblity(self.banners[self.count])
     }
     
     func setup() {
@@ -107,7 +112,7 @@ class BannerViewController: UIViewController {
         
         let frame = scrollView.frame
         
-        
+         
         var x:CGFloat = 0
         let y:CGFloat = 0
         for (i,banner) in banners.enumerated() {
