@@ -63,6 +63,10 @@
 		86C57FF126BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C57FF026BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift */; };
 		86C5AB5E2741F49600CDB050 /* DataTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5AB5D2741F49600CDB050 /* DataTableCollectionViewCell.swift */; };
 		86CF20822726912400DD2A1C /* Swish.mov in Resources */ = {isa = PBXBuildFile; fileRef = 86CF207A2726912400DD2A1C /* Swish.mov */; };
+		86FFBB3127964D67004BF4D9 /* CustomRotor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86FFBB3027964D67004BF4D9 /* CustomRotor.storyboard */; };
+		86FFBB3327964D7F004BF4D9 /* CustomRotorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FFBB3227964D7F004BF4D9 /* CustomRotorViewController.swift */; };
+		86FFBB3527964F72004BF4D9 /* CustomRotorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FFBB3427964F72004BF4D9 /* CustomRotorCell.swift */; };
+		86FFBB3727965014004BF4D9 /* CustomRotorMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FFBB3627965014004BF4D9 /* CustomRotorMainViewController.swift */; };
 		A05D005E267311320066F44E /* SeparateFocusMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */; };
 		A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05D005C267311320066F44E /* SeparateFocus.storyboard */; };
 		A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D005D267311320066F44E /* SeparateFocusViewController.swift */; };
@@ -212,6 +216,10 @@
 		86C57FF026BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverScrollTestWebViewCell.swift; sourceTree = "<group>"; };
 		86C5AB5D2741F49600CDB050 /* DataTableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableCollectionViewCell.swift; sourceTree = "<group>"; };
 		86CF207A2726912400DD2A1C /* Swish.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Swish.mov; sourceTree = "<group>"; };
+		86FFBB3027964D67004BF4D9 /* CustomRotor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomRotor.storyboard; sourceTree = "<group>"; };
+		86FFBB3227964D7F004BF4D9 /* CustomRotorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRotorViewController.swift; sourceTree = "<group>"; };
+		86FFBB3427964F72004BF4D9 /* CustomRotorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRotorCell.swift; sourceTree = "<group>"; };
+		86FFBB3627965014004BF4D9 /* CustomRotorMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRotorMainViewController.swift; sourceTree = "<group>"; };
 		8E94E82D9BE3E91625ABA2A3 /* Pods-IosAccessibilityDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosAccessibilityDemos.release.xcconfig"; path = "Target Support Files/Pods-IosAccessibilityDemos/Pods-IosAccessibilityDemos.release.xcconfig"; sourceTree = "<group>"; };
 		A05D005B267311320066F44E /* SeparateFocusMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparateFocusMainViewController.swift; sourceTree = "<group>"; };
 		A05D005C267311320066F44E /* SeparateFocus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeparateFocus.storyboard; sourceTree = "<group>"; };
@@ -339,6 +347,7 @@
 		1F8501E92518816700B99181 /* IosAccessibilityDemos */ = {
 			isa = PBXGroup;
 			children = (
+				86FFBB2F27964CF6004BF4D9 /* CustomRotor */,
 				B33D67892627FFCC00116E26 /* ScreenScroll */,
 				B380937C25FB3B6700244627 /* Setting */,
 				3E95E30525DCD945000F625B /* CarouselAccessibility */,
@@ -554,6 +563,17 @@
 				86CF207A2726912400DD2A1C /* Swish.mov */,
 			);
 			path = musics;
+			sourceTree = "<group>";
+		};
+		86FFBB2F27964CF6004BF4D9 /* CustomRotor */ = {
+			isa = PBXGroup;
+			children = (
+				86FFBB3027964D67004BF4D9 /* CustomRotor.storyboard */,
+				86FFBB3227964D7F004BF4D9 /* CustomRotorViewController.swift */,
+				86FFBB3427964F72004BF4D9 /* CustomRotorCell.swift */,
+				86FFBB3627965014004BF4D9 /* CustomRotorMainViewController.swift */,
+			);
+			path = CustomRotor;
 			sourceTree = "<group>";
 		};
 		A05D005A267311320066F44E /* SeparateFocus */ = {
@@ -810,6 +830,7 @@
 				B34FF6DB256614F50026AF2E /* WebViewDemo.storyboard in Resources */,
 				A05D005F267311320066F44E /* SeparateFocus.storyboard in Resources */,
 				B326738C25B534390067C5CE /* FirstPage.storyboard in Resources */,
+				86FFBB3127964D67004BF4D9 /* CustomRotor.storyboard in Resources */,
 				B33D67982628003400116E26 /* ScreenScroll.storyboard in Resources */,
 				B33C9A27257DF418009E8811 /* AccessibilityFocusDemo.storyboard in Resources */,
 				B32673DC25B570E70067C5CE /* FilterDemoMain.storyboard in Resources */,
@@ -976,6 +997,7 @@
 				A05D006B2673136F0066F44E /* SeparateFocusAccessibilityViewController.swift in Sources */,
 				860C9A1D270EBA3400632EFE /* ReloadingTableViewDemoViewController.swift in Sources */,
 				86C2D2B4273A63A400744FF0 /* DataTableCalendarCell.swift in Sources */,
+				86FFBB3327964D7F004BF4D9 /* CustomRotorViewController.swift in Sources */,
 				860C9A19270EB68F00632EFE /* ReloadingCollectionViewCell.swift in Sources */,
 				A09B13D426B15B7000EF499A /* ReadjustFocusMainViewController.swift in Sources */,
 				1F8501EB2518816700B99181 /* AppDelegate.swift in Sources */,
@@ -989,6 +1011,7 @@
 				B35BF8772563B9CA006858DF /* WebViewDemoViewController.swift in Sources */,
 				3ED8579A25D9CA8D006C86F4 /* BannerViewController.swift in Sources */,
 				8698549E2726888D0065AC8D /* Track.swift in Sources */,
+				86FFBB3527964F72004BF4D9 /* CustomRotorCell.swift in Sources */,
 				B32673E125B571B70067C5CE /* FilterDemoViewController.swift in Sources */,
 				869C7B922681B7EB00CF5B97 /* NewDragNDropViewController.swift in Sources */,
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
@@ -1005,6 +1028,7 @@
 				860C9A15270EB65D00632EFE /* ReloadingTableViewCell.swift in Sources */,
 				86C57FEB26BA2C0F00119C2C /* VoiceOverScrollTestMainViewController.swift in Sources */,
 				B37E840425650D4900DCD7DF /* WebViewDemoMainViewController.swift in Sources */,
+				86FFBB3727965014004BF4D9 /* CustomRotorMainViewController.swift in Sources */,
 				866B60E426FDAE9800D251C2 /* NewDragNDropPopup.swift in Sources */,
 				3E11435A25DCF32E00B6560F /* DogStatsView.swift in Sources */,
 				A0D9A2A22706CAFA00CA14F5 /* TableViewMoveRowDemoCell.swift in Sources */,
