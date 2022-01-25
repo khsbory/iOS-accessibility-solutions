@@ -1,0 +1,80 @@
+enum CountType:Int { // 열거형, switch 문에 사용될 값을 담는 용도로 사용해보았음
+    case COUNT_DECREMENT = 0
+    case COUNT_INCREMENT = 1
+}
+
+extension VStack { // VStack에 대한 새 메소드를 확장 정의함, 
+    @ViewBuilder func gone(_ makeGone:Bool)-> some View {
+        if makeGone {
+            self.hidden()// makeGone 변수가 true면 view를 숨김.
+        } else {
+            self // false면 표시함
+        }
+    }
+}
+
+struct FoldingContent<Content>: View where Content : View{ // 접었다 펼칠 수 있는 섹션 컴포넌트
+    @State private var folded = false // 접힘/펼침 상태정보를 나타내는 @State Attribute 
+    let content:()-> Content // 클로져 안에 일반 코드 뿐만 아니라, 뷰를 넣을 수 있도록 함. 위에 struct 선언문을 보면, 이게 언급돼있음
+    var body: some View { // 뷰가 생성됐을 때, 기본이 되는 몸체. 이것이 없으면 View를 생성할 수 없음
+        VStack(alignment:.center){ // VStack(Vertical Stack) / HStack(Horizontal Stack), Android의 LinearLayout이랑 비슷하다, ZStack도 있는데, FrameLayout과 유사하다고 볼 수 있겠다
+            Button("View Counter"){
+                folded = !folded // 버튼 다음에 오는 중괄호, 클로져는 콜백함수 개념이다. 버튼은 누르는 것임으로, 클로져 안에 실행문을 써서 클릭 이밴트를 걸 수 있다.
+            }.accessibilityValue(folded ? "expanded" : "collapsed") //accessibilityValue에 folded 상태를 참조하여 상태 텍스트가 바뀌도록 한다.
+            
+            VStack(alignment:.leading){
+                content() // 버튼 다음에 나오는 VStack에 코더가 넣은 콘텐츠가 쌓이도록 한다.
+            }.gone(!folded) // folded값에 따라 펼쳐지고 접힘다.
+        }
+    }
+}
+
+struct CounterView: View { // 카운터 예제를 담은 컴포넌트이다.
+    @State private var countMSG:String = "" // 메시지 스트링이 담길 속성
+    @Binding var count:Int // CounterView가 불러와질 상위 뷰인 ContentView에서 count라는 @State 상태를 사용할 수 있도록 @Binding 프로퍼티로 지정한다.
+    var body: some View {
+        VStack(alignment:.center){
+            Text("You counted \(count)") // 카운트 숫자가 표시될 텍스트뷰
+            Button("+"){ // 증가 버튼
+                Counter(.COUNT_INCREMENT) // 카운터 함수를 호출한다.
+            }.accessibilityLabel("increase count") // 더 자세한 레이블로 대체
+            Button("-"){
+                Counter(.COUNT_DECREMENT)// 위와 동일, 함수에 들어갈 값만 DECREMENT인걸 확인
+            }.accessibilityLabel("decrease count")
+        }
+    }
+    
+    func Counter (_ countType:CountType) -> Void { // INCREMENT / DECREMENT, 둘 중 하나의 값을 받아, 카운트 상태를 증가시키거나 감소시킬 수 있는 함수
+        switch countType {
+            case .COUNT_INCREMENT:
+                if count < 100 {
+                    count += 1
+                    countMSG = "You counted \(count)"
+                    UIAccessibility.post(notification: .announcement, argument: countMSG)
+                }
+            case .COUNT_DECREMENT:
+            if count > 0 {
+                count-=1
+                countMSG = "You counted \(count)"
+                UIAccessibility.post(notification: .announcement, argument: countMSG)
+            }
+        }
+    }
+}
+
+struct ContentView: View {
+    @State private var count = 0 // CounterView에서 사용할 count 상태
+    var body: some View {
+        VStack(alignment:.center){
+            FoldingContent(){
+                CounterView(count:$count) // count를 지속적으로 참조
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
