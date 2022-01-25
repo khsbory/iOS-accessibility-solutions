@@ -61,17 +61,20 @@ class CustomRotorViewController: UIViewController {
         
         let propertyRotorOption = UIAccessibilityCustomRotor(name: name) { (predicate) ->
             UIAccessibilityCustomRotorItemResult? in
-            if let targetIndex = self.getAccessibilityFocusedTargetIndex(direction: predicate.searchDirection) {
-                
-                if targetIndex >= self.arrNumber.count || targetIndex < 0 {
-                    return nil
-                }
-                
-                let indexPath: IndexPath = IndexPath(row: targetIndex, section: 0)
+//            if let targetIndex = self.getAccessibilityFocusedTargetIndex(direction: predicate.searchDirection) {
+//
+//                if targetIndex >= self.arrNumber.count || targetIndex < 0 {
+//                    return nil
+//                }
+//
+                let indexPath: IndexPath = IndexPath(row: 1, section: 0)
                 let cell: CustomRotorCell = self.tableView.cellForRow(at: indexPath) as! CustomRotorCell
                 
+            let indexPath2: IndexPath = IndexPath(row: 1, section: 0)
+            let cell2: CustomRotorCell = self.tableView.cellForRow(at: indexPath2) as! CustomRotorCell
+            
                 return UIAccessibilityCustomRotorItemResult(targetElement: cell.btnDelete, targetRange: nil)
-            }
+//            }
             return nil
         }
         
@@ -115,6 +118,9 @@ extension CustomRotorViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomRotorCell", for: indexPath) as! CustomRotorCell
         cell.lblNumber.text = arrNumber[indexPath.row]
         
+        if Constants.isAccessibilityApplied {
+            cell.btnDelete.accessibilityLabel = "\(number) 삭제"
+        }
         return cell
         
     }

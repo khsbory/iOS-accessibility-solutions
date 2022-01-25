@@ -17,6 +17,7 @@ class CustomRotorCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,11 +26,4 @@ class CustomRotorCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    override func accessibilityElementDidBecomeFocused() {
-        
-    }
-    
-    override func accessibilityElementDidLoseFocus() {
-        
-    }
 }
