@@ -12,8 +12,8 @@ class CustomRotorViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let maxNumber: Int = 100
-    var arrNumber: [String] = []
+    let maxNumber: Int = 50
+    var arrNumber: [Int] = []
     
     var searchDistance = 0
     
@@ -40,7 +40,7 @@ class CustomRotorViewController: UIViewController {
     func initArrayNumber() {
         
         for i in 1..<maxNumber+1 {
-            arrNumber.append("\(i)")
+            arrNumber.append(i)
         }
         
     }
@@ -51,54 +51,54 @@ class CustomRotorViewController: UIViewController {
         tableView.dataSource = self
         
         if Constants.isAccessibilityApplied {
-            self.tableView.accessibilityCustomRotors = [self.customRotor(name: "삭제")]
+            self.tableView.accessibilityCustomRotors = [self.customRotorForTableViewButton(elementIdentifier: "삭제")]
         }
         
     }
     
-    /// CustomRotor 생성
-    func customRotor(name: String) -> UIAccessibilityCustomRotor {
+    /// TableView의 CustomRotor 생성 - 로터시킬 Element(Button)에 accessibilityIdentifier를 설정하여 생성하는 방법
+    func customRotorForTableViewButton(elementIdentifier: String, rotorName: String = "") -> UIAccessibilityCustomRotor {
+        
+        // rotorName을 따로 지정하지 않을 경우, Identifier로 사용
+        let name = rotorName.isEmpty ? elementIdentifier : rotorName
         
         let propertyRotorOption = UIAccessibilityCustomRotor(name: name) { (predicate) ->
             UIAccessibilityCustomRotorItemResult? in
-            if let targetIndex = self.getAccessibilityFocusedTargetIndex(direction: predicate.searchDirection) {
-                
-                if targetIndex >= self.arrNumber.count || targetIndex < 0 {
-                    return nil
-                }
-                
-                let indexPath: IndexPath = IndexPath(row: targetIndex, section: 0)
-                let cell: CustomRotorCell = self.tableView.cellForRow(at: indexPath) as! CustomRotorCell
-                
-                return UIAccessibilityCustomRotorItemResult(targetElement: cell.btnDelete, targetRange: nil)
+            let currentElement = predicate.currentItem.targetElement as? UIButton
+            let elementViews = self.getElementViews(elementIdentifier)
+            let currentIndex = elementViews.firstIndex { $0 == currentElement }
+            
+            let targetIndex: Int
+            switch predicate.searchDirection {
+            case .previous:
+                targetIndex = (currentIndex ?? 1) - 1
+            case .next:
+                targetIndex = (currentIndex ?? -1) + 1
+            @unknown default:
+                fatalError()
             }
-            return nil
+            
+            guard 0..<elementViews.count ~= targetIndex else { return nil }
+            return UIAccessibilityCustomRotorItemResult(targetElement: elementViews[targetIndex], targetRange: nil)
         }
         
         return propertyRotorOption
     }
     
-    /// Focus 할 TableView의 Index 반환
-    private func getAccessibilityFocusedTargetIndex(direction:  UIAccessibilityCustomRotor.Direction) -> Int? {
+    /// accessibilityIdentifier를 사용하여, 로터를 생성할 Element 목록 반환
+    func getElementViews(_ identifier: String) -> [UIView] {
+        let cells = self.tableView.visibleCells
         
-        var targetIndex: Int?
-        
-        // TableView에서 포커스 중인 View 찾기
-        for index in 0..<arrNumber.count {
-            let indexPath: IndexPath = IndexPath(row: index, section: 0)
-            
-            if let cell: CustomRotorCell = self.tableView.cellForRow(at: indexPath) as? CustomRotorCell {
-                // target 선정
-                if cell.accessibilityElementIsFocused() {
-                    targetIndex = direction == .next ? index : index - 1
-                    return targetIndex
-                } else if cell.btnDelete.accessibilityElementIsFocused() {
-                    targetIndex = direction == .next ? index + 1 : index - 1
-                    return targetIndex
+        var views: [UIView] = []
+        for index in 0..<cells.count {
+            if let cell = cells[index] as? CustomRotorCell {
+                if let element = cell.contentView.subviews.first(where: { $0.accessibilityIdentifier == identifier }) {
+                    views.append(element)
                 }
             }
         }
-        return nil
+        
+        return views
     }
 }
 
@@ -113,10 +113,13 @@ extension CustomRotorViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomRotorCell", for: indexPath) as! CustomRotorCell
-        cell.lblNumber.text = arrNumber[indexPath.row]
+        cell.lblNumber.text = "\(arrNumber[indexPath.row])"
         
         if Constants.isAccessibilityApplied {
             cell.btnDelete.accessibilityLabel = "\(arrNumber[indexPath.row]) 삭제"
+            
+            // '삭제' 버튼에 대한 로터 생성을 위한 accessibilityIdentifier 설정
+            cell.btnDelete.accessibilityIdentifier = "삭제"
         }
         return cell
         
