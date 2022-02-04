@@ -64,9 +64,10 @@ class CustomRotorViewController: UIViewController {
         
         let propertyRotorOption = UIAccessibilityCustomRotor(name: name) { (predicate) ->
             UIAccessibilityCustomRotorItemResult? in
-            let currentElement = predicate.currentItem.targetElement as? UIButton
+            
+            let currentButton = predicate.currentItem.targetElement as? UIButton
             let elementViews = self.getElementViews(elementIdentifier)
-            let currentIndex = elementViews.firstIndex { $0 == currentElement }
+            let currentIndex = elementViews.firstIndex { $0 == currentButton }
             
             let targetIndex: Int
             switch predicate.searchDirection {
@@ -114,12 +115,19 @@ extension CustomRotorViewController: UITableViewDelegate, UITableViewDataSource 
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomRotorCell", for: indexPath) as! CustomRotorCell
         cell.lblNumber.text = "\(arrNumber[indexPath.row])"
-        
+                
         if Constants.isAccessibilityApplied {
             cell.btnDelete.accessibilityLabel = "\(arrNumber[indexPath.row]) 삭제"
             
             // '삭제' 버튼에 대한 로터 생성을 위한 accessibilityIdentifier 설정
             cell.btnDelete.accessibilityIdentifier = "삭제"
+            
+            // 10의 단위로 accessibilityTextHeadingLevel 1로 설정
+            if arrNumber[indexPath.row] % 10 == 0 {
+                let attributes: [NSAttributedString.Key:Any] = [.accessibilityTextHeadingLevel: NSNumber(value: 1), .font: UIFont.boldSystemFont(ofSize: 20)]
+                let text = NSAttributedString(string: "\(arrNumber[indexPath.row])", attributes: attributes)
+                cell.lblNumber.attributedText = text
+            }
         }
         return cell
         
