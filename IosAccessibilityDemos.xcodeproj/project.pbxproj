@@ -75,6 +75,9 @@
 		A09B13D326B15B7000EF499A /* ReadjustFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B13CF26B15B7000EF499A /* ReadjustFocusViewController.swift */; };
 		A09B13D426B15B7000EF499A /* ReadjustFocusMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B13D026B15B7000EF499A /* ReadjustFocusMainViewController.swift */; };
 		A09B13D526B15B7000EF499A /* ReadjustFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09B13D126B15B7000EF499A /* ReadjustFocus.storyboard */; };
+		A0D7D71927B91368003C784D /* HeadingLevelAndLanguage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D7D71827B91368003C784D /* HeadingLevelAndLanguage.storyboard */; };
+		A0D7D71B27B91425003C784D /* HLALMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D7D71A27B91425003C784D /* HLALMainViewController.swift */; };
+		A0D7D71D27B91433003C784D /* HLALViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D7D71C27B91433003C784D /* HLALViewController.swift */; };
 		A0D9A2932706C89000CA14F5 /* TableViewMoveRowDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D9A2922706C89000CA14F5 /* TableViewMoveRowDemo.storyboard */; };
 		A0D9A2982706C8E900CA14F5 /* TableViewMoveRowDemoMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A2972706C8E900CA14F5 /* TableViewMoveRowDemoMainViewController.swift */; };
 		A0D9A29D2706C8FA00CA14F5 /* TableViewMoveRowDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A29C2706C8FA00CA14F5 /* TableViewMoveRowDemoViewController.swift */; };
@@ -229,6 +232,9 @@
 		A09B13CF26B15B7000EF499A /* ReadjustFocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadjustFocusViewController.swift; sourceTree = "<group>"; };
 		A09B13D026B15B7000EF499A /* ReadjustFocusMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadjustFocusMainViewController.swift; sourceTree = "<group>"; };
 		A09B13D126B15B7000EF499A /* ReadjustFocus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReadjustFocus.storyboard; sourceTree = "<group>"; };
+		A0D7D71827B91368003C784D /* HeadingLevelAndLanguage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeadingLevelAndLanguage.storyboard; sourceTree = "<group>"; };
+		A0D7D71A27B91425003C784D /* HLALMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLALMainViewController.swift; sourceTree = "<group>"; };
+		A0D7D71C27B91433003C784D /* HLALViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLALViewController.swift; sourceTree = "<group>"; };
 		A0D9A2922706C89000CA14F5 /* TableViewMoveRowDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewMoveRowDemo.storyboard; sourceTree = "<group>"; };
 		A0D9A2972706C8E900CA14F5 /* TableViewMoveRowDemoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMoveRowDemoMainViewController.swift; sourceTree = "<group>"; };
 		A0D9A29C2706C8FA00CA14F5 /* TableViewMoveRowDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMoveRowDemoViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +353,7 @@
 		1F8501E92518816700B99181 /* IosAccessibilityDemos */ = {
 			isa = PBXGroup;
 			children = (
+				A0D7D71727B91337003C784D /* HeadingLevelAndLanguage */,
 				86FFBB2F27964CF6004BF4D9 /* CustomRotor */,
 				B33D67892627FFCC00116E26 /* ScreenScroll */,
 				B380937C25FB3B6700244627 /* Setting */,
@@ -598,6 +605,16 @@
 			path = ReadjustFocus;
 			sourceTree = "<group>";
 		};
+		A0D7D71727B91337003C784D /* HeadingLevelAndLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				A0D7D71827B91368003C784D /* HeadingLevelAndLanguage.storyboard */,
+				A0D7D71A27B91425003C784D /* HLALMainViewController.swift */,
+				A0D7D71C27B91433003C784D /* HLALViewController.swift */,
+			);
+			path = HeadingLevelAndLanguage;
+			sourceTree = "<group>";
+		};
 		A0D9A2912706C87000CA14F5 /* TableViewMoveRowDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -842,6 +859,7 @@
 				86CF20822726912400DD2A1C /* Swish.mov in Resources */,
 				B33D357F25CBD72F0079A10C /* DragNDropMain.storyboard in Resources */,
 				B33D679D2628004400116E26 /* ScreenScrollMain.storyboard in Resources */,
+				A0D7D71927B91368003C784D /* HeadingLevelAndLanguage.storyboard in Resources */,
 				3E11435225DCF1D700B6560F /* CarouselAccessibility.storyboard in Resources */,
 				3E95E30725DCDA25000F625B /* CarouselAccessibilityMain.storyboard in Resources */,
 				86C57FE926BA2A8900119C2C /* VoiceOverScrollTest.storyboard in Resources */,
@@ -984,6 +1002,7 @@
 				1F8501EF2518816700B99181 /* ViewController.swift in Sources */,
 				86C2D2AD273A37CB00744FF0 /* CalendarCell.swift in Sources */,
 				86C2D2A9273A134300744FF0 /* CalendarMainViewController.swift in Sources */,
+				A0D7D71D27B91433003C784D /* HLALViewController.swift in Sources */,
 				A0D9A29D2706C8FA00CA14F5 /* TableViewMoveRowDemoViewController.swift in Sources */,
 				86C57FED26BA2C2B00119C2C /* VoiceOverScrollTestViewController.swift in Sources */,
 				A05D005E267311320066F44E /* SeparateFocusMainViewController.swift in Sources */,
@@ -1017,6 +1036,7 @@
 				1F8501ED2518816700B99181 /* SceneDelegate.swift in Sources */,
 				86C57FEF26BA2D6A00119C2C /* VoiceOverScrollTestTableViewCell.swift in Sources */,
 				A09B13D326B15B7000EF499A /* ReadjustFocusViewController.swift in Sources */,
+				A0D7D71B27B91425003C784D /* HLALMainViewController.swift in Sources */,
 				8698549C272681EF0065AC8D /* UISliderMusicPlayerDemoViewController.swift in Sources */,
 				86C57FF126BA2E1600119C2C /* VoiceOverScrollTestWebViewCell.swift in Sources */,
 				A05D0060267311320066F44E /* SeparateFocusViewController.swift in Sources */,
